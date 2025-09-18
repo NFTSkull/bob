@@ -64,8 +64,8 @@ export default function RootLayout({
   return (
     <html lang="es-MX" className="scroll-smooth">
       <head>
-        {/* Google Analytics */}
-        {process.env.NEXT_PUBLIC_GA_ID && (
+        {/* Google Analytics - Temporarily disabled for deployment */}
+        {/* {process.env.NEXT_PUBLIC_GA_ID && (
           <>
             <script
               async
@@ -85,7 +85,7 @@ export default function RootLayout({
               }}
             />
           </>
-        )}
+        )} */}
         
         {/* Preconnect para optimización */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
