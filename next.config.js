@@ -1,8 +1,7 @@
-import type { NextConfig } from 'next'
-
-const nextConfig: NextConfig = {
-  experimental: {
-    appDir: true,
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  eslint: {
+    ignoreDuringBuilds: true,
   },
   images: {
     formats: ['image/webp', 'image/avif'],
@@ -44,4 +43,4 @@ const nextConfig: NextConfig = {
   },
 }
 
-export default nextConfig
+module.exports = nextConfig

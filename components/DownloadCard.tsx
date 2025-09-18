@@ -15,6 +15,7 @@ interface DownloadCardProps {
   fileType?: string;
   icon?: string;
   className?: string;
+  style?: React.CSSProperties;
 }
 
 export default function DownloadCard({
@@ -25,7 +26,8 @@ export default function DownloadCard({
   fileSize,
   fileType = 'PDF',
   icon = '📄',
-  className
+  className,
+  style
 }: DownloadCardProps) {
   const handleDownload = () => {
     trackCatalogDownload();
@@ -41,7 +43,10 @@ export default function DownloadCard({
   };
 
   return (
-    <div className={cn('card group hover:scale-105 transition-all duration-300', className)}>
+    <div
+      className={cn('card group hover:scale-105 transition-all duration-300', className)}
+      style={style}
+    >
       <div className="flex items-start space-x-4">
         {/* Icono */}
         <div className="flex-shrink-0">

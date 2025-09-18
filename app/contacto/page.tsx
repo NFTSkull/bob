@@ -4,7 +4,7 @@ import ContactBlock from '@/components/ContactBlock';
 import { generateMetadata as generatePageMetadata } from '@/lib/metadata';
 import { pageMetadata } from '@/data';
 
-export const metadata: Metadata = generatePageMetadata(pageMetadata.contacto);
+export const metadata: Metadata = generatePageMetadata(pageMetadata.contact);
 
 export default function ContactoPage() {
   return (

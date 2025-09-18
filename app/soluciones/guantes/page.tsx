@@ -5,7 +5,7 @@ import { generateMetadata as generatePageMetadata } from '@/lib/metadata';
 import { pageMetadata } from '@/data';
 import { guantesCategories } from '@/data/guantes';
 
-export const metadata: Metadata = generatePageMetadata(pageMetadata.guantes);
+export const metadata: Metadata = generatePageMetadata(pageMetadata.gloves);
 
 export default function GuantesPage() {
   // Crear tabs para cada categoría de guantes

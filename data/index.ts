@@ -157,6 +157,47 @@ export const navigation: NavigationItem[] = [
   { name: 'Contacto', href: '/contacto' }
 ];
 
+// Page Metadata
+export interface PageMetadata {
+  title: string;
+  description: string;
+  keywords?: string[];
+  canonical?: string;
+}
+
+export const pageMetadata = {
+  home: {
+    title: 'BobCoperation - EPP y Consumibles Industriales | Guantes, Calzado, Protección',
+    description: 'Proveedor líder de EPP y consumibles industriales en México. Guantes, calzado de seguridad, protección visual, ergonomía y más. Entregas rápidas en toda la República.',
+    keywords: ['EPP', 'consumibles industriales', 'guantes', 'calzado seguridad', 'protección visual']
+  },
+  contact: {
+    title: 'Contacto - BobCoperation',
+    description: 'Contacta con BobCoperation para tus necesidades de EPP y consumibles industriales. Asesoría personalizada y cotizaciones rápidas.',
+    keywords: ['contacto', 'cotización', 'asesoría EPP']
+  },
+  faq: {
+    title: 'Preguntas Frecuentes - BobCoperation',
+    description: 'Encuentra respuestas a las preguntas más comunes sobre nuestros productos EPP, tiempos de entrega, facturación y más.',
+    keywords: ['FAQ', 'preguntas frecuentes', 'ayuda']
+  },
+  solutions: {
+    title: 'Soluciones EPP - BobCoperation',
+    description: 'Descubre nuestras soluciones completas de EPP: guantes, protección visual, calzado de seguridad, ergonomía y consumibles industriales.',
+    keywords: ['soluciones EPP', 'catálogo productos', 'equipos protección']
+  },
+  gloves: {
+    title: 'Guantes de Seguridad - BobCoperation',
+    description: 'Amplio catálogo de guantes de seguridad: nitrilo, PU, anticorte, antiestático y más. Protección para todas las industrias.',
+    keywords: ['guantes seguridad', 'guantes nitrilo', 'guantes anticorte']
+  },
+  whyBob: {
+    title: 'Por qué BobCoperation - Proveedor Confiable de EPP',
+    description: 'Conoce por qué somos el proveedor preferido de EPP: cumplimiento normativo, disponibilidad, entregas puntuales y asesoría experta.',
+    keywords: ['proveedor EPP', 'confiabilidad', 'calidad']
+  }
+};
+
 // FAQ
 export interface FAQ {
   question: string;

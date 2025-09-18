@@ -4,7 +4,7 @@ import Image from 'next/image';
 import { generateMetadata as generatePageMetadata } from '@/lib/metadata';
 import { pageMetadata } from '@/data';
 
-export const metadata: Metadata = generatePageMetadata(pageMetadata.soluciones);
+export const metadata: Metadata = generatePageMetadata(pageMetadata.solutions);
 
 const solutions = [
   {

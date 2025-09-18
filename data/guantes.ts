@@ -284,10 +284,10 @@ export const guantesAlgodon: ProductCategory = {
     'Comodidad y transpirabilidad',
     'Actividades de limpieza'
   ],
-  composicion: {
-    poliester: '70%',
-    algodon: '30%'
-  },
+  composicion: [
+    { comp: 'Poliéster', pct: 70 },
+    { comp: 'Algodón', pct: 30 }
+  ],
   empaque: {
     paquete: '12 pares',
     cajaMaster: '360 pares'
