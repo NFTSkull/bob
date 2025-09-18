@@ -6,14 +6,36 @@
 
 @layer base {
   :root {
-    --color-primary: #0B0B0B;
+    /* Negro industrial - fondos principales */
+    --color-primary: #0A0A0A;
     --color-primary-light: #1A1A1A;
-    --color-accent: #FFC107;
-    --color-accent-dark: #E6A700;
-    --color-secondary: #E7E7E7;
+    --color-primary-dark: #000000;
+
+    /* Amarillo seguridad - acentos institucionales */
+    --color-accent: #FFD700;
+    --color-accent-light: #FFED4A;
+    --color-accent-dark: #F1C40F;
+    --color-accent-muted: #FFF8DC;
+
+    /* Escala de grises institucional */
+    --color-gray-50: #FAFAFA;
+    --color-gray-100: #F5F5F5;
+    --color-gray-200: #EEEEEE;
+    --color-gray-300: #E0E0E0;
+    --color-gray-400: #BDBDBD;
+    --color-gray-500: #9E9E9E;
+    --color-gray-600: #757575;
+    --color-gray-700: #616161;
+    --color-gray-800: #424242;
+    --color-gray-850: #2A2A2A;
+    --color-gray-900: #212121;
+    --color-gray-950: #0F0F0F;
+
+    /* Colores de texto optimizados */
     --color-text-primary: #FFFFFF;
-    --color-text-secondary: #E7E7E7;
-    --color-text-dark: #0B0B0B;
+    --color-text-secondary: #F5F5F5;
+    --color-text-muted: #BDBDBD;
+    --color-text-dark: #0A0A0A;
   }
 
   * {
@@ -40,27 +62,35 @@
     @apply bg-white/10 backdrop-blur-sm text-white border border-white/20 font-semibold py-4 px-8 rounded-xl hover:bg-white/20 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-white/50 focus:ring-offset-2 focus:ring-offset-primary;
   }
 
-  /* Executive Cards */
+  /* Executive Cards - Fondos grises institucionales */
   .card {
-    @apply bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300;
+    @apply bg-gray-50/5 backdrop-blur-sm border border-gray-200/20 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300;
   }
 
   .card-hover {
-    @apply hover:scale-[1.02] hover:border-accent/50 cursor-pointer;
+    @apply hover:scale-[1.02] hover:border-accent/50 cursor-pointer hover:bg-gray-50/10;
   }
 
-  /* Product Cards */
+  /* Product Cards - Con fondos blancos/grises claros */
   .product-card {
-    @apply group bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl overflow-hidden hover:border-accent/50 transition-all duration-300 hover:scale-[1.02] hover:shadow-xl hover:shadow-accent/10;
+    @apply group bg-gray-50/10 backdrop-blur-sm border border-gray-200/20 rounded-xl overflow-hidden hover:border-accent/60 transition-all duration-300 hover:scale-[1.02] hover:shadow-xl hover:shadow-accent/20;
   }
 
-  /* Professional Gradients */
+  /* Professional Gradients - Paleta institucional */
   .gradient-radial {
-    background: radial-gradient(circle, rgba(255,193,7,0.15) 0%, transparent 70%);
+    background: radial-gradient(circle, rgba(255,215,0,0.15) 0%, transparent 70%);
   }
 
   .gradient-professional {
-    background: linear-gradient(135deg, #0B0B0B 0%, #1A1A1A 50%, #0B0B0B 100%);
+    background: linear-gradient(135deg, #0A0A0A 0%, #1A1A1A 50%, #0A0A0A 100%);
+  }
+
+  .gradient-safety {
+    background: linear-gradient(135deg, #0A0A0A 0%, #2A2A2A 50%, #0A0A0A 100%);
+  }
+
+  .gradient-institutional {
+    background: linear-gradient(90deg, rgba(255,215,0,0.1) 0%, transparent 50%, rgba(255,215,0,0.1) 100%);
   }
 
   /* Text Utilities */
@@ -140,9 +170,13 @@
     @apply text-xl md:text-2xl text-gray-300 leading-relaxed;
   }
 
-  /* Status Indicators */
+  /* Status Indicators - Colores institucionales */
   .status-indicator {
-    @apply inline-flex items-center bg-accent/10 text-accent font-semibold px-4 py-2 rounded-full text-sm border border-accent/20;
+    @apply inline-flex items-center bg-accent/10 text-accent font-semibold px-4 py-2 rounded-full text-sm border border-accent/30;
+  }
+
+  .status-safety {
+    @apply inline-flex items-center bg-gray-100/90 text-text-dark font-semibold px-4 py-2 rounded-full text-sm border border-gray-300;
   }
 
   /* Professional Shadows */

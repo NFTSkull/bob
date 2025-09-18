@@ -8,22 +8,47 @@ module.exports = {
   theme: {
     extend: {
       colors: {
+        // Negro industrial - fondos principales
         primary: {
-          DEFAULT: '#0B0B0B',
-          light: '#2B2B2B',
+          DEFAULT: '#0A0A0A',
+          light: '#1A1A1A',
+          dark: '#000000',
         },
+        // Amarillo seguridad - acentos y resaltados
         accent: {
-          DEFAULT: '#FFC107',
-          dark: '#E6A700',
+          DEFAULT: '#FFD700',
+          light: '#FFED4A',
+          dark: '#F1C40F',
+          muted: '#FFF8DC',
         },
-        secondary: {
-          DEFAULT: '#E7E7E7',
-          dark: '#C7C7C7',
+        // Escala de grises institucional
+        gray: {
+          50: '#FAFAFA',    // Blanco suave
+          100: '#F5F5F5',   // Gris muy claro
+          200: '#EEEEEE',   // Gris claro - fondos secundarios
+          300: '#E0E0E0',   // Gris claro medio
+          400: '#BDBDBD',   // Gris medio
+          500: '#9E9E9E',   // Gris neutro
+          600: '#757575',   // Gris oscuro medio
+          700: '#616161',   // Gris oscuro
+          800: '#424242',   // Gris carbón
+          850: '#2A2A2A',   // Gris carbón oscuro
+          900: '#212121',   // Gris muy oscuro
+          950: '#0F0F0F',   // Negro carbón
         },
+        // Colores de texto optimizados
         text: {
           primary: '#FFFFFF',
-          secondary: '#E7E7E7',
-          dark: '#0B0B0B',
+          secondary: '#F5F5F5',
+          muted: '#BDBDBD',
+          dark: '#0A0A0A',
+        },
+        // Colores de estado industrial
+        status: {
+          success: '#4CAF50',
+          warning: '#FFD700',
+          error: '#F44336',
+          info: '#2196F3',
         },
       },
       fontFamily: {

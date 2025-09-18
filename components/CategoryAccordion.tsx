@@ -14,15 +14,15 @@ export default function CategoryAccordion({ category, className }: CategoryAccor
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className={cn("border border-white/10 rounded-2xl overflow-hidden", className)}>
+    <div className={cn("border border-gray-300/40 rounded-2xl overflow-hidden shadow-lg bg-gray-50/20", className)}>
       {/* Category Header - Clickable */}
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="w-full text-left p-8 bg-white/5 hover:bg-white/10 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 focus:ring-offset-primary"
+        className="w-full text-left p-8 bg-gray-100/80 hover:bg-gray-200/90 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 focus:ring-offset-primary"
       >
         <div className="flex items-center justify-between">
           <div className="flex items-center space-x-6">
-            <div className="flex items-center justify-center w-16 h-16 bg-accent/10 rounded-xl group-hover:bg-accent/20 transition-colors">
+            <div className="flex items-center justify-center w-16 h-16 bg-accent-muted/80 rounded-xl group-hover:bg-accent/20 transition-colors">
               <svg
                 className="w-8 h-8 text-accent"
                 fill="currentColor"
@@ -32,18 +32,18 @@ export default function CategoryAccordion({ category, className }: CategoryAccor
               </svg>
             </div>
             <div>
-              <h3 className="text-2xl font-bold text-white mb-2 group-hover:text-accent transition-colors">
+              <h3 className="text-2xl font-bold text-text-dark mb-2 group-hover:text-accent transition-colors">
                 {category.name}
               </h3>
-              <p className="text-gray-300 text-base leading-relaxed max-w-2xl">
+              <p className="text-gray-700 text-base leading-relaxed max-w-2xl">
                 {category.description}
               </p>
               <div className="mt-3 flex items-center space-x-4">
                 <span className="text-accent font-semibold text-sm">
                   {category.products.length} productos disponibles
                 </span>
-                <div className="h-4 w-px bg-accent/30" />
-                <span className="text-gray-400 text-sm">
+                <div className="h-4 w-px bg-accent/50" />
+                <span className="text-gray-600 text-sm">
                   Especificaciones técnicas completas
                 </span>
               </div>
@@ -52,10 +52,10 @@ export default function CategoryAccordion({ category, className }: CategoryAccor
 
           <div className="flex items-center space-x-4">
             <div className="text-right">
-              <div className="text-accent font-bold text-lg">
+              <div className="text-accent-dark font-bold text-lg">
                 {isOpen ? 'Ocultar' : 'Ver'} Productos
               </div>
-              <div className="text-gray-400 text-sm">
+              <div className="text-gray-600 text-sm">
                 {isOpen ? 'Contraer lista' : 'Expandir catálogo'}
               </div>
             </div>
@@ -76,7 +76,7 @@ export default function CategoryAccordion({ category, className }: CategoryAccor
         "transition-all duration-500 overflow-hidden",
         isOpen ? "max-h-[5000px] opacity-100" : "max-h-0 opacity-0"
       )}>
-        <div className="p-8 bg-gradient-to-br from-primary-light/50 to-primary/50">
+        <div className="p-8 bg-gradient-to-br from-gray-100/95 to-gray-50/95">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {category.products.map((product) => (
               <DetailedProductCard key={product.id} product={product} />
