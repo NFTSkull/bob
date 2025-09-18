@@ -1,5 +1,5 @@
 import { productCategories } from '@/data/products';
-import CategorySection from '@/components/CategorySection';
+import CategoryAccordion from '@/components/CategoryAccordion';
 
 export default function Home() {
   return (
@@ -131,16 +131,32 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Detailed Product Sections */}
-      <div className="bg-gradient-to-b from-primary-light to-primary">
-        {productCategories.map((category, index) => (
-          <CategorySection
-            key={category.id}
-            category={category}
-            className={index % 2 === 0 ? "bg-primary/50" : "bg-primary-light/50"}
-          />
-        ))}
-      </div>
+      {/* Interactive Product Categories */}
+      <section id="catalogo-detallado" className="py-20 bg-gradient-to-b from-primary-light to-primary">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              Catálogo Técnico Completo
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+              Especificaciones técnicas detalladas para cada producto. Haga clic en cualquier categoría para expandir el catálogo completo.
+            </p>
+            <div className="inline-flex items-center bg-accent/10 text-accent font-semibold px-4 py-2 rounded-full text-sm border border-accent/20">
+              <div className="w-2 h-2 bg-accent rounded-full mr-2 animate-pulse" />
+              Catálogo Interactivo • Especificaciones Completas
+            </div>
+          </div>
+
+          <div className="space-y-8">
+            {productCategories.map((category) => (
+              <CategoryAccordion
+                key={category.id}
+                category={category}
+              />
+            ))}
+          </div>
+        </div>
+      </section>
 
       {/* Executive CTA Section */}
       <section id="contacto" className="py-20 bg-gradient-to-br from-primary via-primary-light to-primary relative overflow-hidden">

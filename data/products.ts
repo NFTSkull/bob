@@ -5,10 +5,19 @@ export interface Product {
   category: string;
   subcategory?: string;
   image: string;
+  material?: string;
+  codes?: string[];
+  colors?: string[];
+  sizes?: string[];
+  packaging?: string;
+  masterBox?: string;
   specifications?: string[];
   applications?: string[];
   certifications?: string[];
-  code?: string;
+  weight?: string;
+  thickness?: string;
+  resistance?: string;
+  norm?: string;
 }
 
 export interface ProductCategory {
@@ -27,139 +36,135 @@ export const productCategories: ProductCategory[] = [
     icon: 'M12 2L13.41 4.17C13.78 4.9 14.6 5.33 15.41 5.17L17.5 4.67C18.3 4.5 19.1 5.3 18.92 6.1L18.42 8.19C18.26 9 18.69 9.82 19.42 10.19L21.5 11.17C22.3 11.5 22.3 12.5 21.5 12.83L19.42 13.81C18.69 14.18 18.26 15 18.42 15.81L18.92 17.9C19.1 18.7 18.3 19.5 17.5 19.33L15.41 18.83C14.6 18.67 13.78 19.1 13.41 19.83L12 22L10.59 19.83C10.22 19.1 9.4 18.67 8.59 18.83L6.5 19.33C5.7 19.5 4.9 18.7 5.08 17.9L5.58 15.81C5.74 15 5.31 14.18 4.58 13.81L2.5 12.83C1.7 12.5 1.7 11.5 2.5 11.17L4.58 10.19C5.31 9.82 5.74 9 5.58 8.19L5.08 6.1C4.9 5.3 5.7 4.5 6.5 4.67L8.59 5.17C9.4 5.33 10.22 4.9 10.59 4.17L12 2Z',
     products: [
       {
-        id: 'guantes-anticorte-nivel-5',
-        name: 'Guantes Anticorte Nivel 5',
-        description: 'Máxima protección contra cortes en aplicaciones con materiales filosos como láminas metálicas y vidrio.',
-        category: 'guantes',
-        subcategory: 'anticorte',
-        image: '/images/cat-guantes-anticorte-nivel-5.webp',
-        specifications: [
-          'Nivel de corte 5 (ANSI/ISEA)',
-          'Recubrimiento de PU en palma',
-          'Base textil de HPPE',
-          'Calibre 13'
-        ],
-        applications: [
-          'Manejo de láminas metálicas',
-          'Trabajo con vidrio',
-          'Corte y ensamble',
-          'Manufactura automotriz'
-        ],
-        certifications: ['ANSI/ISEA 105', 'EN 388']
-      },
-      {
         id: 'guantes-pu-recubiertos',
-        name: 'Guantes PU Recubiertos',
-        description: 'Precisión y destreza para inspección y manejo de componentes metálicos pequeños.',
+        name: 'Guantes de Poliuretano (PU)',
+        description: 'Precisión y destreza para manipulaciones finas y ensamblaje de piezas.',
         category: 'guantes',
         subcategory: 'pu-recubierto',
         image: '/images/cat-guantes-pu.webp',
-        specifications: [
-          'Recubrimiento PU en dedos y palma',
-          'Base de nylon sin costuras',
-          'Calibre 15',
-          'Transpirable'
-        ],
+        material: 'Poliéster 70% + Poliuretano 30%',
+        codes: ['BGU-0016 a BGU-00110', 'BGU-0026 a BGU-00210'],
+        colors: ['Amarillo', 'Blanco', 'Verde', 'Gris', 'Café'],
+        sizes: ['XS (6)', 'S (7)', 'M (8)', 'L (9)', 'XL (10)'],
+        packaging: 'Paquete 12 pares',
+        masterBox: 'Caja máster 240 pares',
         applications: [
-          'Inspección de calidad',
-          'Ensamble de precisión',
-          'Electrónica',
-          'Manufactura ligera'
+          'Manipulaciones finas',
+          'Ensamblaje de piezas',
+          'Riesgos mecánicos',
+          'Trabajo de precisión'
         ]
       },
       {
-        id: 'guantes-pu-blancos',
-        name: 'Guantes PU Sin Recubrimiento (Blancos)',
-        description: 'Manejo delicado de componentes electrónicos y piezas de precisión.',
+        id: 'guantes-anticorte-nivel-5',
+        name: 'Guantes Anticorte Nivel 5',
+        description: 'Máxima protección contra cortes para manejo de materiales filosos.',
+        category: 'guantes',
+        subcategory: 'anticorte',
+        image: '/images/cat-guantes-anticorte-nivel-5.webp',
+        material: 'Polietileno 35%, Poliuretano 20%, Acero 15%, Nailon 13%, Vidrio 10%, Elastano 7%',
+        packaging: 'Paquete 12 pares',
+        masterBox: 'Caja máster 240 pares',
+        applications: [
+          'Corte y manejo de vidrios',
+          'Manipulación de láminas',
+          'Trabajo con cerámicas',
+          'Materiales filosos'
+        ],
+        certifications: ['Nivel 5 de corte', 'ANSI/ISEA 105']
+      },
+      {
+        id: 'guantes-pu-sin-recubrimiento-negro',
+        name: 'Guantes PU sin Recubrimiento (Negros)',
+        description: 'Inspección de piezas delicadas con máxima sensibilidad táctil.',
         category: 'guantes',
         subcategory: 'pu-sin-recubrimiento',
-        image: '/images/cat-guantes-pu-sin-recubrimiento-blanco.webp',
-        specifications: [
-          'Nylon sin recubrimiento',
-          'Color blanco',
-          'Calibre 15',
-          'Lavable'
-        ],
+        image: '/images/cat-guantes-pu-sin-recubrimiento-negro.webp',
+        material: 'Poliéster 100%',
+        colors: ['Negro'],
+        packaging: 'Paquete 12 pares',
+        masterBox: 'Caja máster 240 pares',
         applications: [
-          'Ensamble electrónico',
-          'Sala blanca',
-          'Industria farmacéutica',
+          'Inspección de piezas delicadas',
+          'Evita rayaduras y huellas digitales',
+          'Máxima sensibilidad',
           'Control de calidad'
         ]
       },
       {
-        id: 'guantes-pu-negros',
-        name: 'Guantes PU Sin Recubrimiento (Negros)',
-        description: 'Versión negra para aplicaciones donde se requiere ocultar suciedad ligera.',
+        id: 'guantes-pu-sin-recubrimiento-blanco',
+        name: 'Guantes PU sin Recubrimiento (Blancos)',
+        description: 'Versión blanca para ambientes de sala limpia y alta precisión.',
         category: 'guantes',
         subcategory: 'pu-sin-recubrimiento',
-        image: '/images/cat-guantes-pu-sin-recubrimiento-negro.webp',
-        specifications: [
-          'Nylon sin recubrimiento',
-          'Color negro',
-          'Calibre 15',
-          'Lavable'
-        ],
+        image: '/images/cat-guantes-pu-sin-recubrimiento-blanco.webp',
+        material: 'Poliéster 100%',
+        colors: ['Blanco'],
+        packaging: 'Paquete 12 pares',
+        masterBox: 'Caja máster 240 pares',
         applications: [
-          'Ensamble general',
-          'Manejo de componentes',
-          'Inspección',
-          'Logística ligera'
+          'Sala limpia',
+          'Industria farmacéutica',
+          'Electrónica de precisión',
+          'Ambiente estéril'
         ]
       },
       {
         id: 'guantes-algodon-45-50g',
-        name: 'Guantes Algodón 45-50g',
-        description: 'Protección básica para manipulación de cajas y trabajo general en almacén.',
+        name: 'Guantes de Algodón 45-50g',
+        description: 'Protección básica para tareas generales en industria.',
         category: 'guantes',
         subcategory: 'algodon',
         image: '/images/cat-guantes-algodon-45-50g.webp',
-        specifications: [
-          'Algodón 100%',
-          'Peso: 45-50g',
-          'Tejido estándar',
-          'Puño elástico'
-        ],
+        material: 'Poliéster 70% + Algodón 30%',
+        codes: ['BGU-00550'],
+        colors: ['Blanco'],
+        sizes: ['XS/S'],
+        weight: '45-50g',
+        packaging: 'Paquete 12 pares',
+        masterBox: 'Caja máster 360 pares',
         applications: [
-          'Almacén y logística',
-          'Manipulación de cajas',
-          'Trabajo general',
-          'Construcción ligera'
+          'Tareas generales en industria',
+          'Trabajo en almacenes',
+          'Talleres',
+          'Uso doméstico'
         ]
       },
       {
         id: 'guantes-algodon-65g',
-        name: 'Guantes Algodón 65g',
+        name: 'Guantes de Algodón 65g',
         description: 'Mayor durabilidad para trabajos de manipulación intensiva.',
         category: 'guantes',
         subcategory: 'algodon',
         image: '/images/cat-guantes-algodon-65g.webp',
-        specifications: [
-          'Algodón 100%',
-          'Peso: 65g',
-          'Tejido reforzado',
-          'Mayor durabilidad'
-        ],
+        material: 'Poliéster 70% + Algodón 30%',
+        codes: ['BGU-00665'],
+        colors: ['Gris'],
+        sizes: ['M/G'],
+        weight: '65g',
+        packaging: 'Paquete 12 pares',
+        masterBox: 'Caja máster 360 pares',
         applications: [
           'Carga y descarga',
           'Manipulación de materiales',
-          'Construcción',
+          'Construcción ligera',
           'Mantenimiento'
         ]
       },
       {
         id: 'guantes-algodon-70g',
-        name: 'Guantes Algodón 70g',
+        name: 'Guantes de Algodón 70g',
         description: 'Máxima resistencia en algodón para trabajos pesados.',
         category: 'guantes',
         subcategory: 'algodon',
         image: '/images/cat-guantes-algodon-70g.webp',
-        specifications: [
-          'Algodón 100%',
-          'Peso: 70g',
-          'Tejido extra resistente',
-          'Puño reforzado'
-        ],
+        material: 'Poliéster 70% + Algodón 30%',
+        codes: ['BGU-00670'],
+        colors: ['Gris'],
+        sizes: ['M/G'],
+        weight: '70g',
+        packaging: 'Paquete 12 pares',
+        masterBox: 'Caja máster 360 pares',
         applications: [
           'Trabajo pesado',
           'Construcción',
@@ -169,65 +174,61 @@ export const productCategories: ProductCategory[] = [
       },
       {
         id: 'guantes-antiestaticos-completo',
-        name: 'Guantes Antiestáticos Completos',
-        description: 'Protección total contra descargas electrostáticas para trabajo con PCB.',
+        name: 'Guante Antiestático Completo',
+        description: 'Protección total contra descargas electrostáticas.',
         category: 'guantes',
         subcategory: 'antiestatico',
         image: '/images/cat-guantes-antiestatico-completo.webp',
-        specifications: [
-          'Fibra conductiva integrada',
-          'Resistencia superficial: 10^6-10^8 Ω',
-          'Recubrimiento PU',
-          'Certificado ESD'
-        ],
+        material: 'Poliéster 70%, Poliuretano 20%, Carbono 10%',
+        codes: ['BGU-0076 a BGU-00710', 'BGU-0090 a BGU-0094'],
+        colors: ['Amarillo', 'Blanco', 'Verde', 'Gris', 'Café'],
+        sizes: ['XS (6)', 'S (7)', 'M (8)', 'L (9)', 'XL (10)'],
+        packaging: 'Paquete 12 pares',
+        masterBox: 'Caja máster 240 pares',
         applications: [
+          'Evita contaminación de componentes electrónicos',
           'Ensamble de PCB',
           'Manufactura electrónica',
-          'Sala limpia',
           'Equipos sensibles'
-        ],
-        certifications: ['IEC 61340-5-1']
+        ]
       },
       {
         id: 'guantes-antiestaticos-punta',
-        name: 'Guantes Antiestáticos en Punta',
-        description: 'Precisión máxima para trabajos delicados con componentes electrónicos.',
+        name: 'Guante Antiestático Punta',
+        description: 'Precisión máxima para manipulación delicada en electrónica.',
         category: 'guantes',
         subcategory: 'antiestatico',
         image: '/images/cat-guantes-antiestatico-punta.webp',
-        specifications: [
-          'Fibra conductiva en dedos',
-          'Base no conductiva',
-          'Máxima destreza',
-          'Resistencia controlada'
-        ],
+        material: 'Poliéster 75%, Poliuretano 10%, Carbono 15%',
+        packaging: 'Paquete 12 pares',
+        masterBox: 'Caja máster 240 pares',
         applications: [
+          'Manipulación delicada en electrónica',
+          'Componentes sensibles',
           'Reparación electrónica',
-          'Ensamble de precisión',
-          'Testing de componentes',
-          'Microelectrónica'
+          'Testing de precisión'
         ]
       },
       {
         id: 'guantes-nitrilo-desechables',
         name: 'Guantes Nitrilo Desechables',
-        description: 'Protección higiénica para uso ligero en laboratorios y áreas limpias.',
+        description: 'Protección higiénica con alta precisión y resistencia química.',
         category: 'guantes',
         subcategory: 'desechable',
         image: '/images/cat-guantes-nitrilo-desechable.webp',
-        specifications: [
-          'Nitrilo sintético',
-          'Libre de látex',
-          'Textura antideslizante',
-          'Desechable'
-        ],
+        material: 'NBR 100%',
+        codes: ['BGU-0087 (S)', 'BGU-0088 (M)', 'BGU-0089 (L)'],
+        colors: ['Azul'],
+        sizes: ['S', 'M', 'L'],
+        packaging: 'Caja 100 pares',
+        masterBox: 'Caja máster 1000 pares',
         applications: [
-          'Laboratorio',
-          'Área médica',
-          'Manipulación de químicos',
-          'Industria alimentaria'
+          'Protección frente a bacterias y virus',
+          'Sustancias nocivas',
+          'Alta precisión',
+          'Laboratorio'
         ],
-        certifications: ['FDA', 'CE']
+        certifications: ['Libre de látex', 'Resistente a químicos']
       }
     ]
   },
@@ -239,45 +240,43 @@ export const productCategories: ProductCategory[] = [
     products: [
       {
         id: 'lentes-seguridad',
-        name: 'Lentes de Seguridad Policarbonato',
-        description: 'Protección ocular de alta resistencia con lentes de policarbonato para máxima claridad.',
+        name: 'Lentes de Seguridad',
+        description: 'Protección ocular de alta resistencia con lentes de policarbonato.',
         category: 'proteccion-visual-auditiva',
         subcategory: 'visual',
         image: '/images/cat-lentes-seguridad.webp',
-        specifications: [
-          'Lentes de policarbonato',
-          'Protección UV 99.9%',
-          'Resistencia al impacto',
-          'Patillas ajustables'
-        ],
+        material: 'Policarbonato',
+        codes: ['BLE-001'],
+        colors: ['Transparente'],
+        sizes: ['Unitalla'],
+        packaging: 'Caja 12 pz',
+        masterBox: 'Caja máster 300 pz',
         applications: [
+          'Protección contra impactos',
           'Soldadura',
           'Esmerilado',
-          'Químicos',
-          'Construcción'
+          'Trabajo con químicos'
         ],
-        certifications: ['ANSI Z87.1', 'EN 166']
+        certifications: ['ANSI Z87.1', 'Resistencia al impacto']
       },
       {
         id: 'tapones-auditivos',
         name: 'Tapones Auditivos con Cordón',
-        description: 'Protección auditiva cómoda y efectiva con cordón de seguridad.',
+        description: 'Protección auditiva desechable con cordón de seguridad.',
         category: 'proteccion-visual-auditiva',
         subcategory: 'auditiva',
         image: '/images/cat-tapones-auditivos.webp',
-        specifications: [
-          'Reducción de ruido: 32 dB',
-          'Material: Espuma PU',
-          'Cordón de seguridad',
-          'Desechables'
-        ],
+        material: 'Plástico',
+        codes: ['BTA-001'],
+        colors: ['Naranja'],
+        sizes: ['Unitalla'],
         applications: [
+          'Protección auditiva desechable',
           'Ambientes ruidosos',
           'Manufactura',
-          'Construcción',
-          'Aeropuertos'
+          'Construcción'
         ],
-        certifications: ['ANSI S3.19', 'EN 352-2']
+        specifications: ['Con cordón de seguridad', 'Desechable']
       }
     ]
   },
@@ -288,18 +287,52 @@ export const productCategories: ProductCategory[] = [
     icon: 'M12 2L2 7V10C2 16 6 20.9 12 22C18 20.9 22 16 22 10V7L12 2Z',
     products: [
       {
+        id: 'trapo-industrial',
+        name: 'Trapo Industrial',
+        description: 'Trapo de algodón para limpieza industrial y mantenimiento.',
+        category: 'empaque-consumibles',
+        subcategory: 'limpieza',
+        image: '/images/cat-trapo-industrial.webp',
+        material: 'Algodón',
+        codes: ['BTR-001'],
+        packaging: 'Caja 200 pares',
+        masterBox: 'Caja máster 2000 pares',
+        applications: [
+          'Limpieza industrial',
+          'Mantenimiento',
+          'Absorción de líquidos',
+          'Talleres'
+        ]
+      },
+      {
+        id: 'cinta-adhesiva',
+        name: 'Cinta Adhesiva Transparente',
+        description: 'Cinta de alta adherencia para sellado profesional.',
+        category: 'empaque-consumibles',
+        subcategory: 'adhesivos',
+        image: '/images/cat-cinta-adhesiva.webp',
+        material: 'Poliéster',
+        codes: ['BCT-001'],
+        colors: ['Transparente'],
+        specifications: ['48 mm x 150 m', 'Alta adherencia'],
+        applications: [
+          'Sellado de cajas',
+          'Empaque',
+          'Etiquetado',
+          'Reparaciones'
+        ]
+      },
+      {
         id: 'pelicula-poliestretch',
         name: 'Película Poliestretch',
-        description: 'Film estirable de alta resistencia para asegurar cargas en pallets.',
+        description: 'Film estirable de alta resistencia para asegurar cargas.',
         category: 'empaque-consumibles',
         subcategory: 'film',
         image: '/images/cat-poliestretch-pallet.webp',
-        specifications: [
-          'Estiramiento: 300%',
-          'Espesor: 17-23 micrones',
-          'Ancho: 50cm',
-          'Longitud: 300m'
-        ],
+        material: 'Poliestretch',
+        codes: ['BPP-001 (18" cal 80, 1.6 kg)', 'BPP-002 (18" cal 80, 2 kg)', 'BPP-003 (18" cal 80, 2.5 kg)'],
+        colors: ['Transparente'],
+        packaging: 'Paquete 4 pz',
         applications: [
           'Paletizado',
           'Aseguramiento de cargas',
@@ -314,57 +347,29 @@ export const productCategories: ProductCategory[] = [
         category: 'empaque-consumibles',
         subcategory: 'film',
         image: '/images/cat-pelicula-biodegradable.webp',
-        specifications: [
-          'Material biodegradable',
-          'Compostable',
-          'Resistencia comparable',
-          'Certificado verde'
-        ],
+        packaging: 'Paquete 6 pz',
         applications: [
           'Empaque ecológico',
           'Industria alimentaria',
           'Productos orgánicos',
           'Cumplimiento ambiental'
-        ]
-      },
-      {
-        id: 'cinta-adhesiva',
-        name: 'Cinta Adhesiva Industrial',
-        description: 'Cinta de alta adherencia para sellado profesional de cajas.',
-        category: 'empaque-consumibles',
-        subcategory: 'adhesivos',
-        image: '/images/cat-cinta-adhesiva.webp',
-        specifications: [
-          'Adhesivo acrílico',
-          'Ancho: 48mm',
-          'Longitud: 100m',
-          'Resistente al agua'
         ],
-        applications: [
-          'Sellado de cajas',
-          'Empaque',
-          'Etiquetado',
-          'Reparaciones'
-        ]
+        certifications: ['Biodegradable', 'Compostable']
       },
       {
         id: 'polifoam',
-        name: 'Polifoam / Espuma Polietileno',
-        description: 'Acolchado protector para componentes delicados y frágiles.',
+        name: 'Polifoam',
+        description: 'Rollo de polifoam para acolchonamiento y protección.',
         category: 'empaque-consumibles',
         subcategory: 'proteccion',
         image: '/images/cat-polifoam-acolchado.webp',
-        specifications: [
-          'Densidad variable',
-          'Espesores: 1-50mm',
-          'Resistente a humedad',
-          'Reciclable'
-        ],
+        material: 'Foam de polietileno',
+        thickness: '1/32" a 1/4" + Foam 3000',
         applications: [
-          'Protección de productos',
-          'Embalaje delicado',
-          'Aislamiento',
-          'Amortiguación'
+          'Acolchonamiento',
+          'Absorción de vibración',
+          'Protección contra golpes',
+          'Embalaje de productos delicados'
         ]
       }
     ]
@@ -378,61 +383,61 @@ export const productCategories: ProductCategory[] = [
       {
         id: 'faja-sacrolumbar',
         name: 'Faja Sacrolumbar',
-        description: 'Soporte lumbar para prevenir lesiones al levantar cargas pesadas.',
+        description: 'Soporte lumbar con doble refuerzo y varillas de soporte.',
         category: 'ergonomia-proteccion',
         subcategory: 'soporte',
         image: '/images/cat-faja-sacrolumbar.webp',
+        material: 'Nylon + Polietileno',
+        codes: ['BFA-0017 (CH)', 'BFA-0018 (M)', 'BFA-0019 (G)', 'BFA-0010 (XXG)'],
+        colors: ['Negro'],
+        sizes: ['CH', 'M', 'G', 'XXG'],
         specifications: [
-          'Soporte lumbar ajustable',
-          'Cierre de velcro',
-          'Materiales transpirables',
-          'Tallas: S-XXL'
+          '100% elástica',
+          'Doble refuerzo',
+          '8" en zona lumbar',
+          '5 varillas de soporte'
         ],
         applications: [
           'Levantamiento de cargas',
-          'Almacén',
-          'Construcción',
-          'Manufactura'
+          'Soporte lumbar',
+          'Prevención de lesiones',
+          'Trabajo pesado'
         ]
       },
       {
         id: 'mandil-mezclilla',
         name: 'Mandil de Mezclilla',
-        description: 'Protección frontal resistente para soldadura ligera y trabajo con chispas.',
+        description: 'Protección frontal resistente contra chispas y partículas.',
         category: 'ergonomia-proteccion',
         subcategory: 'vestimenta',
         image: '/images/cat-mandil-mezclilla.webp',
-        specifications: [
-          'Mezclilla 100%',
-          'Resistente al fuego',
-          'Tirantes ajustables',
-          'Bolsillos frontales'
-        ],
+        material: 'Mezclilla',
+        codes: ['BMM-001'],
+        colors: ['Negro'],
+        sizes: ['Unitalla'],
         applications: [
-          'Soldadura ligera',
-          'Trabajo con chispas',
-          'Taller mecánico',
-          'Herrería'
+          'Protección contra chispas de soldadura',
+          'Partículas sólidas',
+          'Resistente a salpicaduras',
+          'Taller mecánico'
         ]
       },
       {
         id: 'mangas-mezclilla',
-        name: 'Mangas de Mezclilla',
-        description: 'Protección específica para brazos en trabajos de taller.',
+        name: 'Manga de Mezclilla',
+        description: 'Protección específica para brazos, resistente y lavable.',
         category: 'ergonomia-proteccion',
         subcategory: 'vestimenta',
         image: '/images/cat-mangas-mezclilla.webp',
-        specifications: [
-          'Mezclilla resistente',
-          'Elásticos en extremos',
-          'Longitud: 35cm',
-          'Lavables'
-        ],
+        material: 'Mezclilla',
+        codes: ['BMM-002'],
+        colors: ['Negro'],
+        sizes: ['Unitalla'],
         applications: [
           'Protección de brazos',
-          'Taller',
-          'Soldadura',
-          'Trabajo con materiales abrasivos'
+          'Resistente',
+          'Lavable',
+          'Ambidiestra'
         ]
       }
     ]
@@ -441,28 +446,28 @@ export const productCategories: ProductCategory[] = [
     id: 'calzado-seguridad',
     name: 'Calzado de Seguridad',
     description: 'Calzado industrial certificado para máxima protección y comodidad',
-    icon: 'M12 2L13.41 4.17C13.78 4.9 14.6 5.33 15.41 5.17L17.5 4.67C18.3 4.5 19.1 5.3 18.92 6.1L18.42 8.19C18.26 9 18.69 9.82 19.42 10.19L21.5 11.17C22.3 11.5 22.3 12.5 21.5 12.83L19.42 13.81C18.69 14.18 18.26 15 18.42 15.81L18.92 17.9C19.1 18.7 18.3 19.5 17.5 19.33L15.41 18.83C14.6 18.67 13.78 19.1 13.41 19.83L12 22L10.59 19.83C10.22 19.1 9.4 18.67 8.59 18.83L6.5 19.33C5.7 19.5 4.9 18.7 5.08 17.9L5.58 15.81C5.74 15 5.31 14.18 4.58 13.81L2.5 12.83C1.7 12.5 1.7 11.5 2.5 11.17L4.58 10.19C5.31 9.82 5.74 9 5.58 8.19L5.08 6.1C4.9 5.3 5.7 4.5 6.5 4.67L8.59 5.17C9.4 5.33 10.22 4.9 10.59 4.17L12 2Z',
+    icon: 'M19 7H18V6A6 6 0 0 0 6 6V7H5A1 1 0 0 0 4 8V20A1 1 0 0 0 5 21H19A1 1 0 0 0 20 20V8A1 1 0 0 0 19 7M8 6A4 4 0 0 1 16 6V7H8V6Z',
     products: [
       {
-        id: 'bota-punta-acero',
-        name: 'Bota de Seguridad Punta de Acero',
-        description: 'Calzado industrial con protección de impacto y antiperforación.',
+        id: 'calzado-punta-acero',
+        name: 'Calzado de Seguridad',
+        description: 'Bota industrial con punta de acero y máxima protección.',
         category: 'calzado-seguridad',
         subcategory: 'botas',
         image: '/images/cat-calzado-punta-acero.webp',
-        specifications: [
-          'Punta de acero',
-          'Suela antiperforación',
-          'Cuero genuino',
-          'Suela antideslizante'
-        ],
+        material: 'Poliuretano + Acero',
+        codes: ['BZA-0013 a BZA-0019'],
+        colors: ['Negro'],
+        sizes: ['Tallas 23-29'],
+        norm: 'NOM-113 (punta de acero)',
+        resistance: 'Resiste hasta 15 kN de presión y 200J de impacto',
         applications: [
           'Construcción',
           'Manufactura pesada',
           'Soldadura',
-          'Minería'
+          'Industria en general'
         ],
-        certifications: ['ASTM F2413', 'NOM-113-STPS']
+        certifications: ['NOM-113', 'Punta de acero certificada']
       }
     ]
   },
@@ -473,18 +478,21 @@ export const productCategories: ProductCategory[] = [
     icon: 'M3 17.25V21H6.75L17.81 9.94L14.06 6.19L3 17.25ZM20.71 7.04C21.1 6.65 21.1 6.02 20.71 5.63L18.37 3.29C17.98 2.9 17.35 2.9 16.96 3.29L15.13 5.12L18.88 8.87L20.71 7.04Z',
     products: [
       {
-        id: 'marcador-base-aceite',
-        name: 'Marcador Base Aceite',
-        description: 'Marcado permanente en superficies metálicas y no porosas.',
+        id: 'marcadores-base-aceite',
+        name: 'Marcadores Base Aceite',
+        description: 'Marcador permanente con tinta opaca base aceite.',
         category: 'marcadores-industriales',
         subcategory: 'permanente',
         image: '/images/cat-marcador-base-aceite.webp',
+        codes: ['BMA-001 a BMA-011'],
+        colors: ['Blanco', 'Negro', 'Rojo', 'Naranja', 'Rosa', 'Morado', 'Verde', 'Amarillo', 'Azul', 'Plata', 'Oro'],
         specifications: [
-          'Base aceite',
-          'Secado rápido',
-          'Resistente al agua',
-          'Punta media'
+          'Marcador permanente',
+          'Tinta opaca base aceite',
+          'Punta redonda media'
         ],
+        packaging: 'Caja 12 pz',
+        masterBox: 'Caja máster 576 pz',
         applications: [
           'Marcado en metal',
           'Identificación permanente',
@@ -493,23 +501,26 @@ export const productCategories: ProductCategory[] = [
         ]
       },
       {
-        id: 'marcador-base-alcohol',
-        name: 'Marcador Base Alcohol',
-        description: 'Ideal para plásticos, cerámicas y superficies lisas.',
+        id: 'marcadores-base-alcohol',
+        name: 'Marcadores Base Alcohol',
+        description: 'Rotulador permanente tipo Sharpie con punta fina.',
         category: 'marcadores-industriales',
         subcategory: 'multiuso',
         image: '/images/cat-marcador-base-alcohol.webp',
+        codes: ['BMA-012 a BMA-015'],
+        colors: ['Negro', 'Verde', 'Rojo', 'Azul'],
         specifications: [
-          'Base alcohol',
-          'Secado instantáneo',
-          'Multi-superficie',
-          'Punta fina'
+          'Rotulador permanente tipo Sharpie',
+          'Punta fina 1.5 mm',
+          'Tinta a base de alcohol'
         ],
+        packaging: 'Caja 12 pz / Caja 144 pz',
+        masterBox: 'Caja máster 864 pz',
         applications: [
           'Plásticos',
           'Cerámica',
           'Vidrio',
-          'Etiquetado'
+          'Etiquetado general'
         ]
       }
     ]

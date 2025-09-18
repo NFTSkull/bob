@@ -68,8 +68,8 @@ export default function ProductCard({ product, className }: ProductCardProps) {
 
         <div className="flex items-center justify-between pt-4 border-t border-white/10">
           <div className="text-xs text-gray-400">
-            {product.code && (
-              <span className="font-mono">Código: {product.code}</span>
+            {product.codes && product.codes.length > 0 && (
+              <span className="font-mono">Código: {product.codes[0]}</span>
             )}
           </div>
           <button className="text-xs bg-accent text-primary font-semibold px-3 py-1.5 rounded-md hover:bg-accent-dark transition-colors">
