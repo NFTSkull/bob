@@ -19,6 +19,9 @@
     "clsx": "^2.0.0",
     "tailwind-merge": "^2.0.0"
   },
+  "engines": {
+    "node": ">=18.0.0"
+  },
   "devDependencies": {
     "@types/node": "^20.0.0",
     "@types/react": "^18.0.0",

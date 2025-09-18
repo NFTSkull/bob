@@ -1,0 +1,36 @@
+# Build artifacts
+.next/
+node_modules/
+
+# Development files
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# IDE files
+.vscode/
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Documentation
+docs/
+*.md
+!README.md
+
+# Scripts
+deploy-to-github.sh
+COMANDOS_GIT.md
+CHECKLIST.md
+VERCEL_CONFIG.md
+
+# Docker
+Dockerfile
+docker-compose.yml
+
+# Other config files
+netlify.toml
+lighthouserc.json
