@@ -19,10 +19,13 @@ export default function DetailedProductCard({ product, className }: DetailedProd
             <p className="text-gray-700 text-sm leading-relaxed">{product.description}</p>
           </div>
           {product.image && (
-            <div className="w-16 h-16 bg-gray-200/80 rounded-lg flex items-center justify-center ml-4">
-              <svg className="w-8 h-8 text-accent" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
-              </svg>
+            <div className="w-20 h-20 bg-gray-200/80 rounded-lg flex items-center justify-center ml-4 overflow-hidden">
+              <img 
+                src={product.image} 
+                alt={`${product.name} - ${product.description}`}
+                className="w-full h-full object-cover"
+                loading="lazy"
+              />
             </div>
           )}
         </div>

@@ -15,6 +15,14 @@ export default function ProductCard({ product, className }: ProductCardProps) {
       className
     )}>
       <div className="aspect-video bg-gradient-to-br from-primary-light to-primary relative overflow-hidden">
+        {product.image && (
+          <img 
+            src={product.image} 
+            alt={`${product.name} - ${product.description}`}
+            className="w-full h-full object-cover"
+            loading="lazy"
+          />
+        )}
         <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
         <div className="absolute bottom-4 left-4 right-4">
           <div className="text-xs text-accent font-semibold uppercase tracking-wider mb-1">

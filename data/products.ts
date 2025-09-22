@@ -38,86 +38,128 @@ export const productCategories: ProductCategory[] = [
       {
         id: 'guantes-pu-recubiertos',
         name: 'Guantes de Poliuretano (PU)',
-        description: 'Precisión y destreza para manipulaciones finas y ensamblaje de piezas.',
+        description: 'Guantes industriales de poliuretano para manipulaciones finas y ensamblaje de piezas. Protección superior contra riesgos mecánicos con máxima destreza y sensibilidad táctil.',
         category: 'guantes',
         subcategory: 'pu-recubierto',
         image: '/images/cat-guantes-pu.webp',
-        material: 'Poliéster 70% + Poliuretano 30%',
+        material: 'Poliéster 70%, Poliuretano 30%',
         codes: ['BGU-0016 a BGU-00110', 'BGU-0026 a BGU-00210'],
         colors: ['Amarillo', 'Blanco', 'Verde', 'Gris', 'Café'],
         sizes: ['XS (6)', 'S (7)', 'M (8)', 'L (9)', 'XL (10)'],
         packaging: 'Paquete 12 pares',
         masterBox: 'Caja máster 240 pares',
         applications: [
-          'Manipulaciones finas',
-          'Ensamblaje de piezas',
-          'Riesgos mecánicos',
-          'Trabajo de precisión'
-        ]
+          'Manipulaciones finas industriales',
+          'Ensamblaje de piezas electrónicas',
+          'Protección contra riesgos mecánicos',
+          'Trabajo de precisión en manufactura',
+          'Control de calidad',
+          'Industria automotriz'
+        ],
+        specifications: [
+          'Recubrimiento de poliuretano de alta calidad',
+          'Excelente agarre y adherencia',
+          'Resistente al desgaste',
+          'Lavable y reutilizable'
+        ],
+        certifications: ['Normas industriales', 'Calidad certificada']
       },
       {
         id: 'guantes-anticorte-nivel-5',
         name: 'Guantes Anticorte Nivel 5',
-        description: 'Máxima protección contra cortes para manejo de materiales filosos.',
+        description: 'Guantes de seguridad anticorte nivel 5 para manipulación de herramientas de corte, vidrios, láminas y cerámicas. Protección máxima contra materiales filosos con tecnología de fibra de acero.',
         category: 'guantes',
         subcategory: 'anticorte',
         image: '/images/cat-guantes-anticorte-nivel-5.webp',
         material: 'Polietileno 35%, Poliuretano 20%, Acero 15%, Nailon 13%, Vidrio 10%, Elastano 7%',
+        codes: ['BGU-0036 a BGU-00310'],
+        colors: ['Amarillo', 'Blanco', 'Verde', 'Gris', 'Café'],
+        sizes: ['XS (6)', 'S (7)', 'M (8)', 'L (9)', 'XL (10)'],
         packaging: 'Paquete 12 pares',
         masterBox: 'Caja máster 240 pares',
         applications: [
-          'Corte y manejo de vidrios',
-          'Manipulación de láminas',
-          'Trabajo con cerámicas',
-          'Materiales filosos'
+          'Manipulación de herramientas para corte',
+          'Trabajo con vidrios y cristales',
+          'Manejo de láminas metálicas',
+          'Cerámicas y materiales filosos',
+          'Industria del vidrio',
+          'Construcción y demolición'
         ],
-        certifications: ['Nivel 5 de corte', 'ANSI/ISEA 105']
+        specifications: [
+          'Nivel 5 de protección contra cortes',
+          'Fibra de acero integrada',
+          'Excelente flexibilidad',
+          'Resistente a perforaciones'
+        ],
+        certifications: ['Nivel 5 de corte', 'ANSI/ISEA 105', 'EN 388']
       },
       {
         id: 'guantes-pu-sin-recubrimiento-negro',
         name: 'Guantes PU sin Recubrimiento (Negros)',
-        description: 'Inspección de piezas delicadas con máxima sensibilidad táctil.',
+        description: 'Guantes de poliéster sin recubrimiento para manejo e inspección de piezas delicadas. Máxima sensibilidad táctil y protección contra rayaduras sin comprometer la destreza.',
         category: 'guantes',
         subcategory: 'pu-sin-recubrimiento',
         image: '/images/cat-guantes-pu-sin-recubrimiento-negro.webp',
         material: 'Poliéster 100%',
+        codes: ['BGU-0046 a BGU-00410'],
         colors: ['Negro'],
+        sizes: ['XS (6)', 'S (7)', 'M (8)', 'L (9)', 'XL (10)'],
         packaging: 'Paquete 12 pares',
         masterBox: 'Caja máster 240 pares',
         applications: [
-          'Inspección de piezas delicadas',
-          'Evita rayaduras y huellas digitales',
-          'Máxima sensibilidad',
-          'Control de calidad'
-        ]
+          'Manejo e inspección de piezas delicadas',
+          'Protección contra rayaduras',
+          'Máxima sensibilidad táctil',
+          'Control de calidad industrial',
+          'Industria electrónica',
+          'Manufactura de precisión'
+        ],
+        specifications: [
+          'Sin recubrimiento para máxima sensibilidad',
+          'Evita huellas digitales',
+          'Protección contra rayaduras',
+          'Excelente destreza'
+        ],
+        certifications: ['Calidad industrial', 'Normas de precisión']
       },
       {
         id: 'guantes-pu-sin-recubrimiento-blanco',
         name: 'Guantes PU sin Recubrimiento (Blancos)',
-        description: 'Versión blanca para ambientes de sala limpia y alta precisión.',
+        description: 'Guantes blancos de poliéster sin recubrimiento para ambientes de sala limpia y alta precisión. Ideales para industria farmacéutica, electrónica y ambientes estériles.',
         category: 'guantes',
         subcategory: 'pu-sin-recubrimiento',
         image: '/images/cat-guantes-pu-sin-recubrimiento-blanco.webp',
         material: 'Poliéster 100%',
+        codes: ['BGU-0056 a BGU-00510'],
         colors: ['Blanco'],
+        sizes: ['XS (6)', 'S (7)', 'M (8)', 'L (9)', 'XL (10)'],
         packaging: 'Paquete 12 pares',
         masterBox: 'Caja máster 240 pares',
         applications: [
-          'Sala limpia',
+          'Sala limpia y ambientes estériles',
           'Industria farmacéutica',
           'Electrónica de precisión',
-          'Ambiente estéril'
-        ]
+          'Laboratorios especializados',
+          'Manufactura de semiconductores',
+          'Industria alimentaria'
+        ],
+        specifications: [
+          'Color blanco para ambientes limpios',
+          'Sin recubrimiento para máxima sensibilidad',
+          'Evita contaminación',
+          'Cumple estándares de sala limpia'
+        ],
+        certifications: ['Sala limpia', 'Normas farmacéuticas', 'ISO 14644']
       },
       {
         id: 'guantes-algodon-45-50g',
         name: 'Guantes de Algodón 45-50g',
-        description: 'Protección básica para tareas generales en industria.',
+        description: 'Guantes de algodón de peso ligero para protección básica en tareas generales industriales. Ideales para almacenes, talleres y uso doméstico con máxima comodidad.',
         category: 'guantes',
         subcategory: 'algodon',
         image: '/images/cat-guantes-algodon-45-50g.webp',
-        material: 'Poliéster 70% + Algodón 30%',
-        codes: ['BGU-00550'],
+        material: 'Poliéster 70%, Algodón 30%',
+        codes: ['BGU-00650'],
         colors: ['Blanco'],
         sizes: ['XS/S'],
         weight: '45-50g',
@@ -126,18 +168,27 @@ export const productCategories: ProductCategory[] = [
         applications: [
           'Tareas generales en industria',
           'Trabajo en almacenes',
-          'Talleres',
-          'Uso doméstico'
-        ]
+          'Talleres mecánicos',
+          'Uso doméstico',
+          'Mantenimiento básico',
+          'Jardinería'
+        ],
+        specifications: [
+          'Peso ligero 45-50g',
+          'Composición mixta algodón-poliéster',
+          'Comodidad y transpirabilidad',
+          'Lavable y reutilizable'
+        ],
+        certifications: ['Calidad industrial', 'Normas básicas']
       },
       {
         id: 'guantes-algodon-65g',
         name: 'Guantes de Algodón 65g',
-        description: 'Mayor durabilidad para trabajos de manipulación intensiva.',
+        description: 'Guantes de algodón de peso intermedio para tareas generales con mayor durabilidad. Perfectos para manipulación intensiva y trabajos de construcción ligera.',
         category: 'guantes',
         subcategory: 'algodon',
         image: '/images/cat-guantes-algodon-65g.webp',
-        material: 'Poliéster 70% + Algodón 30%',
+        material: 'Poliéster 70%, Algodón 30%',
         codes: ['BGU-00665'],
         colors: ['Gris'],
         sizes: ['M/G'],
@@ -145,20 +196,29 @@ export const productCategories: ProductCategory[] = [
         packaging: 'Paquete 12 pares',
         masterBox: 'Caja máster 360 pares',
         applications: [
-          'Carga y descarga',
-          'Manipulación de materiales',
+          'Carga y descarga de materiales',
+          'Manipulación de materiales pesados',
           'Construcción ligera',
-          'Mantenimiento'
-        ]
+          'Mantenimiento industrial',
+          'Trabajos de jardinería',
+          'Almacenamiento'
+        ],
+        specifications: [
+          'Peso intermedio 65g',
+          'Mayor durabilidad',
+          'Resistente al desgaste',
+          'Excelente agarre'
+        ],
+        certifications: ['Calidad industrial', 'Resistencia certificada']
       },
       {
         id: 'guantes-algodon-70g',
         name: 'Guantes de Algodón 70g',
-        description: 'Máxima resistencia en algodón para trabajos pesados.',
+        description: 'Guantes de algodón de máximo peso para trabajos pesados industriales. Máxima resistencia frente al desgaste, ideales para uso industrial continuo y construcción.',
         category: 'guantes',
         subcategory: 'algodon',
         image: '/images/cat-guantes-algodon-70g.webp',
-        material: 'Poliéster 70% + Algodón 30%',
+        material: 'Poliéster 70%, Algodón 30%',
         codes: ['BGU-00670'],
         colors: ['Gris'],
         sizes: ['M/G'],
@@ -166,16 +226,25 @@ export const productCategories: ProductCategory[] = [
         packaging: 'Paquete 12 pares',
         masterBox: 'Caja máster 360 pares',
         applications: [
-          'Trabajo pesado',
-          'Construcción',
+          'Trabajo pesado industrial',
+          'Construcción y demolición',
           'Soldadura ligera',
-          'Mantenimiento industrial'
-        ]
+          'Mantenimiento industrial pesado',
+          'Minería',
+          'Industria metalúrgica'
+        ],
+        specifications: [
+          'Peso máximo 70g',
+          'Máxima resistencia al desgaste',
+          'Diseñado para uso continuo',
+          'Protección superior'
+        ],
+        certifications: ['Calidad industrial pesada', 'Resistencia máxima']
       },
       {
         id: 'guantes-antiestaticos-completo',
         name: 'Guante Antiestático Completo',
-        description: 'Protección total contra descargas electrostáticas.',
+        description: 'Guantes antiestáticos con recubrimiento completo para protección ESD total. Evita descargas electrostáticas y contaminación en componentes electrónicos sensibles.',
         category: 'guantes',
         subcategory: 'antiestatico',
         image: '/images/cat-guantes-antiestatico-completo.webp',
@@ -187,48 +256,77 @@ export const productCategories: ProductCategory[] = [
         masterBox: 'Caja máster 240 pares',
         applications: [
           'Evita contaminación de componentes electrónicos',
-          'Ensamble de PCB',
+          'Ensamble de PCB y circuitos',
           'Manufactura electrónica',
-          'Equipos sensibles'
-        ]
+          'Equipos sensibles ESD',
+          'Industria de semiconductores',
+          'Laboratorios electrónicos'
+        ],
+        specifications: [
+          'Recubrimiento antiestático completo',
+          'Protección ESD certificada',
+          'Conductividad controlada',
+          'Evita descargas electrostáticas'
+        ],
+        certifications: ['ESD S20.20', 'IEC 61340', 'ANSI/ESD S20.20']
       },
       {
         id: 'guantes-antiestaticos-punta',
         name: 'Guante Antiestático Punta',
-        description: 'Precisión máxima para manipulación delicada en electrónica.',
+        description: 'Guantes antiestáticos con recubrimiento solo en la punta para manipulación delicada de electrónicos. Máxima sensibilidad y control con protección ESD en las yemas.',
         category: 'guantes',
         subcategory: 'antiestatico',
         image: '/images/cat-guantes-antiestatico-punta.webp',
         material: 'Poliéster 75%, Poliuretano 10%, Carbono 15%',
+        codes: ['BGU-0086 a BGU-00810'],
+        colors: ['Amarillo', 'Blanco', 'Verde', 'Gris', 'Café'],
+        sizes: ['XS (6)', 'S (7)', 'M (8)', 'L (9)', 'XL (10)'],
         packaging: 'Paquete 12 pares',
         masterBox: 'Caja máster 240 pares',
         applications: [
           'Manipulación delicada en electrónica',
-          'Componentes sensibles',
-          'Reparación electrónica',
-          'Testing de precisión'
-        ]
+          'Componentes sensibles ESD',
+          'Reparación electrónica de precisión',
+          'Testing de componentes',
+          'Microelectrónica',
+          'Laboratorios de investigación'
+        ],
+        specifications: [
+          'Recubrimiento antiestático solo en punta',
+          'Máxima sensibilidad táctil',
+          'Protección ESD en yemas',
+          'Control de precisión superior'
+        ],
+        certifications: ['ESD S20.20', 'IEC 61340', 'Precisión certificada']
       },
       {
         id: 'guantes-nitrilo-desechables',
         name: 'Guantes Nitrilo Desechables',
-        description: 'Protección higiénica con alta precisión y resistencia química.',
+        description: 'Guantes desechables de nitrilo para protección frente a bacterias, virus y químicos. Máxima comodidad y precisión en tareas delicadas con resistencia química superior.',
         category: 'guantes',
         subcategory: 'desechable',
         image: '/images/cat-guantes-nitrilo-desechable.webp',
         material: 'NBR 100%',
         codes: ['BGU-0087 (S)', 'BGU-0088 (M)', 'BGU-0089 (L)'],
         colors: ['Azul'],
-        sizes: ['S', 'M', 'L'],
+        sizes: ['S (7)', 'M (8)', 'L (9)'],
         packaging: 'Caja 100 pares',
         masterBox: 'Caja máster 1000 pares',
         applications: [
           'Protección frente a bacterias y virus',
-          'Sustancias nocivas',
-          'Alta precisión',
-          'Laboratorio'
+          'Manejo de sustancias químicas',
+          'Alta precisión en tareas delicadas',
+          'Laboratorios y análisis',
+          'Industria alimentaria',
+          'Sector médico y farmacéutico'
         ],
-        certifications: ['Libre de látex', 'Resistente a químicos']
+        specifications: [
+          'Material NBR 100%',
+          'Libre de látex',
+          'Resistente a químicos',
+          'Excelente sensibilidad táctil'
+        ],
+        certifications: ['Libre de látex', 'Resistente a químicos', 'FDA aprobado']
       }
     ]
   },
