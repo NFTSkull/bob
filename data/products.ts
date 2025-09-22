@@ -459,22 +459,6 @@ export const productCategories: ProductCategory[] = [
         ]
       },
       {
-        id: 'pelicula-biodegradable',
-        name: 'Película Biodegradable',
-        description: 'Alternativa ecológica para empaque sostenible.',
-        category: 'empaque-consumibles',
-        subcategory: 'film',
-        image: '/images/cat-pelicula-biodegradable.webp',
-        packaging: 'Paquete 6 pz',
-        applications: [
-          'Empaque ecológico',
-          'Industria alimentaria',
-          'Productos orgánicos',
-          'Cumplimiento ambiental'
-        ],
-        certifications: ['Biodegradable', 'Compostable']
-      },
-      {
         id: 'polifoam',
         name: 'Polifoam',
         description: 'Rollo de polifoam para acolchonamiento y protección.',
