@@ -1,7 +1,12 @@
+'use client';
+
 import { productCategories } from '@/data/products';
 import CategoryAccordion from '@/components/CategoryAccordion';
+import { useCategoryNavigation } from '@/hooks/useCategoryNavigation';
 
 export default function Home() {
+  const { isCategoryOpen, toggleCategory, navigateToCategory } = useCategoryNavigation();
+
   return (
     <div className="min-h-screen bg-primary">
       {/* Executive Header */}
@@ -98,28 +103,33 @@ export default function Home() {
             {productCategories.map((category) => (
               <div
                 key={category.id}
-                className="group bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 hover:border-accent/50 transition-all duration-300 hover:scale-105 cursor-pointer"
+                onClick={() => navigateToCategory(category.id)}
+                className="group bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 hover:border-accent/50 transition-all duration-300 hover:scale-105 cursor-pointer animate-fade-in-up"
+                style={{
+                  animationDelay: `${productCategories.indexOf(category) * 100}ms`,
+                  animationFillMode: 'both'
+                }}
               >
-                <div className="flex items-center justify-center w-16 h-16 bg-accent/10 rounded-xl mb-6 group-hover:bg-accent/20 transition-colors">
+                <div className="flex items-center justify-center w-16 h-16 bg-accent/10 rounded-xl mb-6 group-hover:bg-accent/20 transition-all duration-300 group-hover:scale-110">
                   <svg
-                    className="w-8 h-8 text-accent"
+                    className="w-8 h-8 text-accent group-hover:text-accent-dark transition-colors duration-300"
                     fill="currentColor"
                     viewBox="0 0 24 24"
                   >
                     <path d={category.icon} />
                   </svg>
                 </div>
-                <h3 className="text-xl font-bold text-white mb-3 group-hover:text-accent transition-colors">
+                <h3 className="text-xl font-bold text-white mb-3 group-hover:text-accent transition-colors duration-300">
                   {category.name}
                 </h3>
                 <p className="text-gray-300 mb-4 text-sm leading-relaxed">
                   {category.description}
                 </p>
                 <div className="flex items-center justify-between">
-                  <span className="text-accent font-semibold text-sm">
+                  <span className="text-accent font-semibold text-sm group-hover:text-accent-dark transition-colors duration-300">
                     {category.products.length} productos
                   </span>
-                  <div className="text-accent group-hover:translate-x-1 transition-transform">
+                  <div className="text-accent group-hover:translate-x-1 group-hover:text-accent-dark transition-all duration-300">
                     <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                     </svg>
@@ -148,11 +158,21 @@ export default function Home() {
           </div>
 
           <div className="space-y-8">
-            {productCategories.map((category) => (
-              <CategoryAccordion
+            {productCategories.map((category, index) => (
+              <div
                 key={category.id}
-                category={category}
-              />
+                className="animate-fade-in-up"
+                style={{
+                  animationDelay: `${index * 150}ms`,
+                  animationFillMode: 'both'
+                }}
+              >
+                <CategoryAccordion
+                  category={category}
+                  isOpen={isCategoryOpen(category.id)}
+                  onToggle={() => toggleCategory(category.id)}
+                />
+              </div>
             ))}
           </div>
         </div>
