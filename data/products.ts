@@ -338,43 +338,63 @@ export const productCategories: ProductCategory[] = [
     products: [
       {
         id: 'lentes-seguridad',
-        name: 'Lentes de Seguridad',
-        description: 'Protección ocular de alta resistencia con lentes de policarbonato.',
+        name: 'Lentes de Seguridad Industrial',
+        description: 'Protección ocular confiable en entornos de riesgo industrial. Fabricados en policarbonato de alta resistencia con diseño unitalla cómodo para máxima protección y visibilidad clara.',
         category: 'proteccion-visual-auditiva',
         subcategory: 'visual',
         image: '/images/cat-lentes-seguridad.webp',
-        material: 'Policarbonato',
+        material: 'Policarbonato de alta resistencia',
         codes: ['BLE-001'],
         colors: ['Transparente'],
         sizes: ['Unitalla'],
-        packaging: 'Caja 12 pz',
-        masterBox: 'Caja máster 300 pz',
+        packaging: 'Caja con 12 pz',
+        masterBox: 'Caja máster con 300 pz',
         applications: [
-          'Protección contra impactos',
-          'Soldadura',
-          'Esmerilado',
-          'Trabajo con químicos'
+          'Protección contra partículas sólidas',
+          'Salpicaduras ligeras en áreas industriales',
+          'Trabajo en entornos de riesgo',
+          'Manufactura y producción industrial',
+          'Construcción y demolición',
+          'Laboratorios y áreas químicas'
         ],
-        certifications: ['ANSI Z87.1', 'Resistencia al impacto']
+        specifications: [
+          'Lentes de policarbonato de alta resistencia',
+          'Diseño unitalla cómodo y ergonómico',
+          'Protección contra impactos y partículas',
+          'Visibilidad clara sin distorsión',
+          'Resistente a rayaduras'
+        ],
+        certifications: ['ANSI Z87.1', 'Resistencia al impacto', 'Normas industriales']
       },
       {
         id: 'tapones-auditivos',
-        name: 'Tapones Auditivos con Cordón',
-        description: 'Protección auditiva desechable con cordón de seguridad.',
+        name: 'Tapones Auditivos con Cordón Desechables',
+        description: 'Protección auditiva ligera y desechable elaborada en espuma de poliuretano con cordón azul para mayor practicidad. Combina comodidad y practicidad en entornos de alto ruido.',
         category: 'proteccion-visual-auditiva',
         subcategory: 'auditiva',
         image: '/images/cat-tapones-auditivos.webp',
-        material: 'Plástico',
+        material: 'Espuma de poliuretano',
         codes: ['BTA-001'],
-        colors: ['Naranja'],
+        colors: ['Naranja (cordón azul)'],
         sizes: ['Unitalla'],
+        packaging: 'Paquete con 200 pares',
+        masterBox: 'Caja máster con 2000 pares',
         applications: [
-          'Protección auditiva desechable',
-          'Ambientes ruidosos',
-          'Manufactura',
-          'Construcción'
+          'Reducción de ruidos en ambientes industriales',
+          'Protección auditiva en entornos de alto ruido',
+          'Manufactura y producción industrial',
+          'Construcción y demolición',
+          'Aeropuertos y talleres mecánicos',
+          'Eventos y conciertos'
         ],
-        specifications: ['Con cordón de seguridad', 'Desechable']
+        specifications: [
+          'Espuma de poliuretano de alta calidad',
+          'Cordón azul para mayor practicidad',
+          'Diseño desechable e higiénico',
+          'Ajuste perfecto y cómodo',
+          'Fácil inserción y extracción'
+        ],
+        certifications: ['Normas de protección auditiva', 'Materiales seguros', 'Desechable certificado']
       }
     ]
   },
