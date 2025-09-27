@@ -10,8 +10,8 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-white">
       {/* Executive Header */}
-      <header className="relative bg-gradient-to-br from-blue-600 via-blue-700 to-blue-800 border-b border-yellow-500/20">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_40%,rgba(245,158,11,0.1),transparent_50%)]" />
+      <header className="relative bg-white border-b border-blue-600/20 shadow-lg">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_40%,rgba(37,99,235,0.05),transparent_50%)]" />
         <div className="relative container mx-auto px-4 py-6">
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-4">
@@ -22,10 +22,10 @@ export default function Home() {
               />
             </div>
             <nav className="hidden lg:flex items-center space-x-8">
-              <a href="#productos" className="text-white hover:text-yellow-300 transition-colors font-medium">Productos</a>
-              <a href="#servicios" className="text-white hover:text-yellow-300 transition-colors font-medium">Servicios</a>
-              <a href="#contacto" className="text-white hover:text-yellow-300 transition-colors font-medium">Contacto</a>
-              <button className="bg-yellow-500 text-white font-semibold px-6 py-2.5 rounded-lg hover:bg-yellow-600 transition-colors shadow-lg hover:shadow-xl">
+              <a href="#productos" className="text-black hover:text-yellow-600 transition-colors font-medium">Productos</a>
+              <a href="#servicios" className="text-black hover:text-yellow-600 transition-colors font-medium">Servicios</a>
+              <a href="#contacto" className="text-black hover:text-yellow-600 transition-colors font-medium">Contacto</a>
+              <button className="bg-yellow-500 text-black font-semibold px-6 py-2.5 rounded-lg hover:bg-yellow-600 transition-colors shadow-lg hover:shadow-xl">
                 Cotizar Ahora
               </button>
             </nav>
@@ -34,35 +34,34 @@ export default function Home() {
       </header>
 
       {/* Executive Hero Section */}
-      <section className="relative py-24 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-blue-600 via-blue-700 to-blue-800" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_60%,rgba(245,158,11,0.15),transparent_70%)]" />
+      <section className="relative py-24 overflow-hidden bg-white">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_60%,rgba(37,99,235,0.05),transparent_70%)]" />
         <div className="relative container mx-auto px-4 text-center">
           <div className="max-w-4xl mx-auto">
-            <div className="inline-flex items-center bg-yellow-500/10 text-yellow-300 font-semibold px-4 py-2 rounded-full text-sm mb-8 border border-yellow-500/20">
+            <div className="inline-flex items-center bg-yellow-500/10 text-yellow-700 font-semibold px-4 py-2 rounded-full text-sm mb-8 border border-yellow-500/20">
               <div className="w-2 h-2 bg-yellow-500 rounded-full mr-2 animate-pulse" />
               Proveedor Certificado de EPP Industrial
             </div>
 
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-8 leading-tight">
+            <h1 className="text-5xl md:text-7xl font-bold text-gray-900 mb-8 leading-tight">
               Seguridad Industrial
-              <span className="block bg-gradient-to-r from-yellow-500 to-yellow-600 bg-clip-text text-transparent">
+              <span className="block bg-gradient-to-r from-blue-600 to-blue-800 bg-clip-text text-transparent">
                 de Clase Mundial
               </span>
             </h1>
 
-            <p className="text-xl md:text-2xl text-gray-300 mb-12 leading-relaxed max-w-3xl mx-auto">
+            <p className="text-xl md:text-2xl text-gray-700 mb-12 leading-relaxed max-w-3xl mx-auto">
               Soluciones integrales de protección personal para empresas líderes.
-              <span className="block mt-2 text-accent font-medium">
+              <span className="block mt-2 text-yellow-600 font-medium">
                 Cumplimiento normativo • Disponibilidad garantizada • Entregas puntuales
               </span>
             </p>
 
             <div className="flex flex-col sm:flex-row gap-6 justify-center mb-16">
-              <button className="bg-accent text-primary font-bold px-8 py-4 rounded-xl hover:bg-accent-dark transition-all duration-300 shadow-lg hover:shadow-2xl hover:scale-105">
+              <button className="bg-blue-600 text-white font-bold px-8 py-4 rounded-xl hover:bg-blue-700 transition-all duration-300 shadow-lg hover:shadow-2xl hover:scale-105">
                 Explorar Catálogo Completo
               </button>
-              <button className="bg-white/10 backdrop-blur-sm text-white border border-white/20 font-semibold px-8 py-4 rounded-xl hover:bg-white/20 transition-all duration-300">
+              <button className="bg-yellow-500 text-black font-semibold px-8 py-4 rounded-xl hover:bg-yellow-600 transition-all duration-300 border border-yellow-600">
                 Solicitar Asesoría Técnica
               </button>
             </div>
@@ -76,8 +75,8 @@ export default function Home() {
                 { value: '500+', label: 'Empresas Atendidas' }
               ].map((stat, index) => (
                 <div key={index} className="text-center">
-                  <div className="text-3xl font-bold text-accent mb-2">{stat.value}</div>
-                  <div className="text-sm text-gray-400 uppercase tracking-wide">{stat.label}</div>
+                  <div className="text-3xl font-bold text-blue-600 mb-2">{stat.value}</div>
+                  <div className="text-sm text-gray-600 uppercase tracking-wide">{stat.label}</div>
                 </div>
               ))}
             </div>
@@ -228,7 +227,7 @@ export default function Home() {
       </section>
 
       {/* Executive Footer */}
-      <footer className="bg-blue-800 border-t border-yellow-500/20 py-12">
+      <footer className="bg-white border-t border-blue-600/20 py-12">
         <div className="container mx-auto px-4">
           <div className="flex flex-col md:flex-row items-center justify-between">
             <div className="flex items-center space-x-4 mb-6 md:mb-0">
@@ -238,13 +237,13 @@ export default function Home() {
                 className="h-10 w-auto"
               />
               <div>
-                <div className="text-white font-bold">BobCoperation</div>
-                <div className="text-sm text-gray-400">Seguridad Industrial Premium</div>
+                <div className="text-gray-900 font-bold">BobCoperation</div>
+                <div className="text-sm text-gray-600">Seguridad Industrial Premium</div>
               </div>
             </div>
 
             <div className="text-center md:text-right">
-              <p className="text-gray-400 text-sm">
+              <p className="text-gray-600 text-sm">
                 © 2024 BobCoperation. Todos los derechos reservados.
               </p>
               <p className="text-gray-500 text-xs mt-1">
