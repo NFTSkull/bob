@@ -8,39 +8,40 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        // Paleta principal BOB (azules del logo)
-        brand: {
-          50: 'var(--brand-50)',
-          100: 'var(--brand-100)',
-          200: 'var(--brand-200)',
-          300: 'var(--brand-300)',
-          400: 'var(--brand-400)',
-          500: 'var(--brand-500)',
-          600: 'var(--brand-600)',
-          700: 'var(--brand-700)',
-          800: 'var(--brand-800)',
-          900: 'var(--brand-900)',
+        // Paleta principal: Azul, Blanco y Amarillo
+        blue: {
+          50: 'var(--blue-50)',
+          100: 'var(--blue-100)',
+          200: 'var(--blue-200)',
+          300: 'var(--blue-300)',
+          400: 'var(--blue-400)',
+          500: 'var(--blue-500)',
+          600: 'var(--blue-600)',
+          700: 'var(--blue-700)',
+          800: 'var(--blue-800)',
+          900: 'var(--blue-900)',
         },
-        // Acento verde del logo
-        accent: {
-          100: 'var(--accent-100)',
-          300: 'var(--accent-300)',
-          500: 'var(--accent-500)',
-          700: 'var(--accent-700)',
+        // Amarillo para detalles
+        yellow: {
+          100: 'var(--yellow-100)',
+          300: 'var(--yellow-300)',
+          500: 'var(--yellow-500)',
+          600: 'var(--yellow-600)',
+          700: 'var(--yellow-700)',
         },
-        // Colores de apoyo
-        cyan: {
-          500: 'var(--cyan-500)',
-        },
-        // Escala de grises institucional
-        neutral: {
-          50: 'var(--neutral-50)',
-          100: 'var(--neutral-100)',
-          200: 'var(--neutral-200)',
-          400: 'var(--neutral-400)',
-          600: 'var(--neutral-600)',
-          800: 'var(--neutral-800)',
-          900: 'var(--neutral-900)',
+        // Blanco y grises
+        white: 'var(--white)',
+        gray: {
+          50: 'var(--gray-50)',
+          100: 'var(--gray-100)',
+          200: 'var(--gray-200)',
+          300: 'var(--gray-300)',
+          400: 'var(--gray-400)',
+          500: 'var(--gray-500)',
+          600: 'var(--gray-600)',
+          700: 'var(--gray-700)',
+          800: 'var(--gray-800)',
+          900: 'var(--gray-900)',
         },
         // Tokens semánticos
         bg: 'var(--bg)',
@@ -49,12 +50,12 @@ module.exports = {
         muted: 'var(--muted)',
         border: 'var(--border)',
         borderHover: 'var(--border-hover)',
-        // Colores de estado B2B
+        // Colores de estado
         status: {
           success: '#10b981',
-          warning: 'var(--accent-500)',
+          warning: 'var(--yellow-500)',
           error: '#ef4444',
-          info: 'var(--brand-500)',
+          info: 'var(--blue-500)',
         },
       },
       ringColor: {

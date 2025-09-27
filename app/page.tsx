@@ -8,10 +8,10 @@ export default function Home() {
   const { isCategoryOpen, toggleCategory, navigateToCategory } = useCategoryNavigation();
 
   return (
-    <div className="min-h-screen bg-primary">
+    <div className="min-h-screen bg-white">
       {/* Executive Header */}
-      <header className="relative bg-gradient-to-br from-primary via-primary-light to-primary border-b border-accent/20">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_40%,rgba(255,193,7,0.1),transparent_50%)]" />
+      <header className="relative bg-gradient-to-br from-blue-600 via-blue-700 to-blue-800 border-b border-yellow-500/20">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_40%,rgba(245,158,11,0.1),transparent_50%)]" />
         <div className="relative container mx-auto px-4 py-6">
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-4">
@@ -22,10 +22,10 @@ export default function Home() {
               />
             </div>
             <nav className="hidden lg:flex items-center space-x-8">
-              <a href="#productos" className="text-white hover:text-accent transition-colors font-medium">Productos</a>
-              <a href="#servicios" className="text-white hover:text-accent transition-colors font-medium">Servicios</a>
-              <a href="#contacto" className="text-white hover:text-accent transition-colors font-medium">Contacto</a>
-              <button className="bg-accent text-primary font-semibold px-6 py-2.5 rounded-lg hover:bg-accent-dark transition-colors shadow-lg hover:shadow-xl">
+              <a href="#productos" className="text-white hover:text-yellow-300 transition-colors font-medium">Productos</a>
+              <a href="#servicios" className="text-white hover:text-yellow-300 transition-colors font-medium">Servicios</a>
+              <a href="#contacto" className="text-white hover:text-yellow-300 transition-colors font-medium">Contacto</a>
+              <button className="bg-yellow-500 text-white font-semibold px-6 py-2.5 rounded-lg hover:bg-yellow-600 transition-colors shadow-lg hover:shadow-xl">
                 Cotizar Ahora
               </button>
             </nav>
@@ -35,18 +35,18 @@ export default function Home() {
 
       {/* Executive Hero Section */}
       <section className="relative py-24 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-primary via-primary-light to-primary" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_60%,rgba(255,193,7,0.15),transparent_70%)]" />
+        <div className="absolute inset-0 bg-gradient-to-br from-blue-600 via-blue-700 to-blue-800" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_60%,rgba(245,158,11,0.15),transparent_70%)]" />
         <div className="relative container mx-auto px-4 text-center">
           <div className="max-w-4xl mx-auto">
-            <div className="inline-flex items-center bg-accent/10 text-accent font-semibold px-4 py-2 rounded-full text-sm mb-8 border border-accent/20">
-              <div className="w-2 h-2 bg-accent rounded-full mr-2 animate-pulse" />
+            <div className="inline-flex items-center bg-yellow-500/10 text-yellow-300 font-semibold px-4 py-2 rounded-full text-sm mb-8 border border-yellow-500/20">
+              <div className="w-2 h-2 bg-yellow-500 rounded-full mr-2 animate-pulse" />
               Proveedor Certificado de EPP Industrial
             </div>
 
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-8 leading-tight">
               Seguridad Industrial
-              <span className="block bg-gradient-to-r from-accent to-accent-dark bg-clip-text text-transparent">
+              <span className="block bg-gradient-to-r from-yellow-500 to-yellow-600 bg-clip-text text-transparent">
                 de Clase Mundial
               </span>
             </h1>
@@ -228,7 +228,7 @@ export default function Home() {
       </section>
 
       {/* Executive Footer */}
-      <footer className="bg-primary border-t border-accent/20 py-12">
+      <footer className="bg-blue-800 border-t border-yellow-500/20 py-12">
         <div className="container mx-auto px-4">
           <div className="flex flex-col md:flex-row items-center justify-between">
             <div className="flex items-center space-x-4 mb-6 md:mb-0">

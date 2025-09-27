@@ -6,68 +6,72 @@
 
 @layer base {
   :root {
-    /* Primarios (azules del logo BOB) */
-    --brand-50: #e9f4ff;
-    --brand-100: #cfe9ff;
-    --brand-200: #a4d3ff;
-    --brand-300: #75bbff;
-    --brand-400: #4aa0f0;   /* azul claro del trazo */
-    --brand-500: #1f84d6;   /* azul principal */
-    --brand-600: #0e5aa7;   /* azul oscuro (letras) */
-    --brand-700: #0c4a86;
-    --brand-800: #093864;
-    --brand-900: #062642;
+    /* Paleta principal: Azul, Blanco y Amarillo */
+    --blue-50: #eff6ff;
+    --blue-100: #dbeafe;
+    --blue-200: #bfdbfe;
+    --blue-300: #93c5fd;
+    --blue-400: #60a5fa;
+    --blue-500: #3b82f6;   /* azul principal */
+    --blue-600: #2563eb;   /* azul oscuro */
+    --blue-700: #1d4ed8;
+    --blue-800: #1e40af;
+    --blue-900: #1e3a8a;
 
-    /* Acento (verde del remate) */
-    --accent-100: #e8f7d1;
-    --accent-300: #c6ee88;
-    --accent-500: #9bd018;  /* verde acento */
-    --accent-700: #6a9c0f;
+    /* Amarillo para detalles */
+    --yellow-100: #fef3c7;
+    --yellow-300: #fcd34d;
+    --yellow-500: #f59e0b;  /* amarillo principal */
+    --yellow-600: #d97706;
+    --yellow-700: #b45309;
 
-    /* Apoyo */
-    --cyan-500: #16b1c9;    /* toque cian si se requiere */
-    --neutral-50: #ffffff;
-    --neutral-100: #f6f7f8;
-    --neutral-200: #eceff1;
-    --neutral-400: #9aa3ad;
-    --neutral-600: #4b5563;
-    --neutral-800: #1f2937;
-    --neutral-900: #0b0b0b;
+    /* Blanco y grises */
+    --white: #ffffff;
+    --gray-50: #f9fafb;
+    --gray-100: #f3f4f6;
+    --gray-200: #e5e7eb;
+    --gray-300: #d1d5db;
+    --gray-400: #9ca3af;
+    --gray-500: #6b7280;
+    --gray-600: #4b5563;
+    --gray-700: #374151;
+    --gray-800: #1f2937;
+    --gray-900: #111827;
 
     /* Tokens semánticos - Modo claro */
-    --bg: var(--neutral-50);
-    --surface: var(--neutral-100);
-    --text: var(--neutral-900);
-    --muted: var(--neutral-600);
-    --primary: var(--brand-600);
-    --primary-contrast: #ffffff;
-    --primary-hover: var(--brand-700);
-    --accent: var(--accent-500);
-    --accent-hover: var(--accent-700);
-    --ring: var(--brand-400);
-    --link: var(--brand-600);
-    --link-hover: var(--brand-700);
-    --border: var(--neutral-200);
-    --border-hover: var(--brand-400);
+    --bg: var(--white);
+    --surface: var(--gray-50);
+    --text: var(--gray-900);
+    --muted: var(--gray-600);
+    --primary: var(--blue-600);
+    --primary-contrast: var(--white);
+    --primary-hover: var(--blue-700);
+    --accent: var(--yellow-500);
+    --accent-hover: var(--yellow-600);
+    --ring: var(--blue-400);
+    --link: var(--blue-600);
+    --link-hover: var(--blue-700);
+    --border: var(--gray-200);
+    --border-hover: var(--blue-400);
   }
 
   /* Modo oscuro */
   @media (prefers-color-scheme: dark) {
     :root {
-      --bg: #0b0b0b;
-      --surface: #121518;
-      --text: #f8fafc;
-      --muted: #cfd5dd;
-      --primary: var(--brand-400);
-      --primary-contrast: #0b0b0b;
-      --primary-hover: var(--brand-300);
-      --accent: var(--accent-300);
-      --accent-hover: var(--accent-500);
-      --ring: var(--brand-300);
-      --link: var(--brand-300);
-      --link-hover: var(--brand-200);
-      --border: var(--neutral-800);
-      --border-hover: var(--brand-500);
+      --bg: var(--gray-900);
+      --surface: var(--gray-800);
+      --text: var(--white);
+      --muted: var(--gray-400);
+      --primary: var(--blue-500);
+      --primary-contrast: var(--white);
+      --primary-hover: var(--blue-400);
+      --accent: var(--yellow-400);
+      --accent-hover: var(--yellow-500);
+      --ring: var(--blue-400);
+      --link: var(--blue-400);
+      --link-hover: var(--blue-300);
+      --border: var(--gray-700);
+      --border-hover: var(--blue-500);
     }
   }
 
@@ -86,57 +90,57 @@
 }
 
 @layer components {
-  /* Botones institucionales BOB */
+  /* Botones institucionales */
   .btn-primary {
     @apply bg-[var(--primary)] text-[var(--primary-contrast)] font-bold py-4 px-8 rounded-xl hover:bg-[var(--primary-hover)] transition-all duration-300 shadow-lg hover:shadow-2xl hover:scale-105 focus:outline-none focus:ring-2 focus:ring-[var(--ring)] focus:ring-offset-2;
   }
 
   .btn-secondary {
-    @apply bg-surface backdrop-blur-sm text-text border border-border font-semibold py-4 px-8 rounded-xl hover:bg-[var(--brand-50)] hover:border-[var(--border-hover)] transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-[var(--ring)] focus:ring-offset-2;
+    @apply bg-surface backdrop-blur-sm text-text border border-border font-semibold py-4 px-8 rounded-xl hover:bg-blue-50 hover:border-[var(--border-hover)] transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-[var(--ring)] focus:ring-offset-2;
   }
 
   .btn-accent {
     @apply bg-[var(--accent)] text-white font-bold py-4 px-8 rounded-xl hover:bg-[var(--accent-hover)] transition-all duration-300 shadow-lg hover:shadow-2xl hover:scale-105 focus:outline-none focus:ring-2 focus:ring-[var(--accent)] focus:ring-offset-2;
   }
 
-  /* Tarjetas institucionales BOB */
+  /* Tarjetas institucionales */
   .card {
     @apply bg-surface backdrop-blur-sm border border-border rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300;
   }
 
   .card-hover {
-    @apply hover:scale-[1.02] hover:border-[var(--border-hover)] cursor-pointer hover:bg-[var(--brand-50)];
+    @apply hover:scale-[1.02] hover:border-[var(--border-hover)] cursor-pointer hover:bg-blue-50;
   }
 
-  /* Tarjetas de productos BOB */
+  /* Tarjetas de productos */
   .product-card {
-    @apply group bg-surface backdrop-blur-sm border border-border rounded-xl overflow-hidden hover:border-[var(--border-hover)] transition-all duration-300 hover:scale-[1.02] hover:shadow-xl hover:shadow-brand-200/20;
+    @apply group bg-surface backdrop-blur-sm border border-border rounded-xl overflow-hidden hover:border-[var(--border-hover)] transition-all duration-300 hover:scale-[1.02] hover:shadow-xl hover:shadow-blue-200/20;
   }
 
-  /* Gradientes institucionales BOB */
+  /* Gradientes institucionales */
   .gradient-radial {
-    background: radial-gradient(circle, rgba(155, 208, 24, 0.15) 0%, transparent 70%);
+    background: radial-gradient(circle, rgba(245, 158, 11, 0.15) 0%, transparent 70%);
   }
 
   .gradient-professional {
-    background: linear-gradient(135deg, var(--brand-600) 0%, var(--brand-700) 50%, var(--brand-800) 100%);
+    background: linear-gradient(135deg, var(--blue-600) 0%, var(--blue-700) 50%, var(--blue-800) 100%);
   }
 
   .gradient-safety {
-    background: linear-gradient(135deg, var(--brand-500) 0%, var(--brand-600) 50%, var(--brand-700) 100%);
+    background: linear-gradient(135deg, var(--blue-500) 0%, var(--blue-600) 50%, var(--blue-700) 100%);
   }
 
   .gradient-institutional {
-    background: linear-gradient(90deg, rgba(155, 208, 24, 0.1) 0%, transparent 50%, rgba(155, 208, 24, 0.1) 100%);
+    background: linear-gradient(90deg, rgba(245, 158, 11, 0.1) 0%, transparent 50%, rgba(245, 158, 11, 0.1) 100%);
   }
 
-  /* Utilidades de texto BOB */
+  /* Utilidades de texto */
   .text-gradient {
-    @apply bg-gradient-to-r from-brand-500 to-brand-700 bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-blue-500 to-blue-700 bg-clip-text text-transparent;
   }
 
   .text-accent-gradient {
-    @apply bg-gradient-to-r from-accent-500 to-accent-700 bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-yellow-500 to-yellow-700 bg-clip-text text-transparent;
   }
 
   .line-clamp-2 {
@@ -269,7 +273,7 @@
     @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
   }
 
-  /* Headers institucionales BOB */
+  /* Headers institucionales */
   .executive-header {
     @apply text-4xl md:text-5xl lg:text-6xl font-bold text-text leading-tight;
   }
@@ -278,21 +282,21 @@
     @apply text-xl md:text-2xl text-muted leading-relaxed;
   }
 
-  /* Indicadores de estado BOB */
+  /* Indicadores de estado */
   .status-indicator {
-    @apply inline-flex items-center bg-accent-100 text-accent-700 font-semibold px-4 py-2 rounded-full text-sm border border-accent-300;
+    @apply inline-flex items-center bg-yellow-100 text-yellow-700 font-semibold px-4 py-2 rounded-full text-sm border border-yellow-300;
   }
 
   .status-safety {
-    @apply inline-flex items-center bg-brand-100 text-brand-700 font-semibold px-4 py-2 rounded-full text-sm border border-brand-300;
+    @apply inline-flex items-center bg-blue-100 text-blue-700 font-semibold px-4 py-2 rounded-full text-sm border border-blue-300;
   }
 
-  /* Sombras institucionales BOB */
+  /* Sombras institucionales */
   .shadow-professional {
-    box-shadow: 0 25px 50px -12px rgba(14, 90, 167, 0.15);
+    box-shadow: 0 25px 50px -12px rgba(37, 99, 235, 0.15);
   }
 
   .shadow-executive {
-    box-shadow: 0 20px 25px -5px rgba(155, 208, 24, 0.1), 0 10px 10px -5px rgba(155, 208, 24, 0.04);
+    box-shadow: 0 20px 25px -5px rgba(245, 158, 11, 0.1), 0 10px 10px -5px rgba(245, 158, 11, 0.04);
   }
 }
