@@ -1,0 +1,27 @@
+<svg width="400" height="300" viewBox="0 0 400 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Fondo -->
+  <rect width="400" height="300" fill="#f8fafc"/>
+  
+  <!-- Marcador base aceite -->
+  <rect x="50" y="80" width="20" height="120" fill="#2563eb" rx="2"/>
+  <rect x="45" y="200" width="30" height="8" fill="#1d4ed8" rx="1"/>
+  <rect x="48" y="75" width="14" height="10" fill="#f59e0b" rx="1"/>
+  
+  <!-- Marcador base alcohol -->
+  <rect x="150" y="80" width="20" height="120" fill="#dc2626" rx="2"/>
+  <rect x="145" y="200" width="30" height="8" fill="#b91c1c" rx="1"/>
+  <rect x="148" y="75" width="14" height="10" fill="#f59e0b" rx="1"/>
+  
+  <!-- Texto -->
+  <text x="200" y="50" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#374151" text-anchor="middle">Marcadores Industriales</text>
+  <text x="200" y="80" font-family="Arial, sans-serif" font-size="16" fill="#6b7280" text-anchor="middle">Base Aceite y Alcohol</text>
+  
+  <!-- Detalles -->
+  <text x="200" y="120" font-family="Arial, sans-serif" font-size="14" fill="#374151" text-anchor="middle">Marcado permanente</text>
+  <text x="200" y="140" font-family="Arial, sans-serif" font-size="14" fill="#374151" text-anchor="middle">Múltiples colores</text>
+  <text x="200" y="160" font-family="Arial, sans-serif" font-size="14" fill="#374151" text-anchor="middle">Aplicación industrial</text>
+  
+  <!-- Códigos -->
+  <text x="200" y="200" font-family="Arial, sans-serif" font-size="12" fill="#6b7280" text-anchor="middle">BMA-001 a BMA-015</text>
+  <text x="200" y="220" font-family="Arial, sans-serif" font-size="12" fill="#6b7280" text-anchor="middle">Caja 12 pz / Caja 144 pz</text>
+</svg>
