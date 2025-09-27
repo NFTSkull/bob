@@ -1,13 +1,10 @@
-<svg width="200" height="56" viewBox="0 0 200 56" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <!-- Fondo azul -->
-  <rect width="200" height="56" fill="#2563eb" rx="8"/>
+<svg viewBox="0 0 420 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Texto principal BOB -->
+  <text x="20" y="80" font-family="Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif" font-size="48" font-weight="bold" fill="#0B0B0B">BOB</text>
   
-  <!-- Texto BOB -->
-  <text x="20" y="38" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="white">BOB</text>
+  <!-- Línea institucional amarilla -->
+  <rect x="20" y="90" width="120" height="4" fill="#FFC107" rx="2"/>
   
-  <!-- Línea amarilla decorativa -->
-  <rect x="20" y="42" width="60" height="3" fill="#f59e0b" rx="1.5"/>
-  
-  <!-- Texto secundario -->
-  <text x="20" y="52" font-family="Arial, sans-serif" font-size="8" fill="#fbbf24">COOPERATION</text>
+  <!-- Texto secundario COOPERATION -->
+  <text x="20" y="110" font-family="Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif" font-size="16" font-weight="500" fill="#FFC107">COOPERATION</text>
 </svg>
