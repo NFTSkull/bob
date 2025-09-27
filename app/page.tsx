@@ -15,13 +15,11 @@ export default function Home() {
         <div className="relative container mx-auto px-4 py-6">
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-4">
-              <div className="w-14 h-14 bg-gradient-to-br from-accent to-accent-dark rounded-xl flex items-center justify-center shadow-lg">
-                <span className="text-2xl font-bold text-primary tracking-tight">BC</span>
-              </div>
-              <div>
-                <h1 className="text-2xl font-bold text-white tracking-tight">BobCoperation</h1>
-                <p className="text-sm text-accent font-medium">Equipos de Protección Personal</p>
-              </div>
+              <img 
+                src="/header.png" 
+                alt="BobCoperation Logo" 
+                className="h-14 w-auto"
+              />
             </div>
             <nav className="hidden lg:flex items-center space-x-8">
               <a href="#productos" className="text-white hover:text-accent transition-colors font-medium">Productos</a>
@@ -234,9 +232,11 @@ export default function Home() {
         <div className="container mx-auto px-4">
           <div className="flex flex-col md:flex-row items-center justify-between">
             <div className="flex items-center space-x-4 mb-6 md:mb-0">
-              <div className="w-10 h-10 bg-gradient-to-br from-accent to-accent-dark rounded-lg flex items-center justify-center">
-                <span className="text-lg font-bold text-primary">BC</span>
-              </div>
+              <img 
+                src="/header.png" 
+                alt="BobCoperation Logo" 
+                className="h-10 w-auto"
+              />
               <div>
                 <div className="text-white font-bold">BobCoperation</div>
                 <div className="text-sm text-gray-400">Seguridad Industrial Premium</div>

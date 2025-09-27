@@ -8,48 +8,57 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        // Negro industrial - fondos principales
-        primary: {
-          DEFAULT: '#0A0A0A',
-          light: '#1A1A1A',
-          dark: '#000000',
+        // Paleta principal BOB (azules del logo)
+        brand: {
+          50: 'var(--brand-50)',
+          100: 'var(--brand-100)',
+          200: 'var(--brand-200)',
+          300: 'var(--brand-300)',
+          400: 'var(--brand-400)',
+          500: 'var(--brand-500)',
+          600: 'var(--brand-600)',
+          700: 'var(--brand-700)',
+          800: 'var(--brand-800)',
+          900: 'var(--brand-900)',
         },
-        // Amarillo seguridad - acentos y resaltados
+        // Acento verde del logo
         accent: {
-          DEFAULT: '#FFD700',
-          light: '#FFED4A',
-          dark: '#F1C40F',
-          muted: '#FFF8DC',
+          100: 'var(--accent-100)',
+          300: 'var(--accent-300)',
+          500: 'var(--accent-500)',
+          700: 'var(--accent-700)',
+        },
+        // Colores de apoyo
+        cyan: {
+          500: 'var(--cyan-500)',
         },
         // Escala de grises institucional
-        gray: {
-          50: '#FAFAFA',    // Blanco suave
-          100: '#F5F5F5',   // Gris muy claro
-          200: '#EEEEEE',   // Gris claro - fondos secundarios
-          300: '#E0E0E0',   // Gris claro medio
-          400: '#BDBDBD',   // Gris medio
-          500: '#9E9E9E',   // Gris neutro
-          600: '#757575',   // Gris oscuro medio
-          700: '#616161',   // Gris oscuro
-          800: '#424242',   // Gris carbón
-          850: '#2A2A2A',   // Gris carbón oscuro
-          900: '#212121',   // Gris muy oscuro
-          950: '#0F0F0F',   // Negro carbón
+        neutral: {
+          50: 'var(--neutral-50)',
+          100: 'var(--neutral-100)',
+          200: 'var(--neutral-200)',
+          400: 'var(--neutral-400)',
+          600: 'var(--neutral-600)',
+          800: 'var(--neutral-800)',
+          900: 'var(--neutral-900)',
         },
-        // Colores de texto optimizados
-        text: {
-          primary: '#FFFFFF',
-          secondary: '#F5F5F5',
-          muted: '#BDBDBD',
-          dark: '#0A0A0A',
-        },
-        // Colores de estado industrial
+        // Tokens semánticos
+        bg: 'var(--bg)',
+        surface: 'var(--surface)',
+        text: 'var(--text)',
+        muted: 'var(--muted)',
+        border: 'var(--border)',
+        borderHover: 'var(--border-hover)',
+        // Colores de estado B2B
         status: {
-          success: '#4CAF50',
-          warning: '#FFD700',
-          error: '#F44336',
-          info: '#2196F3',
+          success: '#10b981',
+          warning: 'var(--accent-500)',
+          error: '#ef4444',
+          info: 'var(--brand-500)',
         },
+      },
+      ringColor: {
+        DEFAULT: 'var(--ring)',
       },
       fontFamily: {
         sans: ['Inter', 'system-ui', 'sans-serif'],
