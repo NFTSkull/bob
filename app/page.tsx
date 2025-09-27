@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import { productCategories } from '@/data/products';
 import CategoryAccordion from '@/components/CategoryAccordion';
 import { useCategoryNavigation } from '@/hooks/useCategoryNavigation';
@@ -15,10 +16,13 @@ export default function Home() {
         <div className="relative container mx-auto px-4 py-6">
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-4">
-              <img 
-                src="/header.png" 
+              <Image 
+                src="/images/header.png" 
                 alt="BobCoperation Logo" 
+                width={200}
+                height={56}
                 className="h-14 w-auto"
+                priority
               />
             </div>
             <nav className="hidden lg:flex items-center space-x-8">
@@ -231,9 +235,11 @@ export default function Home() {
         <div className="container mx-auto px-4">
           <div className="flex flex-col md:flex-row items-center justify-between">
             <div className="flex items-center space-x-4 mb-6 md:mb-0">
-              <img 
-                src="/header.png" 
+              <Image 
+                src="/images/header.png" 
                 alt="BobCoperation Logo" 
+                width={200}
+                height={56}
                 className="h-10 w-auto"
               />
               <div>
