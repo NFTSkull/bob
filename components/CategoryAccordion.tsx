@@ -56,10 +56,7 @@ export default function CategoryAccordion({
               </svg>
             </div>
             <div>
-              <h3 className={cn(
-                "text-2xl font-bold mb-2 transition-colors duration-300",
-                isOpen ? "text-accent-dark" : "text-text-dark group-hover:text-accent"
-              )}>
+              <h3 className="text-2xl font-bold mb-2 text-black">
                 {category.name}
               </h3>
               <p className="text-gray-700 text-base leading-relaxed max-w-2xl">
