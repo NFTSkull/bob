@@ -1,23 +1,29 @@
+import Image from "next/image";
+import logo from "@/public/header.png";
+
 export function HeaderLogo() {
   return (
-    <img
-      src="/images/header.svg"
+    <Image
+      src={logo}
       alt="BobCoperation Logo"
+      width={200}
+      height={56}
+      priority
+      sizes="(max-width: 768px) 140px, 200px"
       className="h-14 w-auto"
-      decoding="async"
-      loading="eager"
     />
   );
 }
 
 export function FooterLogo() {
   return (
-    <img
-      src="/images/header.svg"
+    <Image
+      src={logo}
       alt="BobCoperation Logo"
+      width={200}
+      height={56}
+      sizes="(max-width: 768px) 100px, 200px"
       className="h-10 w-auto"
-      decoding="async"
-      loading="eager"
     />
   );
 }
