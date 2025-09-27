@@ -16,7 +16,7 @@ export default function Home() {
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-4">
               <img 
-                src="/header.png" 
+                src="/header.svg" 
                 alt="BobCoperation Logo" 
                 className="h-14 w-auto"
               />
@@ -232,7 +232,7 @@ export default function Home() {
           <div className="flex flex-col md:flex-row items-center justify-between">
             <div className="flex items-center space-x-4 mb-6 md:mb-0">
               <img 
-                src="/header.png" 
+                src="/header.svg" 
                 alt="BobCoperation Logo" 
                 className="h-10 w-auto"
               />
