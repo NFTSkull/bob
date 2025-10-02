@@ -33,7 +33,7 @@ export const productCategories: ProductCategory[] = [
     id: 'guantes',
     name: 'Guantes de Protección',
     description: 'Protección completa para las manos en entornos industriales exigentes',
-    icon: 'M12 2L13.41 4.17C13.78 4.9 14.6 5.33 15.41 5.17L17.5 4.67C18.3 4.5 19.1 5.3 18.92 6.1L18.42 8.19C18.26 9 18.69 9.82 19.42 10.19L21.5 11.17C22.3 11.5 22.3 12.5 21.5 12.83L19.42 13.81C18.69 14.18 18.26 15 18.42 15.81L18.92 17.9C19.1 18.7 18.3 19.5 17.5 19.33L15.41 18.83C14.6 18.67 13.78 19.1 13.41 19.83L12 22L10.59 19.83C10.22 19.1 9.4 18.67 8.59 18.83L6.5 19.33C5.7 19.5 4.9 18.7 5.08 17.9L5.58 15.81C5.74 15 5.31 14.18 4.58 13.81L2.5 12.83C1.7 12.5 1.7 11.5 2.5 11.17L4.58 10.19C5.31 9.82 5.74 9 5.58 8.19L5.08 6.1C4.9 5.3 5.7 4.5 6.5 4.67L8.59 5.17C9.4 5.33 10.22 4.9 10.59 4.17L12 2Z',
+    icon: 'M12 2C6.48 2 2 6.48 2 12S6.48 22 12 22 22 17.52 22 12 17.52 2 12 2ZM12 20C7.59 20 4 16.41 4 12S7.59 4 12 4 20 7.59 20 12 16.41 20 12 20ZM12 6C9.79 6 8 7.79 8 10H10C10 8.9 10.9 8 12 8S14 8.9 14 10H16C16 7.79 14.21 6 12 6ZM12 16C10.9 16 10 15.1 10 14H8C8 16.21 9.79 18 12 18S16 16.21 16 14H14C14 15.1 13.1 16 12 16ZM12 11C11.45 11 11 11.45 11 12V15C11 15.55 11.45 16 12 16S13 15.55 13 15V12C13 11.45 12.55 11 12 11Z',
     products: [
       {
         id: 'guantes-pu-recubiertos',
@@ -334,7 +334,7 @@ export const productCategories: ProductCategory[] = [
     id: 'proteccion-visual-auditiva',
     name: 'Protección Visual y Auditiva',
     description: 'Equipos especializados para proteger vista y oído en entornos industriales',
-    icon: 'M12 9C10.89 9 10 9.89 10 11S10.89 13 12 13 14 12.11 14 11 13.11 9 12 9M12 17C9.24 17 7 14.76 7 12S9.24 7 12 7 17 9.24 17 12 14.76 17 12 17M12 5C7.03 5 3 9.03 3 14H5C5 10.13 8.13 7 12 7S19 10.13 19 14H21C21 9.03 16.97 5 12 5Z',
+    icon: 'M12 2C13.1 2 14 2.9 14 4C14 5.1 13.1 6 12 6C10.9 6 10 5.1 10 4C10 2.9 10.9 2 12 2ZM21 9V7L15 5.5V6.5C15 7.33 14.33 8 13.5 8H10.5C9.67 8 9 7.33 9 6.5V5.5L3 7V9C3 9.55 3.45 10 4 10H5V20C5 20.55 5.45 21 6 21H8C8.55 21 9 20.55 9 20V10H15V20C15 20.55 15.45 21 16 21H18C18.55 21 19 20.55 19 20V10H20C20.55 10 21 9.55 21 9ZM7 12H17C17.55 12 18 12.45 18 13V17C18 17.55 17.55 18 17 18H7C6.45 18 6 17.55 6 17V13C6 12.45 6.45 12 7 12Z',
     products: [
       {
         id: 'lentes-seguridad',
@@ -480,7 +480,7 @@ export const productCategories: ProductCategory[] = [
     id: 'ergonomia-proteccion',
     name: 'Ergonomía y Protección',
     description: 'Equipos ergonómicos para prevenir lesiones y mejorar la comodidad laboral',
-    icon: 'M12 2C6.48 2 2 6.48 2 12S6.48 22 12 22 22 17.52 22 12 17.52 2 12 2Z',
+    icon: 'M12 2C6.48 2 2 6.48 2 12S6.48 22 12 22 22 17.52 22 12 17.52 2 12 2ZM12 20C7.59 20 4 16.41 4 12S7.59 4 12 4 20 7.59 20 12 16.41 20 12 20ZM12 6C9.79 6 8 7.79 8 10H10C10 8.9 10.9 8 12 8S14 8.9 14 10H16C16 7.79 14.21 6 12 6ZM12 16C10.9 16 10 15.1 10 14H8C8 16.21 9.79 18 12 18S16 16.21 16 14H14C14 15.1 13.1 16 12 16ZM12 11C11.45 11 11 11.45 11 12V15C11 15.55 11.45 16 12 16S13 15.55 13 15V12C13 11.45 12.55 11 12 11Z',
     products: [
       {
         id: 'faja-sacrolumbar',
