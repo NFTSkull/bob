@@ -142,11 +142,11 @@ export default function Home() {
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
               Catálogo Técnico Completo
             </h2>
-            <p className="text-xl text-gray-700 max-w-3xl mx-auto mb-8">
+            <p className="text-xl text-gray-800 max-w-3xl mx-auto mb-8 font-medium">
               Especificaciones técnicas detalladas para cada producto. Haga clic en cualquier categoría para expandir el catálogo completo.
             </p>
-            <div className="inline-flex items-center bg-yellow-500/10 text-yellow-700 font-semibold px-4 py-2 rounded-full text-sm border border-yellow-500/20">
-              <div className="w-2 h-2 bg-yellow-500 rounded-full mr-2 animate-pulse" />
+            <div className="inline-flex items-center bg-yellow-100 text-yellow-800 font-bold px-4 py-2 rounded-full text-sm border border-yellow-300 shadow-sm">
+              <div className="w-2 h-2 bg-yellow-600 rounded-full mr-2 animate-pulse" />
               Catálogo Interactivo • Especificaciones Completas
             </div>
           </div>
