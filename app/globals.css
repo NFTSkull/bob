@@ -215,7 +215,7 @@
   }
 
   .text-glow-subtle {
-    @apply transition-all duration-400 ease-out;
+    @apply transition-all duration-[400ms] ease-out;
   }
 
   .text-glow-subtle:hover {
@@ -235,7 +235,7 @@
   }
 
   .text-slide-reveal {
-    @apply transition-all duration-600 ease-out;
+    @apply transition-all duration-[600ms] ease-out;
     transform: translateY(0);
     opacity: 1;
   }
@@ -256,7 +256,7 @@
   }
 
   .paragraph-transition {
-    @apply transition-all duration-400 ease-out;
+    @apply transition-all duration-[400ms] ease-out;
   }
 
   .paragraph-transition:hover {
@@ -264,7 +264,7 @@
   }
 
   .link-transition-elegant {
-    @apply transition-all duration-300 ease-out relative;
+    @apply transition-all duration-[300ms] ease-out relative;
   }
 
   .link-transition-elegant::before {
