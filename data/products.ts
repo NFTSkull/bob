@@ -585,7 +585,7 @@ export const productCategories: ProductCategory[] = [
         description: 'Marcador permanente con tinta opaca base aceite.',
         category: 'marcadores-industriales',
         subcategory: 'permanente',
-        image: '/images/cat-marcador-base-aceite.webp',
+        image: '/images/marcador-base-aceite.png',
         codes: ['BMA-001 a BMA-011'],
         colors: ['Blanco', 'Negro', 'Rojo', 'Naranja', 'Rosa', 'Morado', 'Verde', 'Amarillo', 'Azul', 'Plata', 'Oro'],
         specifications: [
@@ -608,7 +608,7 @@ export const productCategories: ProductCategory[] = [
         description: 'Rotulador permanente tipo Sharpie con punta fina.',
         category: 'marcadores-industriales',
         subcategory: 'multiuso',
-        image: '/images/cat-marcador-base-alcohol.webp',
+        image: '/images/marcador-base-alcohol.png',
         codes: ['BMA-012 a BMA-015'],
         colors: ['Negro', 'Verde', 'Rojo', 'Azul'],
         specifications: [
