@@ -15,8 +15,8 @@ export default function DetailedProductCard({ product, className }: DetailedProd
       <div className="p-6 border-b border-gray-300/50">
         <div className="flex items-start justify-between mb-4">
           <div className="flex-1">
-            <h4 className="text-xl font-bold text-gray-900 mb-2">{product.name}</h4>
-            <p className="text-gray-800 text-sm leading-relaxed">{product.description}</p>
+            <h4 className="text-xl font-bold text-gray-900 mb-2 heading-transition">{product.name}</h4>
+            <p className="text-gray-800 text-sm leading-relaxed paragraph-transition">{product.description}</p>
           </div>
           {product.image && (
             <div className="w-20 h-20 bg-gray-100 rounded-lg flex items-center justify-center ml-4 overflow-hidden border border-gray-200">
@@ -42,7 +42,7 @@ export default function DetailedProductCard({ product, className }: DetailedProd
         {/* Material & Basic Info */}
         {(product.material || product.weight || product.thickness) && (
           <div>
-            <h5 className="text-gray-900 font-bold text-sm mb-3 uppercase tracking-wide">Especificaciones Técnicas</h5>
+            <h5 className="text-gray-900 font-bold text-sm mb-3 uppercase tracking-wide heading-transition">Especificaciones Técnicas</h5>
             <div className="grid grid-cols-1 gap-2 text-sm">
               {product.material && (
                 <div className="flex justify-between">
@@ -76,7 +76,7 @@ export default function DetailedProductCard({ product, className }: DetailedProd
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
           {product.codes && product.codes.length > 0 && (
             <div>
-              <h5 className="text-gray-900 font-bold text-sm mb-2 uppercase tracking-wide">Códigos</h5>
+              <h5 className="text-gray-900 font-bold text-sm mb-2 uppercase tracking-wide heading-transition">Códigos</h5>
               <div className="flex flex-wrap gap-1">
                 {product.codes.map((code, index) => (
                   <span key={index} className="bg-gray-300 text-gray-900 px-2 py-1 rounded text-xs font-mono font-semibold border border-gray-400">
@@ -89,7 +89,7 @@ export default function DetailedProductCard({ product, className }: DetailedProd
 
           {product.colors && product.colors.length > 0 && (
             <div>
-              <h5 className="text-gray-900 font-bold text-sm mb-2 uppercase tracking-wide">Colores</h5>
+              <h5 className="text-gray-900 font-bold text-sm mb-2 uppercase tracking-wide heading-transition">Colores</h5>
               <div className="flex flex-wrap gap-1">
                 {product.colors.map((color, index) => (
                   <span key={index} className="bg-yellow-100 text-yellow-800 px-2 py-1 rounded text-xs font-semibold border border-yellow-200">
@@ -104,7 +104,7 @@ export default function DetailedProductCard({ product, className }: DetailedProd
         {/* Sizes */}
         {product.sizes && product.sizes.length > 0 && (
           <div>
-            <h5 className="text-gray-900 font-bold text-sm mb-2 uppercase tracking-wide">Tallas Disponibles</h5>
+            <h5 className="text-gray-900 font-bold text-sm mb-2 uppercase tracking-wide heading-transition">Tallas Disponibles</h5>
             <div className="flex flex-wrap gap-1">
               {product.sizes.map((size, index) => (
                 <span key={index} className="bg-gray-300 text-gray-900 px-2 py-1 rounded text-xs font-semibold border border-gray-400">
@@ -118,7 +118,7 @@ export default function DetailedProductCard({ product, className }: DetailedProd
         {/* Packaging */}
         {(product.packaging || product.masterBox) && (
           <div>
-            <h5 className="text-gray-900 font-bold text-sm mb-2 uppercase tracking-wide">Empaque</h5>
+            <h5 className="text-gray-900 font-bold text-sm mb-2 uppercase tracking-wide heading-transition">Empaque</h5>
             <div className="space-y-1 text-sm">
               {product.packaging && (
                 <div className="flex justify-between">
@@ -139,7 +139,7 @@ export default function DetailedProductCard({ product, className }: DetailedProd
         {/* Applications */}
         {product.applications && product.applications.length > 0 && (
           <div>
-            <h5 className="text-gray-900 font-bold text-sm mb-2 uppercase tracking-wide">Aplicaciones</h5>
+            <h5 className="text-gray-900 font-bold text-sm mb-2 uppercase tracking-wide heading-transition">Aplicaciones</h5>
             <ul className="text-sm text-gray-800 space-y-1">
               {product.applications.map((app, index) => (
                 <li key={index} className="flex items-start">
@@ -154,7 +154,7 @@ export default function DetailedProductCard({ product, className }: DetailedProd
         {/* Specifications */}
         {product.specifications && product.specifications.length > 0 && (
           <div>
-            <h5 className="text-gray-900 font-bold text-sm mb-2 uppercase tracking-wide">Características</h5>
+            <h5 className="text-gray-900 font-bold text-sm mb-2 uppercase tracking-wide heading-transition">Características</h5>
             <ul className="text-sm text-gray-800 space-y-1">
               {product.specifications.map((spec, index) => (
                 <li key={index} className="flex items-start">
@@ -169,7 +169,7 @@ export default function DetailedProductCard({ product, className }: DetailedProd
         {/* Certifications */}
         {product.certifications && product.certifications.length > 0 && (
           <div>
-            <h5 className="text-gray-900 font-bold text-sm mb-2 uppercase tracking-wide">Certificaciones</h5>
+            <h5 className="text-gray-900 font-bold text-sm mb-2 uppercase tracking-wide heading-transition">Certificaciones</h5>
             <div className="flex flex-wrap gap-2">
               {product.certifications.map((cert, index) => (
                 <span key={index} className="bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-xs font-bold border border-yellow-300">

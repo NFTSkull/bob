@@ -85,10 +85,10 @@ export default function Home() {
       <section id="productos" className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 heading-transition">
               Catálogo de Productos Profesionales
             </h2>
-            <p className="text-xl text-gray-700 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-700 max-w-3xl mx-auto paragraph-transition">
               Equipos de protección personal certificados para las industrias más exigentes
             </p>
           </div>
@@ -113,10 +113,10 @@ export default function Home() {
                     <path d={category.icon} />
                   </svg>
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors duration-300">
+                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 text-hover-gentle text-scale-gentle">
                   {category.name}
                 </h3>
-                <p className="text-gray-600 mb-4 text-sm leading-relaxed">
+                <p className="text-gray-600 mb-4 text-sm leading-relaxed text-hover-gentle">
                   {category.description}
                 </p>
                 <div className="flex items-center justify-between">
@@ -139,10 +139,10 @@ export default function Home() {
       <section id="catalogo-detallado" className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 heading-transition">
               Catálogo Técnico Completo
             </h2>
-            <p className="text-xl text-gray-800 max-w-3xl mx-auto mb-8 font-medium">
+            <p className="text-xl text-gray-800 max-w-3xl mx-auto mb-8 font-medium paragraph-transition">
               Especificaciones técnicas detalladas para cada producto. Haga clic en cualquier categoría para expandir el catálogo completo.
             </p>
             <div className="inline-flex items-center bg-yellow-100 text-yellow-800 font-bold px-4 py-2 rounded-full text-sm border border-yellow-300 shadow-sm">

@@ -186,6 +186,122 @@
     animation: slideInRight 0.7s ease-out;
   }
 
+  /* Subtle Text Transitions */
+  .text-transition-subtle {
+    @apply transition-all duration-500 ease-out;
+  }
+
+  .text-hover-gentle {
+    @apply transition-colors duration-300 ease-in-out;
+  }
+
+  .text-hover-underline {
+    @apply relative transition-all duration-300 ease-out;
+  }
+
+  .text-hover-underline::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background: currentColor;
+    transition: width 0.4s ease-out;
+  }
+
+  .text-hover-underline:hover::after {
+    width: 100%;
+  }
+
+  .text-glow-subtle {
+    @apply transition-all duration-400 ease-out;
+  }
+
+  .text-glow-subtle:hover {
+    text-shadow: 0 0 8px rgba(59, 130, 246, 0.3);
+  }
+
+  .text-scale-gentle {
+    @apply transition-transform duration-300 ease-out;
+  }
+
+  .text-scale-gentle:hover {
+    transform: scale(1.02);
+  }
+
+  .text-fade-reveal {
+    @apply transition-opacity duration-500 ease-out;
+  }
+
+  .text-slide-reveal {
+    @apply transition-all duration-600 ease-out;
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  .text-slide-reveal-hidden {
+    transform: translateY(10px);
+    opacity: 0;
+  }
+
+  /* Professional Typography Transitions */
+  .heading-transition {
+    @apply transition-all duration-500 ease-out;
+  }
+
+  .heading-transition:hover {
+    transform: translateY(-1px);
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  .paragraph-transition {
+    @apply transition-all duration-400 ease-out;
+  }
+
+  .paragraph-transition:hover {
+    transform: translateX(2px);
+  }
+
+  .link-transition-elegant {
+    @apply transition-all duration-300 ease-out relative;
+  }
+
+  .link-transition-elegant::before {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, currentColor, transparent);
+    transition: width 0.5s ease-out;
+  }
+
+  .link-transition-elegant:hover::before {
+    width: 100%;
+  }
+
+  /* Subtle Animation Delays */
+  .delay-100 { animation-delay: 100ms; }
+  .delay-200 { animation-delay: 200ms; }
+  .delay-300 { animation-delay: 300ms; }
+  .delay-400 { animation-delay: 400ms; }
+  .delay-500 { animation-delay: 500ms; }
+
+  /* Text Reveal Animations */
+  .text-reveal-fade {
+    animation: textRevealFade 0.8s ease-out forwards;
+  }
+
+  .text-reveal-slide {
+    animation: textRevealSlide 0.7s ease-out forwards;
+  }
+
+  .text-reveal-scale {
+    animation: textRevealScale 0.6s ease-out forwards;
+  }
+
   @keyframes fadeIn {
     from { opacity: 0; }
     to { opacity: 1; }
@@ -261,6 +377,69 @@
     to {
       opacity: 1;
       transform: translateX(0);
+    }
+  }
+
+  /* New Text Animation Keyframes */
+  @keyframes textRevealFade {
+    0% {
+      opacity: 0;
+      transform: translateY(8px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes textRevealSlide {
+    0% {
+      opacity: 0;
+      transform: translateX(-10px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes textRevealScale {
+    0% {
+      opacity: 0;
+      transform: scale(0.98);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  @keyframes gentleFloat {
+    0%, 100% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-2px);
+    }
+  }
+
+  @keyframes textGlow {
+    0%, 100% {
+      text-shadow: 0 0 0px rgba(59, 130, 246, 0);
+    }
+    50% {
+      text-shadow: 0 0 12px rgba(59, 130, 246, 0.2);
+    }
+  }
+
+  @keyframes underlineExpand {
+    0% {
+      width: 0%;
+      left: 50%;
+    }
+    100% {
+      width: 100%;
+      left: 0%;
     }
   }
 

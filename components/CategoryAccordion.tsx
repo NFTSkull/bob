@@ -56,15 +56,15 @@ export default function CategoryAccordion({
               </svg>
             </div>
             <div>
-              <h3 className="text-2xl font-bold mb-2 text-gray-900">
+              <h3 className="text-2xl font-bold mb-2 text-gray-900 heading-transition">
                 {category.name}
               </h3>
-              <p className="text-gray-800 text-base leading-relaxed max-w-2xl">
+              <p className="text-gray-800 text-base leading-relaxed max-w-2xl paragraph-transition">
                 {category.description}
               </p>
               <div className="mt-3 flex items-center space-x-4">
                 <span className={cn(
-                  "font-semibold text-sm transition-colors duration-300",
+                  "font-semibold text-sm text-hover-gentle",
                   isOpen ? "text-yellow-700" : "text-yellow-600"
                 )}>
                   {category.products.length} productos disponibles
@@ -73,7 +73,7 @@ export default function CategoryAccordion({
                   "h-4 w-px transition-colors duration-300",
                   isOpen ? "bg-yellow-700/50" : "bg-yellow-600/50"
                 )} />
-                <span className="text-gray-700 text-sm font-medium">
+                <span className="text-gray-700 text-sm font-medium text-hover-gentle">
                   Especificaciones técnicas completas
                 </span>
               </div>
@@ -88,7 +88,7 @@ export default function CategoryAccordion({
               )}>
                 {isOpen ? 'Ocultar' : 'Ver'} Productos
               </div>
-              <div className="text-gray-700 text-sm font-medium">
+              <div className="text-gray-700 text-sm font-medium text-hover-gentle">
                 {isOpen ? 'Contraer lista' : 'Expandir catálogo'}
               </div>
             </div>
@@ -115,12 +115,12 @@ export default function CategoryAccordion({
           <div className="mb-6">
             <div className="flex items-center justify-center space-x-4 mb-4">
               <div className="h-px bg-gradient-to-r from-transparent via-gray-400 to-transparent flex-1" />
-              <span className="text-gray-800 font-bold text-sm uppercase tracking-wider px-4">
+              <span className="text-gray-800 font-bold text-sm uppercase tracking-wider px-4 heading-transition">
                 Catálogo Completo
               </span>
               <div className="h-px bg-gradient-to-r from-transparent via-gray-400 to-transparent flex-1" />
             </div>
-            <p className="text-center text-gray-700 text-sm font-medium">
+            <p className="text-center text-gray-700 text-sm font-medium paragraph-transition">
               Especificaciones técnicas detalladas para cada producto
             </p>
           </div>
