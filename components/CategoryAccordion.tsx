@@ -41,23 +41,22 @@ export default function CategoryAccordion({
           {/* Left side - Icon and content */}
           <div className="flex items-start sm:items-center space-x-3 sm:space-x-4 lg:space-x-6">
             <div className={cn(
-              "flex items-center justify-center rounded-xl transition-all duration-300 flex-shrink-0",
-              "w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16", // Responsive icon size
+              "flex items-center justify-center rounded-xl transition-all duration-300 flex-shrink-0 overflow-hidden",
+              "w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16", // Responsive image size
               isOpen 
                 ? "bg-yellow-200 scale-110 shadow-md" 
                 : "bg-yellow-100 group-hover:bg-yellow-200 shadow-sm"
             )}>
-              <svg
+              <img
+                src={category.image}
+                alt={`${category.name} - ${category.description}`}
                 className={cn(
-                  "transition-colors duration-300",
-                  "w-6 h-6 sm:w-7 sm:h-7 lg:w-8 lg:h-8", // Responsive icon size
-                  isOpen ? "text-yellow-800" : "text-yellow-700"
+                  "transition-all duration-300 object-cover",
+                  "w-full h-full rounded-xl",
+                  isOpen ? "scale-110" : "scale-100"
                 )}
-                fill="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path d={category.icon} />
-              </svg>
+                loading="lazy"
+              />
             </div>
             
             <div className="flex-1 min-w-0">
