@@ -71,8 +71,8 @@ export default function ContactForm() {
         <p className="text-gray-600 mb-6">
           Gracias por contactarnos. Nuestro equipo se pondrá en contacto contigo en las próximas 24 horas.
         </p>
-        <div className="bg-blue-50 border border-blue-200 rounded-lg p-4">
-          <p className="text-blue-800 text-sm">
+        <div className="bg-bob-blue-50 border border-bob-blue-200 rounded-lg p-4">
+          <p className="text-bob-blue-800 text-sm">
             <strong>Próximos pasos:</strong> Revisaremos tu solicitud y te enviaremos una cotización personalizada.
           </p>
         </div>
@@ -103,7 +103,7 @@ export default function ContactForm() {
               value={formData.nombre}
               onChange={handleChange}
               required
-              className="form-smooth w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500 transition-colors"
+              className="form-smooth w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-bob-blue-500 focus:border-bob-blue-500 transition-colors"
               placeholder="Tu nombre completo"
             />
           </div>
@@ -119,7 +119,7 @@ export default function ContactForm() {
               value={formData.empresa}
               onChange={handleChange}
               required
-              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500 transition-colors"
+              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-bob-blue-500 focus:border-bob-blue-500 transition-colors"
               placeholder="Nombre de tu empresa"
             />
           </div>
@@ -138,7 +138,7 @@ export default function ContactForm() {
               value={formData.email}
               onChange={handleChange}
               required
-              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500 transition-colors"
+              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-bob-blue-500 focus:border-bob-blue-500 transition-colors"
               placeholder="tu@empresa.com"
             />
           </div>
@@ -154,7 +154,7 @@ export default function ContactForm() {
               value={formData.telefono}
               onChange={handleChange}
               required
-              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500 transition-colors"
+              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-bob-blue-500 focus:border-bob-blue-500 transition-colors"
               placeholder="+52 81 1234 5678"
             />
           </div>
@@ -172,7 +172,7 @@ export default function ContactForm() {
               value={formData.productos}
               onChange={handleChange}
               required
-              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500 transition-colors"
+              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-bob-blue-500 focus:border-bob-blue-500 transition-colors"
             >
               <option value="">Selecciona una categoría</option>
               <option value="guantes">Guantes de Seguridad</option>
@@ -197,7 +197,7 @@ export default function ContactForm() {
               name="cantidad"
               value={formData.cantidad}
               onChange={handleChange}
-              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500 transition-colors"
+              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-bob-blue-500 focus:border-bob-blue-500 transition-colors"
             >
               <option value="">Selecciona un rango</option>
               <option value="1-50">1 - 50 unidades</option>
@@ -230,7 +230,7 @@ export default function ContactForm() {
           <button
             type="submit"
             disabled={isSubmitting}
-            className="w-full bg-yellow-500 text-white font-bold py-4 px-6 rounded-lg hover:bg-yellow-600 transition-colors text-lg shadow-lg hover:shadow-xl disabled:opacity-50 disabled:cursor-not-allowed"
+            className="w-full bg-bob-blue-500 text-white font-bold py-4 px-6 rounded-lg hover:bg-bob-green-500 transition-colors text-lg shadow-lg hover:shadow-xl disabled:opacity-50 disabled:cursor-not-allowed"
           >
             {isSubmitting ? (
               <div className="flex items-center justify-center">
@@ -258,7 +258,7 @@ export default function ContactForm() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-2xl mx-auto">
               <a
                 href="mailto:ventas@bobsolution.com"
-                className="group flex items-center justify-center px-6 py-4 bg-gradient-to-r from-blue-600 to-blue-700 text-white rounded-xl hover:from-blue-700 hover:to-blue-800 transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105"
+                className="group flex items-center justify-center px-6 py-4 bg-gradient-to-r from-bob-blue-500 to-bob-blue-600 text-white rounded-xl hover:from-bob-blue-600 hover:to-bob-blue-700 transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105"
               >
                 <div className="flex items-center">
                   <div className="w-10 h-10 bg-white/20 rounded-lg flex items-center justify-center mr-4 group-hover:bg-white/30 transition-colors">
@@ -274,7 +274,7 @@ export default function ContactForm() {
               </a>
               <a
                 href="tel:+528125090913"
-                className="group flex items-center justify-center px-6 py-4 bg-gradient-to-r from-green-600 to-green-700 text-white rounded-xl hover:from-green-700 hover:to-green-800 transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105"
+                className="group flex items-center justify-center px-6 py-4 bg-gradient-to-r from-bob-green-500 to-bob-green-600 text-white rounded-xl hover:from-bob-green-600 hover:to-bob-green-700 transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105"
               >
                 <div className="flex items-center">
                   <div className="w-10 h-10 bg-white/20 rounded-lg flex items-center justify-center mr-4 group-hover:bg-white/30 transition-colors">
@@ -289,8 +289,8 @@ export default function ContactForm() {
                 </div>
               </a>
             </div>
-            <div className="mt-6 p-4 bg-blue-50 border border-blue-200 rounded-lg">
-              <p className="text-blue-800 text-sm font-medium">
+            <div className="mt-6 p-4 bg-bob-blue-50 border border-bob-blue-200 rounded-lg">
+              <p className="text-bob-blue-800 text-sm font-medium">
                 <span className="font-bold">Horario de Atención:</span> Lunes a Viernes 8:00 AM - 6:00 PM
               </p>
             </div>

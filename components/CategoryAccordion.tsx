@@ -44,8 +44,8 @@ export default function CategoryAccordion({
               "flex items-center justify-center rounded-xl transition-all duration-300 flex-shrink-0 overflow-hidden",
               "w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16", // Responsive image size
               isOpen 
-                ? "bg-yellow-200 scale-110 shadow-md" 
-                : "bg-yellow-100 group-hover:bg-yellow-200 shadow-sm"
+                ? "bg-bob-green-100 scale-110 shadow-md" 
+                : "bg-bob-green-50 group-hover:bg-bob-green-100 shadow-sm"
             )}>
               <img
                 src={category.image}
@@ -71,13 +71,13 @@ export default function CategoryAccordion({
               <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4">
                 <span className={cn(
                   "font-semibold text-xs sm:text-sm text-hover-gentle",
-                  isOpen ? "text-yellow-700" : "text-yellow-600"
+                  isOpen ? "text-bob-green-600" : "text-bob-green-500"
                 )}>
                   {category.products.length} productos disponibles
                 </span>
                 <div className={cn(
                   "hidden sm:block h-4 w-px transition-colors duration-300",
-                  isOpen ? "bg-yellow-700/50" : "bg-yellow-600/50"
+                  isOpen ? "bg-bob-green-600/50" : "bg-bob-green-500/50"
                 )} />
                 <span className="text-gray-700 text-xs sm:text-sm font-medium text-hover-gentle">
                   Especificaciones técnicas completas
@@ -91,7 +91,7 @@ export default function CategoryAccordion({
             <div className="text-left sm:text-right">
               <div className={cn(
                 "font-bold text-sm sm:text-base lg:text-lg transition-colors duration-300",
-                isOpen ? "text-yellow-700" : "text-yellow-600"
+                isOpen ? "text-bob-green-600" : "text-bob-green-500"
               )}>
                 {isOpen ? 'Ocultar' : 'Ver'} Productos
               </div>
@@ -103,8 +103,8 @@ export default function CategoryAccordion({
               "transition-all duration-500 flex-shrink-0",
               "ml-2 sm:ml-0", // Margin adjustment for mobile
               isOpen 
-                ? "rotate-180 text-yellow-700 scale-110" 
-                : "rotate-0 text-yellow-600 hover:scale-110"
+                ? "rotate-180 text-bob-green-600 scale-110" 
+                : "rotate-0 text-bob-green-500 hover:scale-110"
             )}>
               <svg className="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />

@@ -6,53 +6,58 @@
 
 @layer base {
   :root {
-    /* Paleta principal: Azul, Blanco y Amarillo */
-    --blue-50: #eff6ff;
-    --blue-100: #dbeafe;
-    --blue-200: #bfdbfe;
-    --blue-300: #93c5fd;
-    --blue-400: #60a5fa;
-    --blue-500: #3b82f6;   /* azul principal */
-    --blue-600: #2563eb;   /* azul oscuro */
-    --blue-700: #1d4ed8;
-    --blue-800: #1e40af;
-    --blue-900: #1e3a8a;
+    /* Paleta Corporativa Bob Coperation */
+    /* Azul principal: #2E6CE6 */
+    --bob-blue-primary: #2E6CE6;
+    --bob-blue-hover: #1e5bd6;
+    --bob-blue-light: #f0f4ff;
+    
+    /* Verde acento: #A3D63F */
+    --bob-green-accent: #A3D63F;
+    --bob-green-hover: #8bc334;
+    --bob-green-light: #f7fdf2;
+    
+    /* Gris neutro: #707070 */
+    --bob-gray-neutral: #707070;
+    --bob-gray-hover: #5a5a5a;
+    --bob-gray-light: #f8f8f8;
+    
+    /* Blanco puro: #FFFFFF */
+    --white: #FFFFFF;
 
-    /* Amarillo para detalles */
-    --yellow-100: #fef3c7;
-    --yellow-300: #fcd34d;
-    --yellow-500: #f59e0b;  /* amarillo principal */
-    --yellow-600: #d97706;
-    --yellow-700: #b45309;
-
-    /* Blanco y grises */
-    --white: #ffffff;
-    --gray-50: #f9fafb;
-    --gray-100: #f3f4f6;
-    --gray-200: #e5e7eb;
-    --gray-300: #d1d5db;
-    --gray-400: #9ca3af;
-    --gray-500: #6b7280;
-    --gray-600: #4b5563;
-    --gray-700: #374151;
-    --gray-800: #1f2937;
-    --gray-900: #111827;
-
-    /* Tokens semánticos - Modo claro */
+    /* Tokens semánticos Bob Coperation */
     --bg: var(--white);
-    --surface: var(--gray-50);
-    --text: var(--gray-900);
-    --muted: var(--gray-600);
-    --primary: var(--blue-600);
+    --surface: var(--white);
+    --text: #1a1a1a;
+    --muted: var(--bob-gray-neutral);
+    --primary: var(--bob-blue-primary);
     --primary-contrast: var(--white);
-    --primary-hover: var(--blue-700);
-    --accent: var(--yellow-500);
-    --accent-hover: var(--yellow-600);
-    --ring: var(--blue-400);
-    --link: var(--blue-600);
-    --link-hover: var(--blue-700);
-    --border: var(--gray-200);
-    --border-hover: var(--blue-400);
+    --primary-hover: var(--bob-green-accent);
+    --accent: var(--bob-green-accent);
+    --accent-hover: var(--bob-green-hover);
+    --ring: var(--bob-blue-primary);
+    --link: var(--bob-blue-primary);
+    --link-hover: var(--bob-green-accent);
+    --border: #e4e4e4;
+    --border-hover: var(--bob-blue-primary);
+
+    /* Legacy variables para compatibilidad */
+    --blue-600: var(--bob-blue-primary);
+    --blue-700: var(--bob-blue-hover);
+    --yellow-500: var(--bob-green-accent);
+    --yellow-600: var(--bob-green-hover);
+    --gray-600: var(--bob-gray-neutral);
+    --gray-700: var(--bob-gray-hover);
+    --gray-900: #1a1a1a;
+    --gray-800: #2e2e2e;
+    --gray-700: #4a4a4a;
+    --gray-600: var(--bob-gray-neutral);
+    --gray-500: #b4b4b4;
+    --gray-400: #d1d1d1;
+    --gray-300: #e4e4e4;
+    --gray-200: #f0f0f0;
+    --gray-100: #f8f8f8;
+    --gray-50: #f8f8f8;
   }
 
   /* Modo oscuro */
@@ -90,57 +95,57 @@
 }
 
 @layer components {
-  /* Botones institucionales */
+  /* Botones corporativos Bob Coperation */
   .btn-primary {
-    @apply bg-[var(--primary)] text-[var(--primary-contrast)] font-bold py-4 px-8 rounded-xl hover:bg-[var(--primary-hover)] transition-all duration-300 shadow-lg hover:shadow-2xl hover:scale-105 focus:outline-none focus:ring-2 focus:ring-[var(--ring)] focus:ring-offset-2;
+    @apply bg-[var(--bob-blue-primary)] text-white font-bold py-3 px-6 rounded-lg hover:bg-[var(--bob-green-accent)] transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-[var(--bob-blue-primary)] focus:ring-offset-2;
   }
 
   .btn-secondary {
-    @apply bg-surface backdrop-blur-sm text-text border border-border font-semibold py-4 px-8 rounded-xl hover:bg-blue-50 hover:border-[var(--border-hover)] transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-[var(--ring)] focus:ring-offset-2;
+    @apply bg-white text-[var(--bob-blue-primary)] border-2 border-[var(--bob-blue-primary)] font-semibold py-3 px-6 rounded-lg hover:bg-[var(--bob-blue-primary)] hover:text-white transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-[var(--bob-blue-primary)] focus:ring-offset-2;
   }
 
   .btn-accent {
-    @apply bg-[var(--accent)] text-white font-bold py-4 px-8 rounded-xl hover:bg-[var(--accent-hover)] transition-all duration-300 shadow-lg hover:shadow-2xl hover:scale-105 focus:outline-none focus:ring-2 focus:ring-[var(--accent)] focus:ring-offset-2;
+    @apply bg-[var(--bob-green-accent)] text-white font-bold py-3 px-6 rounded-lg hover:bg-[var(--bob-green-hover)] transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-[var(--bob-green-accent)] focus:ring-offset-2;
   }
 
-  /* Tarjetas institucionales */
+  /* Tarjetas corporativas Bob Coperation */
   .card {
-    @apply bg-surface backdrop-blur-sm border border-border rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300;
+    @apply bg-white border border-gray-200 rounded-lg shadow-sm hover:shadow-md transition-all duration-300;
   }
 
   .card-hover {
-    @apply hover:scale-[1.02] hover:border-[var(--border-hover)] cursor-pointer hover:bg-blue-50;
+    @apply hover:scale-[1.02] hover:border-[var(--bob-blue-primary)] cursor-pointer hover:bg-[var(--bob-blue-light)];
   }
 
   /* Tarjetas de productos */
   .product-card {
-    @apply group bg-surface backdrop-blur-sm border border-border rounded-xl overflow-hidden hover:border-[var(--border-hover)] transition-all duration-300 hover:scale-[1.02] hover:shadow-xl hover:shadow-blue-200/20;
+    @apply group bg-white border border-gray-200 rounded-lg overflow-hidden hover:border-[var(--bob-blue-primary)] transition-all duration-300 hover:scale-[1.02] hover:shadow-lg;
   }
 
-  /* Gradientes institucionales */
+  /* Gradientes corporativos Bob Coperation */
   .gradient-radial {
-    background: radial-gradient(circle, rgba(245, 158, 11, 0.15) 0%, transparent 70%);
+    background: radial-gradient(circle, rgba(163, 214, 63, 0.15) 0%, transparent 70%);
   }
 
   .gradient-professional {
-    background: linear-gradient(135deg, var(--blue-600) 0%, var(--blue-700) 50%, var(--blue-800) 100%);
+    background: linear-gradient(135deg, var(--bob-blue-primary) 0%, var(--bob-blue-hover) 50%, #1a4bb8 100%);
   }
 
   .gradient-safety {
-    background: linear-gradient(135deg, var(--blue-500) 0%, var(--blue-600) 50%, var(--blue-700) 100%);
+    background: linear-gradient(135deg, var(--bob-blue-primary) 0%, var(--bob-blue-hover) 50%, #1a4bb8 100%);
   }
 
   .gradient-institutional {
-    background: linear-gradient(90deg, rgba(245, 158, 11, 0.1) 0%, transparent 50%, rgba(245, 158, 11, 0.1) 100%);
+    background: linear-gradient(90deg, rgba(163, 214, 63, 0.1) 0%, transparent 50%, rgba(163, 214, 63, 0.1) 100%);
   }
 
-  /* Utilidades de texto */
+  /* Utilidades de texto corporativas Bob Coperation */
   .text-gradient {
-    @apply bg-gradient-to-r from-blue-500 to-blue-700 bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-[var(--bob-blue-primary)] to-[var(--bob-blue-hover)] bg-clip-text text-transparent;
   }
 
   .text-accent-gradient {
-    @apply bg-gradient-to-r from-yellow-500 to-yellow-700 bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-[var(--bob-green-accent)] to-[var(--bob-green-hover)] bg-clip-text text-transparent;
   }
 
   .line-clamp-2 {
@@ -219,7 +224,7 @@
   }
 
   .text-glow-subtle:hover {
-    text-shadow: 0 0 8px rgba(59, 130, 246, 0.3);
+    text-shadow: 0 0 8px rgba(46, 108, 230, 0.3);
   }
 
   .text-scale-gentle {
@@ -592,7 +597,7 @@
     left: 0;
     width: 0;
     height: 2px;
-    background: linear-gradient(90deg, #3b82f6, #1d4ed8);
+    background: linear-gradient(90deg, var(--bob-blue-primary), var(--bob-blue-hover));
     transition: width 0.4s ease-out;
   }
 
@@ -704,6 +709,23 @@
     animation: fadeInScale 0.6s ease-out;
   }
 
+  /* Hero Video Background Effects */
+  .text-shadow-sm {
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+  }
+
+  .text-shadow-md {
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+  }
+
+  .text-shadow-lg {
+    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
+  }
+
+  .text-shadow-xl {
+    text-shadow: 0 8px 16px rgba(0, 0, 0, 0.8);
+  }
+
   /* Professional Spacing */
   .space-professional > * + * {
     margin-top: 1.5rem;
@@ -744,20 +766,20 @@
   @apply text-xl md:text-2xl text-muted leading-relaxed;
 }
 
-/* Indicadores de estado */
-.status-indicator {
-  @apply inline-flex items-center bg-yellow-100 text-yellow-700 font-semibold px-4 py-2 rounded-full text-sm border border-yellow-300;
-}
+  /* Indicadores de estado corporativos Bob Coperation */
+  .status-indicator {
+    @apply inline-flex items-center bg-[var(--bob-green-light)] text-[var(--bob-green-accent)] font-semibold px-4 py-2 rounded-full text-sm border border-[var(--bob-green-accent)];
+  }
 
-.status-safety {
-  @apply inline-flex items-center bg-blue-100 text-blue-700 font-semibold px-4 py-2 rounded-full text-sm border border-blue-300;
-}
+  .status-safety {
+    @apply inline-flex items-center bg-[var(--bob-blue-light)] text-[var(--bob-blue-primary)] font-semibold px-4 py-2 rounded-full text-sm border border-[var(--bob-blue-primary)];
+  }
 
-/* Sombras institucionales */
+/* Sombras corporativas Bob Coperation */
 .shadow-professional {
-  box-shadow: 0 25px 50px -12px rgba(37, 99, 235, 0.15);
+  box-shadow: 0 25px 50px -12px rgba(46, 108, 230, 0.15);
 }
 
 .shadow-executive {
-  box-shadow: 0 20px 25px -5px rgba(245, 158, 11, 0.1), 0 10px 10px -5px rgba(245, 158, 11, 0.04);
+  box-shadow: 0 20px 25px -5px rgba(163, 214, 63, 0.1), 0 10px 10px -5px rgba(163, 214, 63, 0.04);
 }

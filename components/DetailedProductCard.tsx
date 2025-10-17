@@ -10,7 +10,7 @@ interface DetailedProductCardProps {
 
 export default function DetailedProductCard({ product, className }: DetailedProductCardProps) {
   return (
-    <div className={cn("bg-white backdrop-blur-sm border border-gray-300/60 rounded-xl overflow-hidden hover:border-yellow-500/60 transition-all duration-300 shadow-lg hover:shadow-xl", className)}>
+    <div className={cn("bg-white border border-gray-200 rounded-lg overflow-hidden hover:border-bob-blue-500 transition-all duration-300 shadow-lg hover:shadow-xl", className)}>
       {/* Product Header */}
       <div className="p-6 border-b border-gray-300/50">
         <div className="flex items-start justify-between mb-4">
@@ -31,7 +31,7 @@ export default function DetailedProductCard({ product, className }: DetailedProd
         </div>
 
         {product.subcategory && (
-          <div className="inline-flex items-center bg-yellow-100 text-yellow-800 font-semibold px-3 py-1 rounded-full text-xs border border-yellow-200">
+          <div className="inline-flex items-center bg-bob-green-50 text-bob-green-600 font-semibold px-3 py-1 rounded-full text-xs border border-bob-green-500">
             {product.subcategory}
           </div>
         )}
@@ -92,7 +92,7 @@ export default function DetailedProductCard({ product, className }: DetailedProd
               <h5 className="text-gray-900 font-bold text-sm mb-2 uppercase tracking-wide heading-transition">Colores</h5>
               <div className="flex flex-wrap gap-1">
                 {product.colors.map((color, index) => (
-                  <span key={index} className="bg-yellow-100 text-yellow-800 px-2 py-1 rounded text-xs font-semibold border border-yellow-200">
+                  <span key={index} className="bg-bob-green-50 text-bob-green-600 px-2 py-1 rounded text-xs font-semibold border border-bob-green-500">
                     {color}
                   </span>
                 ))}
@@ -143,7 +143,7 @@ export default function DetailedProductCard({ product, className }: DetailedProd
             <ul className="text-sm text-gray-800 space-y-1">
               {product.applications.map((app, index) => (
                 <li key={index} className="flex items-start">
-                  <span className="text-yellow-600 mr-2 font-bold">•</span>
+                  <span className="text-bob-green-500 mr-2 font-bold">•</span>
                   {app}
                 </li>
               ))}
@@ -158,7 +158,7 @@ export default function DetailedProductCard({ product, className }: DetailedProd
             <ul className="text-sm text-gray-800 space-y-1">
               {product.specifications.map((spec, index) => (
                 <li key={index} className="flex items-start">
-                  <span className="text-yellow-600 mr-2 font-bold">•</span>
+                  <span className="text-bob-green-500 mr-2 font-bold">•</span>
                   {spec}
                 </li>
               ))}
@@ -172,7 +172,7 @@ export default function DetailedProductCard({ product, className }: DetailedProd
             <h5 className="text-gray-900 font-bold text-sm mb-2 uppercase tracking-wide heading-transition">Certificaciones</h5>
             <div className="flex flex-wrap gap-2">
               {product.certifications.map((cert, index) => (
-                <span key={index} className="bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-xs font-bold border border-yellow-300">
+                <span key={index} className="bg-bob-green-50 text-bob-green-600 px-3 py-1 rounded-full text-xs font-bold border border-bob-green-500">
                   {cert}
                 </span>
               ))}
@@ -185,7 +185,7 @@ export default function DetailedProductCard({ product, className }: DetailedProd
           <div className="border-t border-gray-300/30 pt-4">
             <div className="flex items-center justify-between">
               <span className="text-gray-700 text-sm font-medium">Norma:</span>
-              <span className="text-yellow-700 font-bold">{product.norm}</span>
+              <span className="text-bob-green-600 font-bold">{product.norm}</span>
             </div>
           </div>
         )}
@@ -195,7 +195,7 @@ export default function DetailedProductCard({ product, className }: DetailedProd
       <div className="p-6 bg-gray-50 border-t border-gray-300/50">
         <a 
           href="#formulario-cotizacion"
-          className="w-full bg-yellow-500 text-white font-bold py-2 px-4 rounded-lg hover:bg-yellow-600 transition-colors text-sm shadow-md hover:shadow-lg inline-block text-center"
+          className="w-full bg-bob-blue-500 text-white font-bold py-2 px-4 rounded-lg hover:bg-bob-green-500 transition-colors text-sm shadow-md hover:shadow-lg inline-block text-center"
         >
           Solicitar Cotización
         </a>
