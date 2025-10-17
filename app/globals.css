@@ -188,7 +188,7 @@
 
   /* Subtle Text Transitions */
   .text-transition-subtle {
-    @apply transition-all duration-500 ease-out;
+    @apply transition-all duration-300 ease-out;
   }
 
   .text-hover-gentle {
@@ -215,7 +215,7 @@
   }
 
   .text-glow-subtle {
-    @apply transition-all duration-[400ms] ease-out;
+    @apply transition-all duration-300 ease-out;
   }
 
   .text-glow-subtle:hover {
@@ -235,7 +235,7 @@
   }
 
   .text-slide-reveal {
-    @apply transition-all duration-[600ms] ease-out;
+    @apply transition-all duration-300 ease-out;
     transform: translateY(0);
     opacity: 1;
   }
@@ -247,7 +247,7 @@
 
   /* Professional Typography Transitions */
   .heading-transition {
-    @apply transition-all duration-500 ease-out;
+    @apply transition-all duration-300 ease-out;
   }
 
   .heading-transition:hover {
@@ -256,7 +256,7 @@
   }
 
   .paragraph-transition {
-    @apply transition-all duration-[400ms] ease-out;
+    @apply transition-all duration-300 ease-out;
   }
 
   .paragraph-transition:hover {
@@ -443,39 +443,321 @@
     }
   }
 
-  /* Executive Spacing */
-  .section-padding {
-    @apply py-20 lg:py-24;
+  /* Modern Text Reveal Effects */
+  .text-reveal-stagger {
+    animation: textRevealStagger 0.8s ease-out forwards;
   }
 
-  .container {
-    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  .text-reveal-stagger:nth-child(1) { animation-delay: 0ms; }
+  .text-reveal-stagger:nth-child(2) { animation-delay: 100ms; }
+  .text-reveal-stagger:nth-child(3) { animation-delay: 200ms; }
+  .text-reveal-stagger:nth-child(4) { animation-delay: 300ms; }
+
+  /* Smooth Card Interactions */
+  .card-interactive {
+    @apply transition-all duration-300 ease-out;
   }
 
-  /* Headers institucionales */
-  .executive-header {
-    @apply text-4xl md:text-5xl lg:text-6xl font-bold text-text leading-tight;
+  .card-interactive:hover {
+    transform: translateY(-4px) scale(1.01);
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
   }
 
-  .professional-subheader {
-    @apply text-xl md:text-2xl text-muted leading-relaxed;
+  /* Professional Button States */
+  .btn-professional {
+    @apply transition-all duration-300 ease-out;
+    position: relative;
+    overflow: hidden;
   }
 
-  /* Indicadores de estado */
-  .status-indicator {
-    @apply inline-flex items-center bg-yellow-100 text-yellow-700 font-semibold px-4 py-2 rounded-full text-sm border border-yellow-300;
+  .btn-professional::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s ease-out;
   }
 
-  .status-safety {
-    @apply inline-flex items-center bg-blue-100 text-blue-700 font-semibold px-4 py-2 rounded-full text-sm border border-blue-300;
+  .btn-professional:hover::before {
+    left: 100%;
   }
 
-  /* Sombras institucionales */
-  .shadow-professional {
-    box-shadow: 0 25px 50px -12px rgba(37, 99, 235, 0.15);
+  /* Elegant Text Hover Effects */
+  .text-elegant-hover {
+    @apply transition-all duration-300 ease-out;
   }
 
-  .shadow-executive {
-    box-shadow: 0 20px 25px -5px rgba(245, 158, 11, 0.1), 0 10px 10px -5px rgba(245, 158, 11, 0.04);
+  .text-elegant-hover:hover {
+    transform: translateY(-1px);
+    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   }
+
+  /* Smooth Icon Transitions */
+  .icon-smooth {
+    @apply transition-all duration-300 ease-out;
+  }
+
+  .icon-smooth:hover {
+    transform: scale(1.1) rotate(2deg);
+  }
+
+  /* Professional Loading States */
+  .loading-shimmer {
+    background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+    background-size: 200% 100%;
+    animation: shimmer 1.5s infinite;
+  }
+
+  /* Modern Focus States */
+  .focus-modern {
+    @apply transition-all duration-200 ease-out;
+  }
+
+  .focus-modern:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+    transform: scale(1.02);
+  }
+
+  /* Smooth Scroll Reveal */
+  .reveal-on-scroll {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease-out;
+  }
+
+  .reveal-on-scroll.revealed {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* Professional Typography Animations */
+  .typing-animation {
+    overflow: hidden;
+    border-right: 2px solid;
+    white-space: nowrap;
+    animation: typing 3s steps(40, end), blink-caret 0.75s step-end infinite;
+  }
+
+  /* Modern Gradient Text */
+  .gradient-text-modern {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    @apply transition-all duration-300 ease-out;
+  }
+
+  .gradient-text-modern:hover {
+    background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  /* Executive Card Hover */
+  .executive-card {
+    @apply transition-all duration-300 ease-out;
+    background: linear-gradient(145deg, #ffffff 0%, #f8fafc 100%);
+  }
+
+  .executive-card:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 32px 64px -12px rgba(0, 0, 0, 0.15);
+    background: linear-gradient(145deg, #ffffff 0%, #f1f5f9 100%);
+  }
+
+  /* Smooth Image Transitions */
+  .image-smooth {
+    @apply transition-all duration-300 ease-out;
+  }
+
+  .image-smooth:hover {
+    transform: scale(1.05);
+    filter: brightness(1.1);
+  }
+
+  /* Professional Link Underlines */
+  .link-professional {
+    @apply relative transition-all duration-300 ease-out;
+  }
+
+  .link-professional::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, #3b82f6, #1d4ed8);
+    transition: width 0.4s ease-out;
+  }
+
+  .link-professional:hover::after {
+    width: 100%;
+  }
+
+  /* Modern Badge Animations */
+  .badge-modern {
+    @apply transition-all duration-300 ease-out;
+  }
+
+  .badge-modern:hover {
+    transform: scale(1.05) translateY(-1px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  }
+
+  /* Smooth Form Interactions */
+  .form-smooth {
+    @apply transition-all duration-300 ease-out;
+  }
+
+  .form-smooth:focus {
+    transform: scale(1.01);
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+  }
+
+  /* Professional Section Transitions */
+  .section-transition {
+    @apply transition-all duration-700 ease-out;
+  }
+
+  .section-transition:hover {
+    transform: translateY(-2px);
+  }
+
+  /* Modern Keyframes */
+  @keyframes textRevealStagger {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes shimmer {
+    0% {
+      background-position: -200% 0;
+    }
+    100% {
+      background-position: 200% 0;
+    }
+  }
+
+  @keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+  }
+
+  @keyframes blink-caret {
+    from, to { border-color: transparent; }
+    50% { border-color: #3b82f6; }
+  }
+
+  @keyframes gentlePulse {
+    0%, 100% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.02);
+    }
+  }
+
+  @keyframes slideInFromBottom {
+    0% {
+      opacity: 0;
+      transform: translateY(50px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes fadeInScale {
+    0% {
+      opacity: 0;
+      transform: scale(0.9);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  /* Utility Classes for Smooth Animations */
+  .animate-gentle-pulse {
+    animation: gentlePulse 2s ease-in-out infinite;
+  }
+
+  .animate-slide-in-bottom {
+    animation: slideInFromBottom 0.8s ease-out;
+  }
+
+  .animate-fade-in-scale {
+    animation: fadeInScale 0.6s ease-out;
+  }
+
+  /* Professional Spacing */
+  .space-professional > * + * {
+    margin-top: 1.5rem;
+  }
+
+  .space-executive > * + * {
+    margin-top: 2rem;
+  }
+
+  /* Modern Grid Animations */
+  .grid-stagger > * {
+    animation: fadeInUp 0.6s ease-out forwards;
+  }
+
+  .grid-stagger > *:nth-child(1) { animation-delay: 0ms; }
+  .grid-stagger > *:nth-child(2) { animation-delay: 100ms; }
+  .grid-stagger > *:nth-child(3) { animation-delay: 200ms; }
+  .grid-stagger > *:nth-child(4) { animation-delay: 300ms; }
+  .grid-stagger > *:nth-child(5) { animation-delay: 400ms; }
+  .grid-stagger > *:nth-child(6) { animation-delay: 500ms; }
+}
+
+/* Executive Spacing */
+.section-padding {
+  @apply py-20 lg:py-24;
+}
+
+.container {
+  @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+}
+
+/* Headers institucionales */
+.executive-header {
+  @apply text-4xl md:text-5xl lg:text-6xl font-bold text-text leading-tight;
+}
+
+.professional-subheader {
+  @apply text-xl md:text-2xl text-muted leading-relaxed;
+}
+
+/* Indicadores de estado */
+.status-indicator {
+  @apply inline-flex items-center bg-yellow-100 text-yellow-700 font-semibold px-4 py-2 rounded-full text-sm border border-yellow-300;
+}
+
+.status-safety {
+  @apply inline-flex items-center bg-blue-100 text-blue-700 font-semibold px-4 py-2 rounded-full text-sm border border-blue-300;
+}
+
+/* Sombras institucionales */
+.shadow-professional {
+  box-shadow: 0 25px 50px -12px rgba(37, 99, 235, 0.15);
+}
+
+.shadow-executive {
+  box-shadow: 0 20px 25px -5px rgba(245, 158, 11, 0.1), 0 10px 10px -5px rgba(245, 158, 11, 0.04);
 }

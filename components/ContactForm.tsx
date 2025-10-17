@@ -82,12 +82,12 @@ export default function ContactForm() {
 
   return (
     <div className="bg-white rounded-2xl shadow-2xl p-8">
-      <div className="text-center mb-8">
-        <h2 className="text-3xl font-bold text-gray-900 mb-4">Solicitar Cotización</h2>
-        <p className="text-gray-600 text-lg">
-          Completa el formulario y recibe una cotización personalizada en 24 horas
-        </p>
-      </div>
+        <div className="text-center mb-8 animate-fade-in-up">
+          <h2 className="text-3xl font-bold text-gray-900 mb-4 text-elegant-hover">Solicitar Cotización</h2>
+          <p className="text-gray-600 text-lg text-elegant-hover">
+            Completa el formulario y recibe una cotización personalizada en 24 horas
+          </p>
+        </div>
 
       <form onSubmit={handleSubmit} className="space-y-6">
         {/* Información Personal */}
@@ -103,7 +103,7 @@ export default function ContactForm() {
               value={formData.nombre}
               onChange={handleChange}
               required
-              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500 transition-colors"
+              className="form-smooth w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500 transition-colors"
               placeholder="Tu nombre completo"
             />
           </div>
@@ -247,30 +247,52 @@ export default function ContactForm() {
         </div>
 
         {/* Información de Contacto Alternativo */}
-        <div className="border-t border-gray-200 pt-6">
+        <div className="border-t border-gray-200 pt-8">
           <div className="text-center">
-            <p className="text-gray-600 text-sm mb-4">
-              ¿Prefieres contactarnos directamente?
+            <h3 className="text-lg font-semibold text-gray-900 mb-2">
+              Contacto Directo Ejecutivo
+            </h3>
+            <p className="text-gray-600 text-sm mb-6">
+              Para consultas urgentes o atención personalizada
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-2xl mx-auto">
               <a
                 href="mailto:ventas@bobsolution.com"
-                className="flex items-center justify-center px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors text-sm"
+                className="group flex items-center justify-center px-6 py-4 bg-gradient-to-r from-blue-600 to-blue-700 text-white rounded-xl hover:from-blue-700 hover:to-blue-800 transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105"
               >
-                <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                </svg>
-                ventas@bobsolution.com
+                <div className="flex items-center">
+                  <div className="w-10 h-10 bg-white/20 rounded-lg flex items-center justify-center mr-4 group-hover:bg-white/30 transition-colors">
+                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                    </svg>
+                  </div>
+                  <div className="text-left">
+                    <div className="text-xs font-medium opacity-90 uppercase tracking-wide">Email Corporativo</div>
+                    <div className="font-semibold">ventas@bobsolution.com</div>
+                  </div>
+                </div>
               </a>
               <a
                 href="tel:+528125090913"
-                className="flex items-center justify-center px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors text-sm"
+                className="group flex items-center justify-center px-6 py-4 bg-gradient-to-r from-green-600 to-green-700 text-white rounded-xl hover:from-green-700 hover:to-green-800 transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105"
               >
-                <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                </svg>
-                81 2509 0913
+                <div className="flex items-center">
+                  <div className="w-10 h-10 bg-white/20 rounded-lg flex items-center justify-center mr-4 group-hover:bg-white/30 transition-colors">
+                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                    </svg>
+                  </div>
+                  <div className="text-left">
+                    <div className="text-xs font-medium opacity-90 uppercase tracking-wide">Línea Directa</div>
+                    <div className="font-semibold">81 2509 0913</div>
+                  </div>
+                </div>
               </a>
+            </div>
+            <div className="mt-6 p-4 bg-blue-50 border border-blue-200 rounded-lg">
+              <p className="text-blue-800 text-sm font-medium">
+                <span className="font-bold">Horario de Atención:</span> Lunes a Viernes 8:00 AM - 6:00 PM
+              </p>
             </div>
           </div>
         </div>

@@ -44,43 +44,43 @@ export default function Home() {
               Proveedor Certificado de EPP Industrial
             </div>
 
-            <h1 className="text-5xl md:text-7xl font-bold text-gray-900 mb-8 leading-tight">
-              Seguridad Industrial
-              <span className="block bg-gradient-to-r from-blue-600 to-blue-800 bg-clip-text text-transparent">
+            <h1 className="text-5xl md:text-7xl font-bold text-gray-900 mb-8 leading-tight animate-fade-in-up">
+              <span className="text-elegant-hover">Seguridad Industrial</span>
+              <span className="block gradient-text-modern animate-fade-in-up delay-200">
                 de Clase Mundial
               </span>
             </h1>
 
-            <p className="text-xl md:text-2xl text-gray-700 mb-12 leading-relaxed max-w-3xl mx-auto">
-              Soluciones integrales de protección personal para empresas líderes.
-              <span className="block mt-2 text-yellow-600 font-medium">
+            <p className="text-xl md:text-2xl text-gray-700 mb-12 leading-relaxed max-w-3xl mx-auto animate-fade-in-up delay-300">
+              <span className="text-elegant-hover">Soluciones integrales de protección personal para empresas líderes.</span>
+              <span className="block mt-2 text-yellow-600 font-medium animate-fade-in-up delay-400">
                 Cumplimiento normativo • Disponibilidad garantizada • Entregas puntuales
               </span>
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-6 justify-center mb-16">
-              <button className="bg-blue-600 text-white font-bold px-8 py-4 rounded-xl hover:bg-blue-700 transition-all duration-300 shadow-lg hover:shadow-2xl hover:scale-105">
+            <div className="flex flex-col sm:flex-row gap-6 justify-center mb-16 animate-fade-in-up delay-500">
+              <button className="btn-professional bg-blue-600 text-white font-bold px-8 py-4 rounded-xl hover:bg-blue-700 shadow-lg hover:shadow-2xl hover:scale-105">
                 Explorar Catálogo Completo
               </button>
               <a 
                 href="#formulario-cotizacion"
-                className="bg-yellow-500 text-black font-semibold px-8 py-4 rounded-xl hover:bg-yellow-600 transition-all duration-300 border border-yellow-600"
+                className="btn-professional bg-yellow-500 text-black font-semibold px-8 py-4 rounded-xl hover:bg-yellow-600 border border-yellow-600"
               >
                 Solicitar Asesoría Técnica
               </a>
             </div>
 
             {/* Stats */}
-            <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 max-w-4xl mx-auto">
+            <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 max-w-4xl mx-auto grid-stagger">
               {[
                 { value: '22+', label: 'Categorías de Productos' },
                 { value: '99.8%', label: 'Disponibilidad' },
                 { value: '24h', label: 'Tiempo de Respuesta' },
                 { value: '500+', label: 'Empresas Atendidas' }
               ].map((stat, index) => (
-                <div key={index} className="text-center">
-                  <div className="text-3xl font-bold text-blue-600 mb-2">{stat.value}</div>
-                  <div className="text-sm text-gray-600 uppercase tracking-wide">{stat.label}</div>
+                <div key={index} className="text-center card-interactive p-6 rounded-xl">
+                  <div className="text-3xl font-bold text-blue-600 mb-2 text-elegant-hover">{stat.value}</div>
+                  <div className="text-sm text-gray-600 uppercase tracking-wide text-elegant-hover">{stat.label}</div>
                 </div>
               ))}
             </div>
@@ -191,36 +191,61 @@ export default function Home() {
             una solución personalizada que cumpla con los más altos estándares de seguridad industrial.
           </p>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12 max-w-4xl mx-auto">
-            <div className="text-center">
-              <div className="w-16 h-16 bg-blue-100 rounded-xl flex items-center justify-center mx-auto mb-4">
-                <svg className="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12 max-w-5xl mx-auto grid-stagger">
+            <div className="group executive-card border border-gray-200 rounded-2xl p-8 hover:border-blue-500 transition-all duration-300 hover:shadow-xl hover:scale-105">
+              <div className="w-20 h-20 bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300 icon-smooth">
+                <svg className="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                 </svg>
               </div>
-              <h3 className="text-lg font-semibold text-gray-900 mb-2">Email Ejecutivo</h3>
-              <p className="text-blue-600 font-medium">ventas@bobsolution.com</p>
+              <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors text-elegant-hover">Email Ejecutivo</h3>
+              <p className="text-gray-600 mb-4 text-sm text-elegant-hover">Para consultas técnicas y cotizaciones</p>
+              <a 
+                href="mailto:ventas@bobsolution.com"
+                className="btn-professional inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-600 to-blue-700 text-white font-semibold rounded-xl hover:from-blue-700 hover:to-blue-800 shadow-lg hover:shadow-xl"
+              >
+                <svg className="w-4 h-4 mr-2 icon-smooth" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                </svg>
+                ventas@bobsolution.com
+              </a>
             </div>
 
-            <div className="text-center">
-              <div className="w-16 h-16 bg-blue-100 rounded-xl flex items-center justify-center mx-auto mb-4">
-                <svg className="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <div className="group executive-card border border-gray-200 rounded-2xl p-8 hover:border-green-500 transition-all duration-300 hover:shadow-xl hover:scale-105">
+              <div className="w-20 h-20 bg-gradient-to-br from-green-500 to-green-600 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300 icon-smooth">
+                <svg className="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                 </svg>
               </div>
-              <h3 className="text-lg font-semibold text-gray-900 mb-2">Línea Directa</h3>
-              <p className="text-blue-600 font-medium">81 2509 0913</p>
+              <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-green-600 transition-colors text-elegant-hover">Línea Directa</h3>
+              <p className="text-gray-600 mb-4 text-sm text-elegant-hover">Atención inmediata y personalizada</p>
+              <a 
+                href="tel:+528125090913"
+                className="btn-professional inline-flex items-center px-6 py-3 bg-gradient-to-r from-green-600 to-green-700 text-white font-semibold rounded-xl hover:from-green-700 hover:to-green-800 shadow-lg hover:shadow-xl"
+              >
+                <svg className="w-4 h-4 mr-2 icon-smooth" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                </svg>
+                81 2509 0913
+              </a>
             </div>
 
-            <div className="text-center">
-              <div className="w-16 h-16 bg-blue-100 rounded-xl flex items-center justify-center mx-auto mb-4">
-                <svg className="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <div className="group executive-card border border-gray-200 rounded-2xl p-8 hover:border-purple-500 transition-all duration-300 hover:shadow-xl hover:scale-105">
+              <div className="w-20 h-20 bg-gradient-to-br from-purple-500 to-purple-600 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300 icon-smooth">
+                <svg className="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                 </svg>
               </div>
-              <h3 className="text-lg font-semibold text-gray-900 mb-2">Ubicación</h3>
-              <p className="text-blue-600 font-medium">Monterrey, Nuevo León</p>
+              <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-purple-600 transition-colors text-elegant-hover">Ubicación</h3>
+              <p className="text-gray-600 mb-4 text-sm text-elegant-hover">Centro industrial de Monterrey</p>
+              <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-600 to-purple-700 text-white font-semibold rounded-xl shadow-lg badge-modern">
+                <svg className="w-4 h-4 mr-2 icon-smooth" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                </svg>
+                Monterrey, Nuevo León
+              </div>
             </div>
           </div>
 
@@ -243,24 +268,93 @@ export default function Home() {
       </section>
 
       {/* Executive Footer */}
-      <footer className="bg-white border-t border-blue-600/20 py-12">
+      <footer className="bg-gradient-to-r from-gray-900 to-gray-800 text-white py-16">
         <div className="container mx-auto px-4">
-          <div className="flex flex-col md:flex-row items-center justify-between">
-            <div className="flex items-center space-x-4 mb-6 md:mb-0">
-              <FooterLogo />
-              <div>
-                <div className="text-gray-900 font-bold">BobCoperation</div>
-                <div className="text-sm text-gray-600">Seguridad Industrial Premium</div>
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
+            {/* Logo y Descripción */}
+            <div className="md:col-span-2">
+              <div className="flex items-center space-x-4 mb-6">
+                <FooterLogo />
+                <div>
+                  <div className="text-white font-bold text-xl">BobCoperation</div>
+                  <div className="text-gray-300 text-sm">Seguridad Industrial Premium</div>
+                </div>
+              </div>
+              <p className="text-gray-300 text-sm leading-relaxed max-w-md">
+                Líder en equipos de protección personal para la industria. Soluciones certificadas 
+                que garantizan la seguridad y cumplimiento normativo de su empresa.
+              </p>
+            </div>
+
+            {/* Contacto */}
+            <div>
+              <h3 className="text-white font-bold text-lg mb-4">Contacto</h3>
+              <div className="space-y-3">
+                <div className="flex items-center space-x-3">
+                  <div className="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center">
+                    <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                    </svg>
+                  </div>
+                  <a href="mailto:ventas@bobsolution.com" className="text-gray-300 hover:text-white transition-colors text-sm">
+                    ventas@bobsolution.com
+                  </a>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <div className="w-8 h-8 bg-green-600 rounded-lg flex items-center justify-center">
+                    <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                    </svg>
+                  </div>
+                  <a href="tel:+528125090913" className="text-gray-300 hover:text-white transition-colors text-sm">
+                    81 2509 0913
+                  </a>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <div className="w-8 h-8 bg-purple-600 rounded-lg flex items-center justify-center">
+                    <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                    </svg>
+                  </div>
+                  <span className="text-gray-300 text-sm">Monterrey, Nuevo León</span>
+                </div>
               </div>
             </div>
 
-            <div className="text-center md:text-right">
-              <p className="text-gray-600 text-sm">
-                © 2024 BobCoperation. Todos los derechos reservados.
-              </p>
-              <p className="text-gray-500 text-xs mt-1">
-                Equipos de Protección Personal • Certificaciones Internacionales
-              </p>
+            {/* Servicios */}
+            <div>
+              <h3 className="text-white font-bold text-lg mb-4">Servicios</h3>
+              <div className="space-y-2">
+                <p className="text-gray-300 text-sm">Cotizaciones Personalizadas</p>
+                <p className="text-gray-300 text-sm">Asesoría Técnica</p>
+                <p className="text-gray-300 text-sm">Certificaciones</p>
+                <p className="text-gray-300 text-sm">Entrega Nacional</p>
+                <p className="text-gray-300 text-sm">Soporte 24/7</p>
+              </div>
+            </div>
+          </div>
+
+          {/* Línea divisoria */}
+          <div className="border-t border-gray-700 pt-8">
+            <div className="flex flex-col md:flex-row items-center justify-between">
+              <div className="text-center md:text-left mb-4 md:mb-0">
+                <p className="text-gray-400 text-sm">
+                  © 2025 BobCoperation. Todos los derechos reservados.
+                </p>
+                <p className="text-gray-500 text-xs mt-1">
+                  Equipos de Protección Personal • Certificaciones Internacionales • ISO 9001
+                </p>
+              </div>
+              <div className="flex items-center space-x-6">
+                <div className="flex items-center space-x-2">
+                  <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
+                  <span className="text-gray-400 text-xs">En línea</span>
+                </div>
+                <div className="text-gray-400 text-xs">
+                  Horario: Lun-Vie 8:00 AM - 6:00 PM
+                </div>
+              </div>
             </div>
           </div>
         </div>
