@@ -30,23 +30,27 @@ export default function CategoryAccordion({
       <button
         onClick={onToggle}
         className={cn(
-          "w-full text-left p-8 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 focus:ring-offset-primary",
+          "w-full text-left transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 focus:ring-offset-primary",
+          "p-4 sm:p-6 lg:p-8", // Responsive padding
           isOpen 
             ? "bg-gradient-to-r from-yellow-50 to-yellow-100/50 border-b border-yellow-200" 
             : "bg-gray-50/80 hover:bg-gray-100/90"
         )}
       >
-        <div className="flex items-center justify-between">
-          <div className="flex items-center space-x-6">
+        <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+          {/* Left side - Icon and content */}
+          <div className="flex items-start sm:items-center space-x-3 sm:space-x-4 lg:space-x-6">
             <div className={cn(
-              "flex items-center justify-center w-16 h-16 rounded-xl transition-all duration-300",
+              "flex items-center justify-center rounded-xl transition-all duration-300 flex-shrink-0",
+              "w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16", // Responsive icon size
               isOpen 
                 ? "bg-yellow-200 scale-110 shadow-md" 
                 : "bg-yellow-100 group-hover:bg-yellow-200 shadow-sm"
             )}>
               <svg
                 className={cn(
-                  "w-8 h-8 transition-colors duration-300",
+                  "transition-colors duration-300",
+                  "w-6 h-6 sm:w-7 sm:h-7 lg:w-8 lg:h-8", // Responsive icon size
                   isOpen ? "text-yellow-800" : "text-yellow-700"
                 )}
                 fill="currentColor"
@@ -55,50 +59,55 @@ export default function CategoryAccordion({
                 <path d={category.icon} />
               </svg>
             </div>
-            <div>
-              <h3 className="text-2xl font-bold mb-2 text-gray-900 heading-transition">
+            
+            <div className="flex-1 min-w-0">
+              <h3 className="text-lg sm:text-xl lg:text-2xl font-bold mb-1 sm:mb-2 text-gray-900 heading-transition leading-tight">
                 {category.name}
               </h3>
-              <p className="text-gray-800 text-base leading-relaxed max-w-2xl paragraph-transition">
+              <p className="text-gray-800 text-sm sm:text-base leading-relaxed paragraph-transition mb-2 sm:mb-3">
                 {category.description}
               </p>
-              <div className="mt-3 flex items-center space-x-4">
+              
+              {/* Mobile: Stack vertically, Desktop: Horizontal */}
+              <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4">
                 <span className={cn(
-                  "font-semibold text-sm text-hover-gentle",
+                  "font-semibold text-xs sm:text-sm text-hover-gentle",
                   isOpen ? "text-yellow-700" : "text-yellow-600"
                 )}>
                   {category.products.length} productos disponibles
                 </span>
                 <div className={cn(
-                  "h-4 w-px transition-colors duration-300",
+                  "hidden sm:block h-4 w-px transition-colors duration-300",
                   isOpen ? "bg-yellow-700/50" : "bg-yellow-600/50"
                 )} />
-                <span className="text-gray-700 text-sm font-medium text-hover-gentle">
+                <span className="text-gray-700 text-xs sm:text-sm font-medium text-hover-gentle">
                   Especificaciones técnicas completas
                 </span>
               </div>
             </div>
           </div>
 
-          <div className="flex items-center space-x-4">
-            <div className="text-right">
+          {/* Right side - Action button and arrow */}
+          <div className="flex items-center justify-between sm:justify-end sm:space-x-4">
+            <div className="text-left sm:text-right">
               <div className={cn(
-                "font-bold text-lg transition-colors duration-300",
+                "font-bold text-sm sm:text-base lg:text-lg transition-colors duration-300",
                 isOpen ? "text-yellow-700" : "text-yellow-600"
               )}>
                 {isOpen ? 'Ocultar' : 'Ver'} Productos
               </div>
-              <div className="text-gray-700 text-sm font-medium text-hover-gentle">
+              <div className="text-gray-700 text-xs sm:text-sm font-medium text-hover-gentle">
                 {isOpen ? 'Contraer lista' : 'Expandir catálogo'}
               </div>
             </div>
             <div className={cn(
-              "transition-all duration-500",
+              "transition-all duration-500 flex-shrink-0",
+              "ml-2 sm:ml-0", // Margin adjustment for mobile
               isOpen 
                 ? "rotate-180 text-yellow-700 scale-110" 
                 : "rotate-0 text-yellow-600 hover:scale-110"
             )}>
-              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg className="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
               </svg>
             </div>

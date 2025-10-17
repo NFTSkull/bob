@@ -193,9 +193,12 @@ export default function DetailedProductCard({ product, className }: DetailedProd
 
       {/* Action Footer */}
       <div className="p-6 bg-gray-50 border-t border-gray-300/50">
-        <button className="w-full bg-yellow-500 text-white font-bold py-2 px-4 rounded-lg hover:bg-yellow-600 transition-colors text-sm shadow-md hover:shadow-lg">
+        <a 
+          href="#formulario-cotizacion"
+          className="w-full bg-yellow-500 text-white font-bold py-2 px-4 rounded-lg hover:bg-yellow-600 transition-colors text-sm shadow-md hover:shadow-lg inline-block text-center"
+        >
           Solicitar Cotización
-        </button>
+        </a>
       </div>
     </div>
   );

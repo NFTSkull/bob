@@ -4,6 +4,7 @@ import { productCategories } from '@/data/products';
 import CategoryAccordion from '@/components/CategoryAccordion';
 import { useCategoryNavigation } from '@/hooks/useCategoryNavigation';
 import { HeaderLogo, FooterLogo } from '@/components/HeaderLogo';
+import ContactForm from '@/components/ContactForm';
 
 export default function Home() {
   const { isCategoryOpen, toggleCategory, navigateToCategory } = useCategoryNavigation();
@@ -22,9 +23,12 @@ export default function Home() {
               <a href="#productos" className="text-black hover:text-yellow-600 transition-colors font-medium">Productos</a>
               <a href="#servicios" className="text-black hover:text-yellow-600 transition-colors font-medium">Servicios</a>
               <a href="#contacto" className="text-black hover:text-yellow-600 transition-colors font-medium">Contacto</a>
-              <button className="bg-yellow-500 text-black font-semibold px-6 py-2.5 rounded-lg hover:bg-yellow-600 transition-colors shadow-lg hover:shadow-xl">
+              <a 
+                href="#formulario-cotizacion"
+                className="bg-yellow-500 text-black font-semibold px-6 py-2.5 rounded-lg hover:bg-yellow-600 transition-colors shadow-lg hover:shadow-xl"
+              >
                 Cotizar Ahora
-              </button>
+              </a>
             </nav>
           </div>
         </div>
@@ -58,9 +62,12 @@ export default function Home() {
               <button className="bg-blue-600 text-white font-bold px-8 py-4 rounded-xl hover:bg-blue-700 transition-all duration-300 shadow-lg hover:shadow-2xl hover:scale-105">
                 Explorar Catálogo Completo
               </button>
-              <button className="bg-yellow-500 text-black font-semibold px-8 py-4 rounded-xl hover:bg-yellow-600 transition-all duration-300 border border-yellow-600">
+              <a 
+                href="#formulario-cotizacion"
+                className="bg-yellow-500 text-black font-semibold px-8 py-4 rounded-xl hover:bg-yellow-600 transition-all duration-300 border border-yellow-600"
+              >
                 Solicitar Asesoría Técnica
-              </button>
+              </a>
             </div>
 
             {/* Stats */}
@@ -217,9 +224,21 @@ export default function Home() {
             </div>
           </div>
 
-          <button className="bg-yellow-500 text-black font-bold px-12 py-4 rounded-xl hover:bg-yellow-600 transition-all duration-300 shadow-lg hover:shadow-2xl hover:scale-105 text-lg">
+          <a 
+            href="#formulario-cotizacion"
+            className="bg-yellow-500 text-black font-bold px-12 py-4 rounded-xl hover:bg-yellow-600 transition-all duration-300 shadow-lg hover:shadow-2xl hover:scale-105 text-lg inline-block"
+          >
             Solicitar Cotización Ejecutiva
-          </button>
+          </a>
+        </div>
+      </section>
+
+      {/* Formulario de Cotización */}
+      <section id="formulario-cotizacion" className="py-20 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            <ContactForm />
+          </div>
         </div>
       </section>
 
