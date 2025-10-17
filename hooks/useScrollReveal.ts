@@ -16,7 +16,7 @@ export function useScrollReveal(options: UseScrollRevealOptions = {}) {
   } = options;
 
   const [isVisible, setIsVisible] = useState(false);
-  const ref = useRef<HTMLElement>(null);
+  const ref = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const element = ref.current;
@@ -52,7 +52,7 @@ export function useScrollReveal(options: UseScrollRevealOptions = {}) {
 // Hook específico para animaciones escalonadas
 export function useStaggeredScrollReveal(itemCount: number, delay: number = 100) {
   const [visibleItems, setVisibleItems] = useState<boolean[]>(new Array(itemCount).fill(false));
-  const ref = useRef<HTMLElement>(null);
+  const ref = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const element = ref.current;
@@ -93,7 +93,7 @@ export function useStaggeredScrollReveal(itemCount: number, delay: number = 100)
 // Hook para animaciones de texto
 export function useTextReveal() {
   const [isVisible, setIsVisible] = useState(false);
-  const ref = useRef<HTMLElement>(null);
+  const ref = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const element = ref.current;
