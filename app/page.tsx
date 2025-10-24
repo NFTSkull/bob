@@ -81,7 +81,7 @@ export default function Home() {
                   <img 
                     src="/logo-hero.png" 
                     alt="BOB Coperation Logo" 
-                    className="h-48 md:h-64 lg:h-80 w-auto object-contain"
+                    className="h-64 md:h-80 lg:h-96 w-auto object-contain"
                   />
                 </div>
                 <div className="w-24 h-1 bg-bob-green-500 mx-auto rounded-full mb-6" />
