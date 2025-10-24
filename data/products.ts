@@ -34,7 +34,7 @@ export const productCategories: ProductCategory[] = [
     id: 'guantes',
     name: 'Guantes de Protección',
     description: 'Protección completa para las manos en entornos industriales exigentes',
-    icon: 'M12 2C6.48 2 2 6.48 2 12S6.48 22 12 22 22 17.52 22 12 17.52 2 12 2ZM12 20C7.59 20 4 16.41 4 12S7.59 4 12 4 20 7.59 20 12 16.41 20 12 20ZM12 6C9.79 6 8 7.79 8 10H10C10 8.9 10.9 8 12 8S14 8.9 14 10H16C16 7.79 14.21 6 12 6ZM12 16C10.9 16 10 15.1 10 14H8C8 16.21 9.79 18 12 18S16 16.21 16 14H14C14 15.1 13.1 16 12 16ZM12 11C11.45 11 11 11.45 11 12V15C11 15.55 11.45 16 12 16S13 15.55 13 15V12C13 11.45 12.55 11 12 11Z',
+    icon: 'M20.05,11C20.02,10.82 20,10.63 20,10.5C20,9.12 21.12,8 22.5,8C22.63,8 22.82,8.02 23,8.05V5.5C23,3.57 21.43,2 19.5,2H4.5C2.57,2 1,3.57 1,5.5V16.5C1,18.43 2.57,20 4.5,20H6.5V19C6.5,17.62 7.62,16.5 9,16.5C9.13,16.5 9.32,16.52 9.5,16.55V14H11V16.55C11.18,16.52 11.37,16.5 11.5,16.5C12.88,16.5 14,17.62 14,19V20H16V19C16,17.62 17.12,16.5 18.5,16.5C18.63,16.5 18.82,16.52 19,16.55V14H20.5V16.55C20.68,16.52 20.87,16.5 21,16.5C22.38,16.5 23.5,17.62 23.5,19V22H1.5V19C1.5,17.62 2.62,16.5 4,16.5C4.13,16.5 4.32,16.52 4.5,16.55V5.5C4.5,5.22 4.72,5 5,5H19C19.28,5 19.5,5.22 19.5,5.5V16.55C19.68,16.52 19.87,16.5 20,16.5C20.13,16.5 20.32,16.52 20.5,16.55V11.5C20.32,11.48 20.13,11.45 20.05,11Z',
     image: '/images/cat-seccion-guantes.webp',
     products: [
       {
@@ -336,7 +336,7 @@ export const productCategories: ProductCategory[] = [
     id: 'proteccion-visual-auditiva',
     name: 'Protección Visual y Auditiva',
     description: 'Equipos especializados para proteger vista y oído en entornos industriales',
-    icon: 'M12 2C6.48 2 2 6.48 2 12S6.48 22 12 22 22 17.52 22 12 17.52 2 12 2ZM12 20C7.59 20 4 16.41 4 12S7.59 4 12 4 20 7.59 20 12 16.41 20 12 20ZM12 6C9.79 6 8 7.79 8 10H10C10 8.9 10.9 8 12 8S14 8.9 14 10H16C16 7.79 14.21 6 12 6ZM12 16C10.9 16 10 15.1 10 14H8C8 16.21 9.79 18 12 18S16 16.21 16 14H14C14 15.1 13.1 16 12 16ZM12 11C11.45 11 11 11.45 11 12V15C11 15.55 11.45 16 12 16S13 15.55 13 15V12C13 11.45 12.55 11 12 11Z',
+    icon: 'M12,9A3,3 0 0,0 9,12A3,3 0 0,0 12,15A3,3 0 0,0 15,12A3,3 0 0,0 12,9M12,17A5,5 0 0,1 7,12A5,5 0 0,1 12,7A5,5 0 0,1 17,12A5,5 0 0,1 12,17M12,4.5C7,4.5 2.73,7.61 1,12C2.73,16.39 7,19.5 12,19.5C17,19.5 21.27,16.39 23,12C21.27,7.61 17,4.5 12,4.5M2,8.5C2,8.22 2.22,8 2.5,8H4.5C4.78,8 5,8.22 5,8.5V15.5C5,15.78 4.78,16 4.5,16H2.5C2.22,16 2,15.78 2,15.5V8.5M19,8.5C19,8.22 19.22,8 19.5,8H21.5C21.78,8 22,8.22 22,8.5V15.5C22,15.78 21.78,16 21.5,16H19.5C19.22,16 19,15.78 19,15.5V8.5Z',
     image: '/images/cat-lentes-seguridad.webp',
     products: [
       {
@@ -405,7 +405,7 @@ export const productCategories: ProductCategory[] = [
     id: 'empaque-consumibles',
     name: 'Empaque y Consumibles',
     description: 'Soluciones completas para empaque, protección y logística industrial',
-    icon: 'M12 2L2 7V10C2 16 6 20.9 12 22C18 20.9 22 16 22 10V7L12 2Z',
+    icon: 'M21,16.5C21,16.88 20.79,17.21 20.47,17.38L12.57,21.82C12.41,21.94 12.21,22 12,22C11.79,22 11.59,21.94 11.43,21.82L3.53,17.38C3.21,17.21 3,16.88 3,16.5V7.5C3,7.12 3.21,6.79 3.53,6.62L11.43,2.18C11.59,2.06 11.79,2 12,2C12.21,2 12.41,2.06 12.57,2.18L20.47,6.62C20.79,6.79 21,7.12 21,7.5V16.5M12,4.15L5,8.09V15.91L12,19.85L19,15.91V8.09L12,4.15Z',
     image: '/images/cat-poliestretch-pallet.webp',
     products: [
       {
@@ -484,7 +484,7 @@ export const productCategories: ProductCategory[] = [
     id: 'ergonomia-proteccion',
     name: 'Ergonomía y Protección',
     description: 'Equipos ergonómicos para prevenir lesiones y mejorar la comodidad laboral',
-    icon: 'M12 2C6.48 2 2 6.48 2 12S6.48 22 12 22 22 17.52 22 12 17.52 2 12 2ZM12 20C7.59 20 4 16.41 4 12S7.59 4 12 4 20 7.59 20 12 16.41 20 12 20ZM12 6C9.79 6 8 7.79 8 10H10C10 8.9 10.9 8 12 8S14 8.9 14 10H16C16 7.79 14.21 6 12 6ZM12 16C10.9 16 10 15.1 10 14H8C8 16.21 9.79 18 12 18S16 16.21 16 14H14C14 15.1 13.1 16 12 16ZM12 11C11.45 11 11 11.45 11 12V15C11 15.55 11.45 16 12 16S13 15.55 13 15V12C13 11.45 12.55 11 12 11Z',
+    icon: 'M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M12,4A8,8 0 0,1 20,12A8,8 0 0,1 12,20A8,8 0 0,1 4,12A8,8 0 0,1 12,4M11,6V12L15.5,14.5L16.5,12.9L12.5,10.8V6H11M7,2H9V5H7V2M15,2H17V5H15V2M7,19H9V22H7V19M15,19H17V22H15V19Z',
     image: '/images/cat-faja-sacrolumbar.webp',
     products: [
       {
@@ -553,7 +553,7 @@ export const productCategories: ProductCategory[] = [
     id: 'calzado-seguridad',
     name: 'Calzado de Seguridad',
     description: 'Calzado industrial certificado para máxima protección y comodidad',
-    icon: 'M19 7H18V6A6 6 0 0 0 6 6V7H5A1 1 0 0 0 4 8V20A1 1 0 0 0 5 21H19A1 1 0 0 0 20 20V8A1 1 0 0 0 19 7M8 6A4 4 0 0 1 16 6V7H8V6Z',
+    icon: 'M3,17V19H9V17H3M3,13V15H7V13H3M3,9V11H9V9H3M3,5V7H7V5H3M11,17V19H17V17H11M11,13V15H15V13H11M11,9V11H17V9H11M11,5V7H15V5H11M19,17V19H21V17H19M19,13V15H21V13H19M19,9V11H21V9H19M19,5V7H21V5H19M5,20C4.45,20 4,19.55 4,19V18H8V19C8,19.55 7.55,20 7,20H5M13,20C12.45,20 12,19.55 12,19V18H16V19C16,19.55 15.55,20 15,20H13Z',
     image: '/images/cat-calzado-punta-acero.webp',
     products: [
       {
@@ -583,7 +583,7 @@ export const productCategories: ProductCategory[] = [
     id: 'marcadores-industriales',
     name: 'Marcadores Industriales',
     description: 'Marcadores especializados para identificación en diversos materiales',
-    icon: 'M3 17.25V21H6.75L17.81 9.94L14.06 6.19L3 17.25ZM20.71 7.04C21.1 6.65 21.1 6.02 20.71 5.63L18.37 3.29C17.98 2.9 17.35 2.9 16.96 3.29L15.13 5.12L18.88 8.87L20.71 7.04Z',
+    icon: 'M20.71,4.63L19.37,3.29C19,2.9 18.35,2.9 17.96,3.29L9,12.25L11.75,15L20.71,6.04C21.1,5.65 21.1,5 20.71,4.63M7,14A3,3 0 0,0 4,17C4,18.31 2.84,19 2,19C2.92,20.22 4.5,21 6,21A4,4 0 0,0 10,17A3,3 0 0,0 7,14M14.75,3.25L13.5,2L11,4.5L12.25,5.75L14.75,3.25Z',
     image: '/images/marcador-base-alcohol.png',
     products: [
       {
