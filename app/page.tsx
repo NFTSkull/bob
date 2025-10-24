@@ -48,7 +48,7 @@ export default function Home() {
             className="w-full h-full object-cover scale-110"
             aria-label="Video de fondo corporativo BOB Coperation"
           >
-            <source src="/hero.mp4" type="video/mp4" />
+            <source src="/hero-bob.mp4" type="video/mp4" />
             Tu navegador no soporta el elemento video.
           </video>
           
@@ -81,7 +81,7 @@ export default function Home() {
                   <img 
                     src="/logo-hero.png" 
                     alt="BOB Coperation Logo" 
-                    className="h-24 md:h-32 lg:h-40 w-auto object-contain"
+                    className="h-48 md:h-64 lg:h-80 w-auto object-contain"
                   />
                 </div>
                 <div className="w-24 h-1 bg-bob-green-500 mx-auto rounded-full mb-6" />
