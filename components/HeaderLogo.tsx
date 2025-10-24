@@ -6,11 +6,11 @@ export function HeaderLogo() {
     <Image
       src={logoHero}
       alt="BOB Coperation Logo"
-      width={200}
-      height={56}
+      width={280}
+      height={78}
       priority
-      sizes="(max-width: 768px) 140px, 200px"
-      className="h-14 w-auto"
+      sizes="(max-width: 768px) 180px, 280px"
+      className="h-20 w-auto"
     />
   );
 }
