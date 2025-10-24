@@ -246,50 +246,10 @@ export default function ContactForm() {
           </button>
         </div>
 
-        {/* Información de Contacto Alternativo */}
+        {/* Horario de Atención */}
         <div className="border-t border-gray-200 pt-8">
           <div className="text-center">
-            <h3 className="text-lg font-semibold text-gray-900 mb-2">
-              Contacto Directo Ejecutivo
-            </h3>
-            <p className="text-gray-600 text-sm mb-6">
-              Para consultas urgentes o atención personalizada
-            </p>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-2xl mx-auto">
-              <a
-                href="mailto:ventas@bobsolution.com"
-                className="group flex items-center justify-center px-6 py-4 bg-gradient-to-r from-bob-blue-500 to-bob-blue-600 text-white rounded-xl hover:from-bob-blue-600 hover:to-bob-blue-700 transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105"
-              >
-                <div className="flex items-center">
-                  <div className="w-10 h-10 bg-white/20 rounded-lg flex items-center justify-center mr-4 group-hover:bg-white/30 transition-colors">
-                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                    </svg>
-                  </div>
-                  <div className="text-left">
-                    <div className="text-xs font-medium opacity-90 uppercase tracking-wide">Email Corporativo</div>
-                    <div className="font-semibold">ventas@bobsolution.com</div>
-                  </div>
-                </div>
-              </a>
-              <a
-                href="tel:+528125090913"
-                className="group flex items-center justify-center px-6 py-4 bg-gradient-to-r from-bob-green-500 to-bob-green-600 text-white rounded-xl hover:from-bob-green-600 hover:to-bob-green-700 transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105"
-              >
-                <div className="flex items-center">
-                  <div className="w-10 h-10 bg-white/20 rounded-lg flex items-center justify-center mr-4 group-hover:bg-white/30 transition-colors">
-                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                    </svg>
-                  </div>
-                  <div className="text-left">
-                    <div className="text-xs font-medium opacity-90 uppercase tracking-wide">Línea Directa</div>
-                    <div className="font-semibold">81 2509 0913</div>
-                  </div>
-                </div>
-              </a>
-            </div>
-            <div className="mt-6 p-4 bg-bob-blue-50 border border-bob-blue-200 rounded-lg">
+            <div className="p-4 bg-bob-blue-50 border border-bob-blue-200 rounded-lg max-w-md mx-auto">
               <p className="text-bob-blue-800 text-sm font-medium">
                 <span className="font-bold">Horario de Atención:</span> Lunes a Viernes 7:00 AM - 5:00 PM
               </p>
