@@ -318,77 +318,77 @@ export default function Home() {
       </section>
 
       {/* Executive Footer */}
-      <footer className="bg-gradient-to-r from-gray-900 to-gray-800 text-white py-20">
+      <footer className="bg-gradient-to-r from-gray-900 to-gray-800 text-white py-16">
         <div className="max-w-7xl mx-auto px-4">
           {/* Sección Principal del Footer */}
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 lg:gap-16 mb-16">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-16 mb-12">
             <StaggeredReveal staggerDelay={150} animation="fadeInUp">
-              {/* Información de la Empresa - Centrada */}
-              <div className="space-y-8 text-center lg:text-left">
-                <div className="flex flex-col lg:flex-row items-center lg:items-start space-y-4 lg:space-y-0 lg:space-x-4">
+              {/* Información de la Empresa - Primera columna (izquierda) */}
+              <div className="space-y-6 lg:space-y-8">
+                <div className="flex items-center space-x-4">
                   <FooterLogo />
-                  <div className="text-center lg:text-left">
-                    <div className="text-white font-bold text-2xl mb-1">BobCoperation</div>
+                  <div>
+                    <div className="text-white font-bold text-2xl">BobCoperation</div>
                     <div className="text-gray-300 text-sm font-medium">Seguridad Industrial Premium</div>
                   </div>
                 </div>
-                <p className="text-gray-300 text-sm leading-relaxed max-w-md mx-auto lg:mx-0">
+                <p className="text-gray-300 text-sm leading-relaxed">
                   Líder en equipos de protección personal para la industria. Soluciones certificadas 
                   que garantizan la seguridad y cumplimiento normativo de su empresa.
                 </p>
-                <div className="space-y-4">
-                  <div className="flex items-center justify-center lg:justify-start space-x-3">
+                <div className="space-y-3">
+                  <div className="flex items-center space-x-2">
                     <div className="w-2 h-2 bg-bob-green-500 rounded-full animate-pulse"></div>
                     <span className="text-gray-400 text-sm font-medium">En línea</span>
                   </div>
-                  <div className="text-gray-400 text-sm text-center lg:text-left">
+                  <div className="text-gray-400 text-xs">
                     Horario: Lun-Vie 7:00 AM - 5:00 PM
                   </div>
                 </div>
               </div>
 
-              {/* Navegación - Alineada */}
-              <div className="space-y-8">
-                <h3 className="text-white font-bold text-xl text-center lg:text-left">Navegación</h3>
-                <div className="space-y-5">
-                  <a href="#productos" className="block text-gray-300 text-sm hover:text-bob-green-400 transition-colors duration-300 text-center lg:text-left leading-relaxed">
+              {/* Navegación - Segunda columna (centro) */}
+              <div className="space-y-6 lg:space-y-8">
+                <h3 className="text-white font-bold text-lg">Navegación</h3>
+                <div className="space-y-4">
+                  <a href="#productos" className="block text-gray-300 text-sm hover:text-bob-green-400 transition-colors duration-300 text-center lg:text-left">
                     Productos
                   </a>
-                  <a href="#catalogo-detallado" className="block text-gray-300 text-sm hover:text-bob-green-400 transition-colors duration-300 text-center lg:text-left leading-relaxed">
+                  <a href="#catalogo-detallado" className="block text-gray-300 text-sm hover:text-bob-green-400 transition-colors duration-300 text-center lg:text-left">
                     Catálogo Técnico
                   </a>
-                  <a href="#contacto" className="block text-gray-300 text-sm hover:text-bob-green-400 transition-colors duration-300 text-center lg:text-left leading-relaxed">
+                  <a href="#contacto" className="block text-gray-300 text-sm hover:text-bob-green-400 transition-colors duration-300 text-center lg:text-left">
                     Contacto
                   </a>
-                  <a href="#formulario-cotizacion" className="block text-gray-300 text-sm hover:text-bob-green-400 transition-colors duration-300 text-center lg:text-left leading-relaxed">
+                  <a href="#formulario-cotizacion" className="block text-gray-300 text-sm hover:text-bob-green-400 transition-colors duration-300 text-center lg:text-left">
                     Solicitar Cotización
                   </a>
                 </div>
               </div>
 
-              {/* Servicios - Alineada */}
-              <div className="space-y-8">
-                <h3 className="text-white font-bold text-xl text-center lg:text-left">Servicios</h3>
-                <div className="space-y-5">
-                  <div className="flex items-center justify-center lg:justify-start space-x-3">
+              {/* Servicios - Tercera columna (derecha) */}
+              <div className="space-y-6 lg:space-y-8">
+                <h3 className="text-white font-bold text-lg">Servicios</h3>
+                <div className="space-y-4">
+                  <div className="flex items-center space-x-3">
                     <div className="w-1.5 h-1.5 bg-bob-green-500 rounded-full flex-shrink-0"></div>
-                    <span className="text-gray-300 text-sm leading-relaxed">Cotizaciones Personalizadas</span>
+                    <span className="text-gray-300 text-sm">Cotizaciones Personalizadas</span>
                   </div>
-                  <div className="flex items-center justify-center lg:justify-start space-x-3">
+                  <div className="flex items-center space-x-3">
                     <div className="w-1.5 h-1.5 bg-bob-green-500 rounded-full flex-shrink-0"></div>
-                    <span className="text-gray-300 text-sm leading-relaxed">Asesoría Técnica</span>
+                    <span className="text-gray-300 text-sm">Asesoría Técnica</span>
                   </div>
-                  <div className="flex items-center justify-center lg:justify-start space-x-3">
+                  <div className="flex items-center space-x-3">
                     <div className="w-1.5 h-1.5 bg-bob-green-500 rounded-full flex-shrink-0"></div>
-                    <span className="text-gray-300 text-sm leading-relaxed">Certificaciones</span>
+                    <span className="text-gray-300 text-sm">Certificaciones</span>
                   </div>
-                  <div className="flex items-center justify-center lg:justify-start space-x-3">
+                  <div className="flex items-center space-x-3">
                     <div className="w-1.5 h-1.5 bg-bob-green-500 rounded-full flex-shrink-0"></div>
-                    <span className="text-gray-300 text-sm leading-relaxed">Entrega Nacional</span>
+                    <span className="text-gray-300 text-sm">Entrega Nacional</span>
                   </div>
-                  <div className="flex items-center justify-center lg:justify-start space-x-3">
+                  <div className="flex items-center space-x-3">
                     <div className="w-1.5 h-1.5 bg-bob-green-500 rounded-full flex-shrink-0"></div>
-                    <span className="text-gray-300 text-sm leading-relaxed">Soporte 24/7</span>
+                    <span className="text-gray-300 text-sm">Soporte 24/7</span>
                   </div>
                 </div>
               </div>
@@ -400,10 +400,10 @@ export default function Home() {
             <div className="flex flex-col lg:flex-row items-center justify-between space-y-6 lg:space-y-0">
               {/* Copyright y Certificaciones */}
               <div className="text-center lg:text-left">
-                <p className="text-gray-400 text-sm mb-3 leading-relaxed">
+                <p className="text-gray-400 text-sm mb-2">
                   © 2025 BobCoperation. Todos los derechos reservados.
                 </p>
-                <p className="text-gray-500 text-xs leading-relaxed">
+                <p className="text-gray-500 text-xs">
                   Equipos de Protección Personal • Certificaciones Internacionales • ISO 9001
                 </p>
               </div>
