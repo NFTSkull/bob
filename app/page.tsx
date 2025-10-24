@@ -38,14 +38,14 @@ export default function Home() {
       {/* Executive Hero Section with Video Background */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
         {/* Video Background */}
-        <div className="absolute inset-0 w-full h-full">
+        <div className="absolute inset-0 w-full h-full overflow-hidden">
           <video
             autoPlay
             muted
             loop
             playsInline
             preload="auto"
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover scale-110"
             aria-label="Video de fondo corporativo BOB Coperation"
           >
             <source src="/hero.mp4" type="video/mp4" />
