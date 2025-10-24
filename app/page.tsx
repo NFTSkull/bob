@@ -321,7 +321,7 @@ export default function Home() {
       {/* Executive Footer */}
       <footer className="bg-gradient-to-r from-gray-900 to-gray-800 text-white py-16">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
             <StaggeredReveal staggerDelay={150} animation="fadeInUp">
               {/* Información de la Empresa */}
               <div className="md:col-span-2">
@@ -332,10 +332,35 @@ export default function Home() {
                     <div className="text-gray-300 text-sm">Seguridad Industrial Premium</div>
                   </div>
                 </div>
-                <p className="text-gray-300 text-sm leading-relaxed max-w-lg">
+                <p className="text-gray-300 text-sm leading-relaxed max-w-lg mb-6">
                   Líder en equipos de protección personal para la industria. Soluciones certificadas 
                   que garantizan la seguridad y cumplimiento normativo de su empresa.
                 </p>
+                <div className="flex items-center space-x-2">
+                  <div className="w-2 h-2 bg-bob-green-500 rounded-full animate-pulse"></div>
+                  <span className="text-gray-400 text-xs font-medium">En línea</span>
+                  <span className="text-gray-500 text-xs">•</span>
+                  <span className="text-gray-400 text-xs">Horario: Lun-Vie 7:00 AM - 5:00 PM</span>
+                </div>
+              </div>
+
+              {/* Navegación */}
+              <div>
+                <h3 className="text-white font-bold text-lg mb-4">Navegación</h3>
+                <div className="space-y-3">
+                  <a href="#productos" className="block text-gray-300 text-sm hover:text-bob-green-400 transition-colors">
+                    Productos
+                  </a>
+                  <a href="#catalogo-detallado" className="block text-gray-300 text-sm hover:text-bob-green-400 transition-colors">
+                    Catálogo Técnico
+                  </a>
+                  <a href="#contacto" className="block text-gray-300 text-sm hover:text-bob-green-400 transition-colors">
+                    Contacto
+                  </a>
+                  <a href="#formulario-cotizacion" className="block text-gray-300 text-sm hover:text-bob-green-400 transition-colors">
+                    Solicitar Cotización
+                  </a>
+                </div>
               </div>
 
               {/* Servicios */}
@@ -344,23 +369,23 @@ export default function Home() {
                 <div className="space-y-3">
                   <div className="flex items-center space-x-2">
                     <div className="w-1.5 h-1.5 bg-bob-green-500 rounded-full"></div>
-                    <p className="text-gray-300 text-sm">Cotizaciones Personalizadas</p>
+                    <span className="text-gray-300 text-sm">Cotizaciones Personalizadas</span>
                   </div>
                   <div className="flex items-center space-x-2">
                     <div className="w-1.5 h-1.5 bg-bob-green-500 rounded-full"></div>
-                    <p className="text-gray-300 text-sm">Asesoría Técnica</p>
+                    <span className="text-gray-300 text-sm">Asesoría Técnica</span>
                   </div>
                   <div className="flex items-center space-x-2">
                     <div className="w-1.5 h-1.5 bg-bob-green-500 rounded-full"></div>
-                    <p className="text-gray-300 text-sm">Certificaciones</p>
+                    <span className="text-gray-300 text-sm">Certificaciones</span>
                   </div>
                   <div className="flex items-center space-x-2">
                     <div className="w-1.5 h-1.5 bg-bob-green-500 rounded-full"></div>
-                    <p className="text-gray-300 text-sm">Entrega Nacional</p>
+                    <span className="text-gray-300 text-sm">Entrega Nacional</span>
                   </div>
                   <div className="flex items-center space-x-2">
                     <div className="w-1.5 h-1.5 bg-bob-green-500 rounded-full"></div>
-                    <p className="text-gray-300 text-sm">Soporte 24/7</p>
+                    <span className="text-gray-300 text-sm">Soporte 24/7</span>
                   </div>
                 </div>
               </div>
@@ -369,9 +394,9 @@ export default function Home() {
 
           {/* Línea divisoria */}
           <div className="border-t border-gray-700 pt-8">
-            <div className="flex flex-col lg:flex-row items-center justify-between space-y-4 lg:space-y-0">
+            <div className="flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0">
               {/* Copyright y Certificaciones */}
-              <div className="text-center lg:text-left">
+              <div className="text-center md:text-left">
                 <p className="text-gray-400 text-sm mb-2">
                   © 2025 BobCoperation. Todos los derechos reservados.
                 </p>
@@ -380,15 +405,14 @@ export default function Home() {
                 </p>
               </div>
               
-              {/* Estado y Horario */}
-              <div className="flex flex-col sm:flex-row items-center space-y-2 sm:space-y-0 sm:space-x-6">
-                <div className="flex items-center space-x-2">
-                  <div className="w-2 h-2 bg-bob-green-500 rounded-full animate-pulse"></div>
-                  <span className="text-gray-400 text-xs font-medium">En línea</span>
-                </div>
-                <div className="text-gray-400 text-xs">
-                  <span className="font-medium">Horario:</span> Lun-Vie 7:00 AM - 5:00 PM
-                </div>
+              {/* Botón de acción */}
+              <div className="flex items-center space-x-4">
+                <a 
+                  href="#formulario-cotizacion"
+                  className="bg-bob-blue-500 text-white font-semibold px-6 py-2 rounded-lg hover:bg-bob-green-500 transition-colors text-sm shadow-lg hover:shadow-xl"
+                >
+                  Cotizar Ahora
+                </a>
               </div>
             </div>
           </div>
