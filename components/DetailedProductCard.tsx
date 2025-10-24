@@ -10,7 +10,7 @@ interface DetailedProductCardProps {
 
 export default function DetailedProductCard({ product, className }: DetailedProductCardProps) {
   return (
-    <div className={cn("bg-white border border-gray-200 rounded-lg overflow-hidden hover:border-bob-blue-500 transition-all duration-300 shadow-lg hover:shadow-xl", className)}>
+    <div className={cn("bg-white border border-gray-200 rounded-lg overflow-hidden hover:border-bob-blue-500 transition-all duration-300 shadow-lg hover:shadow-xl h-full flex flex-col", className)}>
       {/* Product Header */}
       <div className="p-6 border-b border-gray-300/50">
         <div className="flex items-start justify-between mb-4">
@@ -38,7 +38,7 @@ export default function DetailedProductCard({ product, className }: DetailedProd
       </div>
 
       {/* Technical Specifications */}
-      <div className="p-6 space-y-6">
+      <div className="p-6 space-y-6 flex-1">
         {/* Material & Basic Info */}
         {(product.material || product.weight || product.thickness) && (
           <div>
@@ -191,15 +191,6 @@ export default function DetailedProductCard({ product, className }: DetailedProd
         )}
       </div>
 
-      {/* Action Footer */}
-      <div className="p-6 bg-gray-50 border-t border-gray-300/50">
-        <a 
-          href="#formulario-cotizacion"
-          className="w-full bg-bob-blue-500 text-white font-bold py-2 px-4 rounded-lg hover:bg-bob-green-500 transition-colors text-sm shadow-md hover:shadow-lg inline-block text-center"
-        >
-          Solicitar Cotización
-        </a>
-      </div>
     </div>
   );
 }

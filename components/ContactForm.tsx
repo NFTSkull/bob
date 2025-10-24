@@ -291,7 +291,7 @@ export default function ContactForm() {
             </div>
             <div className="mt-6 p-4 bg-bob-blue-50 border border-bob-blue-200 rounded-lg">
               <p className="text-bob-blue-800 text-sm font-medium">
-                <span className="font-bold">Horario de Atención:</span> Lunes a Viernes 8:00 AM - 6:00 PM
+                <span className="font-bold">Horario de Atención:</span> Lunes a Viernes 7:00 AM - 5:00 PM
               </p>
             </div>
           </div>
