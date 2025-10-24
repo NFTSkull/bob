@@ -21,9 +21,9 @@ export default function Home() {
               <HeaderLogo />
             </div>
             <nav className="hidden lg:flex items-center space-x-8">
-              <a href="#productos" className="text-black hover:text-bob-blue-500 transition-colors font-medium">Productos</a>
-              <a href="#servicios" className="text-black hover:text-bob-blue-500 transition-colors font-medium">Servicios</a>
-              <a href="#contacto" className="text-black hover:text-bob-blue-500 transition-colors font-medium">Contacto</a>
+              <a href="#productos" className="bg-bob-blue-500 text-white font-semibold px-6 py-2.5 rounded-lg hover:bg-bob-green-500 transition-colors shadow-lg hover:shadow-xl">Productos</a>
+              <a href="#servicios" className="bg-bob-blue-500 text-white font-semibold px-6 py-2.5 rounded-lg hover:bg-bob-green-500 transition-colors shadow-lg hover:shadow-xl">Servicios</a>
+              <a href="#contacto" className="bg-bob-blue-500 text-white font-semibold px-6 py-2.5 rounded-lg hover:bg-bob-green-500 transition-colors shadow-lg hover:shadow-xl">Contacto</a>
               <a 
                 href="#formulario-cotizacion"
                 className="bg-bob-blue-500 text-white font-semibold px-6 py-2.5 rounded-lg hover:bg-bob-green-500 transition-colors shadow-lg hover:shadow-xl"
@@ -90,37 +90,11 @@ export default function Home() {
 
             <ScrollReveal animation="fadeInUp" delay={400}>
               <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold text-white mb-8 leading-tight">
-                <span className="block text-shadow-lg">Equipos de Protección Personal</span>
+                <span className="block text-shadow-lg">LIDER EN SOLUCIONES</span>
                 <span className="block text-bob-green-400 text-shadow-lg">
-                  & Consumibles Industriales
+                  Y MATERIALES INDUSTRIALES
                 </span>
               </h1>
-            </ScrollReveal>
-
-            <ScrollReveal animation="fadeInUp" delay={600}>
-              <p className="text-lg md:text-xl lg:text-2xl text-gray-200 mb-12 leading-relaxed max-w-4xl mx-auto text-shadow-md">
-                <span className="block mb-4">
-                  Líder en soluciones de seguridad industrial para empresas de manufactura, 
-                  maquila y almacenes en México.
-                </span>
-                <span className="block text-bob-green-400 font-semibold text-base md:text-lg">
-                  Cumplimiento Normativo • Disponibilidad Garantizada • Entregas Puntuales
-                </span>
-              </p>
-            </ScrollReveal>
-
-            <ScrollReveal animation="fadeInUp" delay={800}>
-              <div className="flex flex-col sm:flex-row gap-6 justify-center mb-16">
-                <button className="btn-professional bg-bob-blue-500 text-white font-bold px-10 py-4 rounded-lg hover:bg-bob-green-500 shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-300 text-lg">
-                  Explorar Catálogo Completo
-                </button>
-                <a 
-                  href="#formulario-cotizacion"
-                  className="btn-professional bg-white/10 backdrop-blur-sm text-white border-2 border-white/30 font-semibold px-10 py-4 rounded-lg hover:bg-white hover:text-bob-blue-500 transition-all duration-300 text-lg"
-                >
-                  Solicitar Cotización
-                </a>
-              </div>
             </ScrollReveal>
 
             {/* Stats con fondo semitransparente */}
