@@ -322,10 +322,10 @@ export default function Home() {
       <footer className="bg-gradient-to-r from-gray-900 to-gray-800 text-white py-16">
         <div className="container mx-auto px-4">
           {/* Sección Principal del Footer */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
+          <div className="flex flex-col lg:flex-row gap-12 mb-12">
             <StaggeredReveal staggerDelay={150} animation="fadeInUp">
               {/* Información de la Empresa */}
-              <div className="md:col-span-1">
+              <div className="flex-1">
                 <div className="flex items-center space-x-4 mb-6">
                   <FooterLogo />
                   <div>
@@ -333,7 +333,7 @@ export default function Home() {
                     <div className="text-gray-300 text-sm">Seguridad Industrial Premium</div>
                   </div>
                 </div>
-                <p className="text-gray-300 text-sm leading-relaxed mb-6">
+                <p className="text-gray-300 text-sm leading-relaxed mb-6 max-w-md">
                   Líder en equipos de protección personal para la industria. Soluciones certificadas 
                   que garantizan la seguridad y cumplimiento normativo de su empresa.
                 </p>
@@ -349,7 +349,7 @@ export default function Home() {
               </div>
 
               {/* Navegación */}
-              <div className="text-left">
+              <div className="flex-1 text-left">
                 <h3 className="text-white font-bold text-lg mb-6">Navegación</h3>
                 <div className="space-y-4">
                   <a href="#productos" className="block text-gray-300 text-sm hover:text-bob-green-400 transition-colors duration-300">
@@ -368,7 +368,7 @@ export default function Home() {
               </div>
 
               {/* Servicios */}
-              <div className="text-left">
+              <div className="flex-1 text-left">
                 <h3 className="text-white font-bold text-lg mb-6">Servicios</h3>
                 <div className="space-y-4">
                   <div className="flex items-center space-x-3">
