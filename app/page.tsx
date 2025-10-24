@@ -48,8 +48,7 @@ export default function Home() {
             className="w-full h-full object-cover"
             aria-label="Video de fondo corporativo BOB Coperation"
           >
-            <source src="/videos/bob-hero-optimized.mp4" type="video/mp4" />
-            <source src="/videos/bob-hero.mov" type="video/quicktime" />
+            <source src="/hero.mp4" type="video/mp4" />
             Tu navegador no soporta el elemento video.
           </video>
           
@@ -78,9 +77,12 @@ export default function Home() {
 
             <ScrollReveal animation="fadeInUp" delay={200}>
               <div className="mb-8">
-                <div className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-4 leading-tight">
-                  <span className="block text-shadow-lg">BOB</span>
-                  <span className="block text-bob-green-400 text-shadow-lg">Coperation</span>
+                <div className="flex justify-center mb-6">
+                  <img 
+                    src="/logo-hero.png" 
+                    alt="BOB Coperation Logo" 
+                    className="h-24 md:h-32 lg:h-40 w-auto object-contain"
+                  />
                 </div>
                 <div className="w-24 h-1 bg-bob-green-500 mx-auto rounded-full mb-6" />
               </div>
