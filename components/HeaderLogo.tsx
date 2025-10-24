@@ -1,11 +1,11 @@
 import Image from "next/image";
-import logo from "@/public/header.png";
+import logoHero from "@/public/logo-hero.png";
 
 export function HeaderLogo() {
   return (
     <Image
-      src={logo}
-      alt="BobCoperation Logo"
+      src={logoHero}
+      alt="BOB Coperation Logo"
       width={200}
       height={56}
       priority
@@ -18,8 +18,8 @@ export function HeaderLogo() {
 export function FooterLogo() {
   return (
     <Image
-      src={logo}
-      alt="BobCoperation Logo"
+      src={logoHero}
+      alt="BOB Coperation Logo"
       width={200}
       height={56}
       sizes="(max-width: 768px) 100px, 200px"
