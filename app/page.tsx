@@ -148,14 +148,13 @@ export default function Home() {
                   onClick={() => navigateToCategory(category.id)}
                   className="group bg-white border border-gray-200 rounded-lg p-8 hover:border-bob-blue-500 transition-all duration-300 hover:scale-105 cursor-pointer shadow-lg hover:shadow-xl"
                 >
-                  <div className="flex items-center justify-center w-16 h-16 bg-bob-blue-50 rounded-lg mb-6 group-hover:bg-bob-blue-100 transition-all duration-300 group-hover:scale-110">
-                    <svg
-                      className="w-8 h-8 text-bob-blue-500 group-hover:text-bob-blue-600 transition-colors duration-300"
-                      fill="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path d={category.icon} />
-                    </svg>
+                  <div className="flex items-center justify-center w-16 h-16 bg-bob-blue-50 rounded-lg mb-6 group-hover:bg-bob-blue-100 transition-all duration-300 group-hover:scale-110 overflow-hidden">
+                    <img
+                      src={category.image}
+                      alt={`${category.name} - ${category.description}`}
+                      className="w-full h-full object-cover rounded-lg transition-all duration-300 group-hover:scale-110"
+                      loading="lazy"
+                    />
                   </div>
                   <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-bob-blue-500 text-hover-gentle text-scale-gentle">
                     {category.name}
