@@ -322,10 +322,10 @@ export default function Home() {
       <footer className="bg-gradient-to-r from-gray-900 to-gray-800 text-white py-16">
         <div className="container mx-auto px-4">
           {/* Sección Principal del Footer */}
-          <div className="grid grid-cols-1 lg:grid-cols-4 gap-8 mb-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
             <StaggeredReveal staggerDelay={150} animation="fadeInUp">
               {/* Información de la Empresa */}
-              <div className="lg:col-span-2">
+              <div className="md:col-span-2 lg:col-span-2">
                 <div className="flex items-center space-x-4 mb-6">
                   <FooterLogo />
                   <div>
@@ -333,7 +333,7 @@ export default function Home() {
                     <div className="text-gray-300 text-sm">Seguridad Industrial Premium</div>
                   </div>
                 </div>
-                <p className="text-gray-300 text-sm leading-relaxed max-w-lg mb-6">
+                <p className="text-gray-300 text-sm leading-relaxed mb-6">
                   Líder en equipos de protección personal para la industria. Soluciones certificadas 
                   que garantizan la seguridad y cumplimiento normativo de su empresa.
                 </p>
@@ -349,7 +349,7 @@ export default function Home() {
               </div>
 
               {/* Navegación */}
-              <div className="text-center lg:text-left">
+              <div className="text-left">
                 <h3 className="text-white font-bold text-lg mb-6">Navegación</h3>
                 <div className="space-y-4">
                   <a href="#productos" className="block text-gray-300 text-sm hover:text-bob-green-400 transition-colors duration-300">
@@ -368,26 +368,26 @@ export default function Home() {
               </div>
 
               {/* Servicios */}
-              <div className="text-center lg:text-left">
+              <div className="text-left">
                 <h3 className="text-white font-bold text-lg mb-6">Servicios</h3>
                 <div className="space-y-4">
-                  <div className="flex items-center justify-center lg:justify-start space-x-3">
+                  <div className="flex items-center space-x-3">
                     <div className="w-1.5 h-1.5 bg-bob-green-500 rounded-full"></div>
                     <span className="text-gray-300 text-sm">Cotizaciones Personalizadas</span>
                   </div>
-                  <div className="flex items-center justify-center lg:justify-start space-x-3">
+                  <div className="flex items-center space-x-3">
                     <div className="w-1.5 h-1.5 bg-bob-green-500 rounded-full"></div>
                     <span className="text-gray-300 text-sm">Asesoría Técnica</span>
                   </div>
-                  <div className="flex items-center justify-center lg:justify-start space-x-3">
+                  <div className="flex items-center space-x-3">
                     <div className="w-1.5 h-1.5 bg-bob-green-500 rounded-full"></div>
                     <span className="text-gray-300 text-sm">Certificaciones</span>
                   </div>
-                  <div className="flex items-center justify-center lg:justify-start space-x-3">
+                  <div className="flex items-center space-x-3">
                     <div className="w-1.5 h-1.5 bg-bob-green-500 rounded-full"></div>
                     <span className="text-gray-300 text-sm">Entrega Nacional</span>
                   </div>
-                  <div className="flex items-center justify-center lg:justify-start space-x-3">
+                  <div className="flex items-center space-x-3">
                     <div className="w-1.5 h-1.5 bg-bob-green-500 rounded-full"></div>
                     <span className="text-gray-300 text-sm">Soporte 24/7</span>
                   </div>
@@ -398,9 +398,9 @@ export default function Home() {
 
           {/* Línea divisoria */}
           <div className="border-t border-gray-700 pt-8">
-            <div className="flex flex-col lg:flex-row items-center justify-between space-y-6 lg:space-y-0">
+            <div className="flex flex-col md:flex-row items-center justify-between space-y-6 md:space-y-0">
               {/* Copyright y Certificaciones */}
-              <div className="text-center lg:text-left">
+              <div className="text-left">
                 <p className="text-gray-400 text-sm mb-2">
                   © 2025 BobCoperation. Todos los derechos reservados.
                 </p>
