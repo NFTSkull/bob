@@ -321,8 +321,9 @@ export default function Home() {
       {/* Executive Footer */}
       <footer className="bg-gradient-to-r from-gray-900 to-gray-800 text-white py-16">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
             <StaggeredReveal staggerDelay={150} animation="fadeInUp">
+              {/* Información de la Empresa */}
               <div className="md:col-span-2">
                 <div className="flex items-center space-x-4 mb-6">
                   <FooterLogo />
@@ -331,7 +332,7 @@ export default function Home() {
                     <div className="text-gray-300 text-sm">Seguridad Industrial Premium</div>
                   </div>
                 </div>
-                <p className="text-gray-300 text-sm leading-relaxed max-w-md">
+                <p className="text-gray-300 text-sm leading-relaxed max-w-lg">
                   Líder en equipos de protección personal para la industria. Soluciones certificadas 
                   que garantizan la seguridad y cumplimiento normativo de su empresa.
                 </p>
@@ -340,12 +341,27 @@ export default function Home() {
               {/* Servicios */}
               <div>
                 <h3 className="text-white font-bold text-lg mb-4">Servicios</h3>
-                <div className="space-y-2">
-                  <p className="text-gray-300 text-sm">Cotizaciones Personalizadas</p>
-                  <p className="text-gray-300 text-sm">Asesoría Técnica</p>
-                  <p className="text-gray-300 text-sm">Certificaciones</p>
-                  <p className="text-gray-300 text-sm">Entrega Nacional</p>
-                  <p className="text-gray-300 text-sm">Soporte 24/7</p>
+                <div className="space-y-3">
+                  <div className="flex items-center space-x-2">
+                    <div className="w-1.5 h-1.5 bg-bob-green-500 rounded-full"></div>
+                    <p className="text-gray-300 text-sm">Cotizaciones Personalizadas</p>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <div className="w-1.5 h-1.5 bg-bob-green-500 rounded-full"></div>
+                    <p className="text-gray-300 text-sm">Asesoría Técnica</p>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <div className="w-1.5 h-1.5 bg-bob-green-500 rounded-full"></div>
+                    <p className="text-gray-300 text-sm">Certificaciones</p>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <div className="w-1.5 h-1.5 bg-bob-green-500 rounded-full"></div>
+                    <p className="text-gray-300 text-sm">Entrega Nacional</p>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <div className="w-1.5 h-1.5 bg-bob-green-500 rounded-full"></div>
+                    <p className="text-gray-300 text-sm">Soporte 24/7</p>
+                  </div>
                 </div>
               </div>
             </StaggeredReveal>
@@ -353,22 +369,25 @@ export default function Home() {
 
           {/* Línea divisoria */}
           <div className="border-t border-gray-700 pt-8">
-            <div className="flex flex-col md:flex-row items-center justify-between">
-              <div className="text-center md:text-left mb-4 md:mb-0">
-                <p className="text-gray-400 text-sm">
+            <div className="flex flex-col lg:flex-row items-center justify-between space-y-4 lg:space-y-0">
+              {/* Copyright y Certificaciones */}
+              <div className="text-center lg:text-left">
+                <p className="text-gray-400 text-sm mb-2">
                   © 2025 BobCoperation. Todos los derechos reservados.
                 </p>
-                <p className="text-gray-500 text-xs mt-1">
+                <p className="text-gray-500 text-xs">
                   Equipos de Protección Personal • Certificaciones Internacionales • ISO 9001
                 </p>
               </div>
-              <div className="flex items-center space-x-6">
+              
+              {/* Estado y Horario */}
+              <div className="flex flex-col sm:flex-row items-center space-y-2 sm:space-y-0 sm:space-x-6">
                 <div className="flex items-center space-x-2">
                   <div className="w-2 h-2 bg-bob-green-500 rounded-full animate-pulse"></div>
-                  <span className="text-gray-400 text-xs">En línea</span>
+                  <span className="text-gray-400 text-xs font-medium">En línea</span>
                 </div>
                 <div className="text-gray-400 text-xs">
-                  Horario: Lun-Vie 7:00 AM - 5:00 PM
+                  <span className="font-medium">Horario:</span> Lun-Vie 7:00 AM - 5:00 PM
                 </div>
               </div>
             </div>
