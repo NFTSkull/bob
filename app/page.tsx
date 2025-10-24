@@ -322,22 +322,22 @@ export default function Home() {
       <footer className="bg-gradient-to-r from-gray-900 to-gray-800 text-white py-16">
         <div className="container mx-auto px-4">
           {/* Sección Principal del Footer */}
-          <div className="flex flex-col lg:flex-row gap-12 mb-12">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-16 mb-12">
             <StaggeredReveal staggerDelay={150} animation="fadeInUp">
               {/* Información de la Empresa */}
-              <div className="flex-1">
-                <div className="flex items-center space-x-4 mb-6">
+              <div className="space-y-6">
+                <div className="flex items-center space-x-4">
                   <FooterLogo />
                   <div>
                     <div className="text-white font-bold text-xl">BobCoperation</div>
                     <div className="text-gray-300 text-sm">Seguridad Industrial Premium</div>
                   </div>
                 </div>
-                <p className="text-gray-300 text-sm leading-relaxed mb-6 max-w-md">
+                <p className="text-gray-300 text-sm leading-relaxed">
                   Líder en equipos de protección personal para la industria. Soluciones certificadas 
                   que garantizan la seguridad y cumplimiento normativo de su empresa.
                 </p>
-                <div className="space-y-2">
+                <div className="space-y-3">
                   <div className="flex items-center space-x-2">
                     <div className="w-2 h-2 bg-bob-green-500 rounded-full animate-pulse"></div>
                     <span className="text-gray-400 text-xs font-medium">En línea</span>
@@ -349,8 +349,8 @@ export default function Home() {
               </div>
 
               {/* Navegación */}
-              <div className="flex-1 text-left">
-                <h3 className="text-white font-bold text-lg mb-6">Navegación</h3>
+              <div className="space-y-6">
+                <h3 className="text-white font-bold text-lg">Navegación</h3>
                 <div className="space-y-4">
                   <a href="#productos" className="block text-gray-300 text-sm hover:text-bob-green-400 transition-colors duration-300">
                     Productos
@@ -368,8 +368,8 @@ export default function Home() {
               </div>
 
               {/* Servicios */}
-              <div className="flex-1 text-left">
-                <h3 className="text-white font-bold text-lg mb-6">Servicios</h3>
+              <div className="space-y-6">
+                <h3 className="text-white font-bold text-lg">Servicios</h3>
                 <div className="space-y-4">
                   <div className="flex items-center space-x-3">
                     <div className="w-1.5 h-1.5 bg-bob-green-500 rounded-full"></div>
