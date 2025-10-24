@@ -322,10 +322,10 @@ export default function Home() {
       <footer className="bg-gradient-to-r from-gray-900 to-gray-800 text-white py-16">
         <div className="container mx-auto px-4">
           {/* Sección Principal del Footer */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
             <StaggeredReveal staggerDelay={150} animation="fadeInUp">
               {/* Información de la Empresa */}
-              <div className="md:col-span-2 lg:col-span-2">
+              <div className="md:col-span-1">
                 <div className="flex items-center space-x-4 mb-6">
                   <FooterLogo />
                   <div>
@@ -337,7 +337,7 @@ export default function Home() {
                   Líder en equipos de protección personal para la industria. Soluciones certificadas 
                   que garantizan la seguridad y cumplimiento normativo de su empresa.
                 </p>
-                <div className="flex items-center space-x-4">
+                <div className="space-y-2">
                   <div className="flex items-center space-x-2">
                     <div className="w-2 h-2 bg-bob-green-500 rounded-full animate-pulse"></div>
                     <span className="text-gray-400 text-xs font-medium">En línea</span>
