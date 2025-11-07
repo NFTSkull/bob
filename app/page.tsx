@@ -11,6 +11,7 @@ import { useCategoryNavigation } from '@/hooks/useCategoryNavigation';
 export default function Home() {
   const { isCategoryOpen, toggleCategory, navigateToCategory } = useCategoryNavigation();
   const [isHeroPassed, setIsHeroPassed] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const heroRef = useRef<HTMLElement | null>(null);
 
   useEffect(() => {
@@ -35,6 +36,27 @@ export default function Home() {
     };
   }, []);
 
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth >= 1024) {
+        setIsMenuOpen(false);
+      }
+    };
+
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+
+  const navigationLinks = [
+    { href: '#productos', label: 'Productos' },
+    { href: '#servicios', label: 'Servicios' },
+    { href: '#contacto', label: 'Contacto' },
+    { href: '#formulario-cotizacion', label: 'Cotizar Ahora' },
+  ];
+
   return (
     <div className="min-h-screen bg-white">
       {/* Executive Header */}
@@ -47,17 +69,53 @@ export default function Home() {
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_40%,rgba(46,108,230,0.05),transparent_50%)]" />
         )}
         <div className="relative mx-auto w-full max-w-4xl px-4 py-2">
-          <nav className="hidden lg:flex items-center justify-center space-x-8">
-            <a href="#productos" className="bg-bob-blue-500 text-white font-semibold px-6 py-2.5 rounded-lg hover:bg-bob-green-500 transition-colors shadow-lg hover:shadow-xl">Productos</a>
-            <a href="#servicios" className="bg-bob-blue-500 text-white font-semibold px-6 py-2.5 rounded-lg hover:bg-bob-green-500 transition-colors shadow-lg hover:shadow-xl">Servicios</a>
-            <a href="#contacto" className="bg-bob-blue-500 text-white font-semibold px-6 py-2.5 rounded-lg hover:bg-bob-green-500 transition-colors shadow-lg hover:shadow-xl">Contacto</a>
-            <a 
-              href="#formulario-cotizacion"
-              className="bg-bob-blue-500 text-white font-semibold px-6 py-2.5 rounded-lg hover:bg-bob-green-500 transition-colors shadow-lg hover:shadow-xl"
+          <div className="flex items-center justify-between lg:justify-center">
+            <button
+              type="button"
+              className="inline-flex items-center justify-center rounded-lg border border-white/20 bg-black/60 px-3 py-2 text-sm font-semibold text-white shadow-lg shadow-black/20 backdrop-blur transition hover:bg-black/80 focus:outline-none focus-visible:ring-2 focus-visible:ring-bob-green-400 lg:hidden"
+              aria-expanded={isMenuOpen}
+              aria-controls="mobile-navigation"
+              onClick={() => setIsMenuOpen((prev) => !prev)}
             >
-              Cotizar Ahora
-            </a>
-          </nav>
+              <svg
+                className="h-6 w-6"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+              >
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4 6h16M4 12h16M4 18h16" />
+              </svg>
+            </button>
+            <nav className="hidden lg:flex items-center justify-center space-x-8">
+              {navigationLinks.map((link) => (
+                <a
+                  key={link.href}
+                  href={link.href}
+                  className="bg-bob-blue-500 text-white font-semibold px-6 py-2.5 rounded-lg hover:bg-bob-green-500 transition-colors shadow-lg hover:shadow-xl"
+                >
+                  {link.label}
+                </a>
+              ))}
+            </nav>
+          </div>
+          {isMenuOpen && (
+            <div
+              id="mobile-navigation"
+              className="mt-3 flex flex-col space-y-3 rounded-xl border border-white/10 bg-black/80 p-4 text-center shadow-2xl shadow-black/40 backdrop-blur lg:hidden"
+            >
+              {navigationLinks.map((link) => (
+                <a
+                  key={link.href}
+                  href={link.href}
+                  className="block rounded-lg bg-bob-blue-500 px-4 py-2 text-sm font-semibold text-white shadow hover:bg-bob-green-500 transition"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  {link.label}
+                </a>
+              ))}
+            </div>
+          )}
         </div>
       </header>
 

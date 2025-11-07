@@ -10,4 +10,5 @@
 - Ajustado el padding vertical interno del header para reducir su altura visual sin modificar el logo.
 - Logo del hero actualizado para utilizar `logobob.png`, manteniendo dimensiones originales.
 - Header ahora es transparente sobre el hero y recupera fondo negro al salir de la sección principal.
+- Menú hamburguesa exclusivo para móviles que despliega la navegación principal.
 

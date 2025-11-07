@@ -10,4 +10,5 @@
 - Microajuste: Se redujo el padding vertical del contenedor del header a `py-2` para disminuir su altura visual manteniendo el tamaño del logo.
 - Branding consistente: El hero ahora utiliza el mismo `logobob.png`, conservando escalas `h-64 md:h-80 lg:h-96`.
 - Decisión: Hacer el header transparente sobre el hero y restaurar fondo negro al salir de la sección para destacar el video inicial.
+- Experiencia móvil: Se incorporó menú hamburguesa exclusivo para móviles reutilizando la navegación principal.
 
