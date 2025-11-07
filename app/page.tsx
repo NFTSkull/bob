@@ -15,7 +15,7 @@ export default function Home() {
       {/* Executive Header */}
       <header className="relative bg-black border-b border-bob-blue-500/20 shadow-lg">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_40%,rgba(46,108,230,0.05),transparent_50%)]" />
-        <div className="relative mx-auto w-full max-w-4xl px-4 py-4">
+        <div className="relative mx-auto w-full max-w-4xl px-4 py-2">
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-4">
               <HeaderLogo />

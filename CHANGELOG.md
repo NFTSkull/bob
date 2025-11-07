@@ -7,4 +7,5 @@
 - Header principal ahora usa fondo negro.
 - Actualizado el logo del header a `logobob.png` y reducido su altura para un perfil más compacto.
 - Reducido el ancho del contenedor del header para una presencia más discreta.
+- Ajustado el padding vertical interno del header para reducir su altura visual sin modificar el logo.
 

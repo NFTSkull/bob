@@ -1,10 +1,11 @@
 import Image from "next/image";
-import logoHero from "@/public/logo-hero.png";
+import headerLogo from "@/public/logobob.png";
+import footerLogo from "@/public/logo-hero.png";
 
 export function HeaderLogo() {
   return (
     <Image
-      src={logoHero}
+      src={headerLogo}
       alt="BOB Coperation Logo"
       width={280}
       height={78}
@@ -18,7 +19,7 @@ export function HeaderLogo() {
 export function FooterLogo() {
   return (
     <Image
-      src={logoHero}
+      src={footerLogo}
       alt="BOB Coperation Logo"
       width={200}
       height={56}
