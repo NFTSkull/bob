@@ -1,7 +1,7 @@
 'use client';
 
 import { ReactNode } from 'react';
-import { useScrollReveal, useStaggeredScrollReveal, useTextReveal } from '@/hooks/useScrollReveal';
+import { useScrollReveal, useTextReveal } from '@/hooks/useScrollReveal';
 
 interface ScrollRevealProps {
   children: ReactNode;

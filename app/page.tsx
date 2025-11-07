@@ -3,9 +3,9 @@
 import { productCategories } from '@/data/products';
 import CategoryAccordion from '@/components/CategoryAccordion';
 import { useCategoryNavigation } from '@/hooks/useCategoryNavigation';
-import { HeaderLogo, FooterLogo } from '@/components/HeaderLogo';
+import { HeaderLogo } from '@/components/HeaderLogo';
 import ContactForm from '@/components/ContactForm';
-import { ScrollReveal, StaggeredReveal, TextReveal, CounterReveal } from '@/components/ScrollReveal';
+import { ScrollReveal, StaggeredReveal } from '@/components/ScrollReveal';
 
 export default function Home() {
   const { isCategoryOpen, toggleCategory, navigateToCategory } = useCategoryNavigation();
@@ -13,7 +13,7 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-white">
       {/* Executive Header */}
-      <header className="relative bg-white border-b border-bob-blue-500/20 shadow-lg">
+      <header className="relative bg-black border-b border-bob-blue-500/20 shadow-lg">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_40%,rgba(46,108,230,0.05),transparent_50%)]" />
         <div className="relative container mx-auto px-4 py-6">
           <div className="flex items-center justify-between">
@@ -68,13 +68,6 @@ export default function Home() {
         {/* Contenido del Hero */}
         <div className="relative z-10 container mx-auto px-4 text-center">
           <div className="max-w-5xl mx-auto">
-            <ScrollReveal animation="fadeInUp" delay={0}>
-              <div className="inline-flex items-center bg-bob-green-500/20 backdrop-blur-sm text-bob-green-400 font-semibold px-6 py-3 rounded-full text-sm mb-8 border border-bob-green-500/30 shadow-lg">
-                <div className="w-2 h-2 bg-bob-green-500 rounded-full mr-3 animate-pulse" />
-                Proveedor Certificado de EPP Industrial
-              </div>
-            </ScrollReveal>
-
             <ScrollReveal animation="fadeInUp" delay={200}>
               <div className="mb-8">
                 <div className="flex justify-center mb-6">
@@ -307,14 +300,6 @@ export default function Home() {
             </div>
           </StaggeredReveal>
 
-          <ScrollReveal animation="fadeInUp" delay={600}>
-            <a 
-              href="#formulario-cotizacion"
-              className="bg-bob-blue-500 text-white font-bold px-12 py-4 rounded-lg hover:bg-bob-green-500 transition-all duration-300 shadow-lg hover:shadow-2xl hover:scale-105 text-lg inline-block"
-            >
-              Solicitar Cotización Ejecutiva
-            </a>
-          </ScrollReveal>
         </div>
       </section>
 
@@ -406,12 +391,6 @@ export default function Home() {
                 <p className="text-gray-400 text-sm">© 2025 BobCoperation. Todos los derechos reservados.</p>
                 <p className="text-gray-500 text-xs mt-1">Equipos de Protección Personal • Certificaciones Internacionales • ISO 9001</p>
               </div>
-              <a
-                href="#formulario-cotizacion"
-                className="bg-bob-blue-500 text-white font-semibold px-8 py-3 rounded-lg hover:bg-bob-green-500 transition-all text-sm shadow-lg hover:shadow-xl md:self-auto self-start"
-              >
-                Cotizar Ahora
-              </a>
             </div>
           </div>
         </div>
