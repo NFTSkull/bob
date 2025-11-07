@@ -8,4 +8,6 @@
 - Cambio de branding: Se reemplazó el logo del header por `logobob.png` y se ajustaron dimensiones/paddings para un header más delgado.
 - Ajuste visual adicional: Se limitó el ancho máximo del contenido del header a `max-w-4xl` para compactar la cabecera sin modificar textos.
 - Microajuste: Se redujo el padding vertical del contenedor del header a `py-2` para disminuir su altura visual manteniendo el tamaño del logo.
+- Branding consistente: El hero ahora utiliza el mismo `logobob.png`, conservando escalas `h-64 md:h-80 lg:h-96`.
+- Decisión: Hacer el header transparente sobre el hero y restaurar fondo negro al salir de la sección para destacar el video inicial.
 

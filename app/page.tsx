@@ -1,42 +1,72 @@
 'use client';
 
+import { useEffect, useRef, useState } from 'react';
+
+import ContactForm from '@/components/ContactForm';
+import { ScrollReveal, StaggeredReveal } from '@/components/ScrollReveal';
 import { productCategories } from '@/data/products';
 import CategoryAccordion from '@/components/CategoryAccordion';
 import { useCategoryNavigation } from '@/hooks/useCategoryNavigation';
-import { HeaderLogo } from '@/components/HeaderLogo';
-import ContactForm from '@/components/ContactForm';
-import { ScrollReveal, StaggeredReveal } from '@/components/ScrollReveal';
 
 export default function Home() {
   const { isCategoryOpen, toggleCategory, navigateToCategory } = useCategoryNavigation();
+  const [isHeroPassed, setIsHeroPassed] = useState(false);
+  const heroRef = useRef<HTMLElement | null>(null);
+
+  useEffect(() => {
+    const heroElement = heroRef.current;
+    if (!heroElement) {
+      return;
+    }
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setIsHeroPassed(!entry.isIntersecting);
+      },
+      {
+        threshold: 0,
+      }
+    );
+
+    observer.observe(heroElement);
+
+    return () => {
+      observer.disconnect();
+    };
+  }, []);
 
   return (
     <div className="min-h-screen bg-white">
       {/* Executive Header */}
-      <header className="relative bg-black border-b border-bob-blue-500/20 shadow-lg">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_40%,rgba(46,108,230,0.05),transparent_50%)]" />
+      <header
+        className={`fixed top-0 left-0 right-0 z-50 transition-colors duration-300 ${
+          isHeroPassed ? 'bg-black border-b border-bob-blue-500/20 shadow-lg' : 'bg-transparent border-transparent'
+        }`}
+      >
+        {isHeroPassed && (
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_40%,rgba(46,108,230,0.05),transparent_50%)]" />
+        )}
         <div className="relative mx-auto w-full max-w-4xl px-4 py-2">
-          <div className="flex items-center justify-between">
-            <div className="flex items-center space-x-4">
-              <HeaderLogo />
-            </div>
-            <nav className="hidden lg:flex items-center space-x-8">
-              <a href="#productos" className="bg-bob-blue-500 text-white font-semibold px-6 py-2.5 rounded-lg hover:bg-bob-green-500 transition-colors shadow-lg hover:shadow-xl">Productos</a>
-              <a href="#servicios" className="bg-bob-blue-500 text-white font-semibold px-6 py-2.5 rounded-lg hover:bg-bob-green-500 transition-colors shadow-lg hover:shadow-xl">Servicios</a>
-              <a href="#contacto" className="bg-bob-blue-500 text-white font-semibold px-6 py-2.5 rounded-lg hover:bg-bob-green-500 transition-colors shadow-lg hover:shadow-xl">Contacto</a>
-              <a 
-                href="#formulario-cotizacion"
-                className="bg-bob-blue-500 text-white font-semibold px-6 py-2.5 rounded-lg hover:bg-bob-green-500 transition-colors shadow-lg hover:shadow-xl"
-              >
-                Cotizar Ahora
-              </a>
-            </nav>
-          </div>
+          <nav className="hidden lg:flex items-center justify-center space-x-8">
+            <a href="#productos" className="bg-bob-blue-500 text-white font-semibold px-6 py-2.5 rounded-lg hover:bg-bob-green-500 transition-colors shadow-lg hover:shadow-xl">Productos</a>
+            <a href="#servicios" className="bg-bob-blue-500 text-white font-semibold px-6 py-2.5 rounded-lg hover:bg-bob-green-500 transition-colors shadow-lg hover:shadow-xl">Servicios</a>
+            <a href="#contacto" className="bg-bob-blue-500 text-white font-semibold px-6 py-2.5 rounded-lg hover:bg-bob-green-500 transition-colors shadow-lg hover:shadow-xl">Contacto</a>
+            <a 
+              href="#formulario-cotizacion"
+              className="bg-bob-blue-500 text-white font-semibold px-6 py-2.5 rounded-lg hover:bg-bob-green-500 transition-colors shadow-lg hover:shadow-xl"
+            >
+              Cotizar Ahora
+            </a>
+          </nav>
         </div>
       </header>
 
       {/* Executive Hero Section with Video Background */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+      <section
+        id="hero"
+        ref={heroRef}
+        className="relative min-h-screen flex items-center justify-center overflow-hidden pt-24"
+      >
         {/* Video Background */}
         <div className="absolute inset-0 w-full h-full overflow-hidden">
           <video
@@ -72,7 +102,7 @@ export default function Home() {
               <div className="mb-8">
                 <div className="flex justify-center mb-6">
                   <img 
-                    src="/logo-hero.png" 
+                    src="/logobob.png" 
                     alt="BOB Coperation Logo" 
                     className="h-64 md:h-80 lg:h-96 w-auto object-contain"
                   />
