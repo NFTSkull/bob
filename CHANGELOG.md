@@ -5,4 +5,6 @@
 - Eliminado el botón "Solicitar Cotización Ejecutiva" del hero.
 - Eliminado el botón "Cotizar Ahora" del footer.
 - Header principal ahora usa fondo negro.
+- Actualizado el logo del header a `logobob.png` y reducido su altura para un perfil más compacto.
+- Reducido el ancho del contenedor del header para una presencia más discreta.
 
