@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useState } from 'react';
 
 import ContactForm from '@/components/ContactForm';
 import { ScrollReveal, StaggeredReveal } from '@/components/ScrollReveal';
@@ -10,31 +10,7 @@ import { useCategoryNavigation } from '@/hooks/useCategoryNavigation';
 
 export default function Home() {
   const { isCategoryOpen, toggleCategory, navigateToCategory } = useCategoryNavigation();
-  const [isHeroPassed, setIsHeroPassed] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const heroRef = useRef<HTMLElement | null>(null);
-
-  useEffect(() => {
-    const heroElement = heroRef.current;
-    if (!heroElement) {
-      return;
-    }
-
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        setIsHeroPassed(!entry.isIntersecting);
-      },
-      {
-        threshold: 0,
-      }
-    );
-
-    observer.observe(heroElement);
-
-    return () => {
-      observer.disconnect();
-    };
-  }, []);
 
   useEffect(() => {
     const handleResize = () => {
@@ -54,22 +30,15 @@ export default function Home() {
     { href: '#productos', label: 'Productos' },
     { href: '#servicios', label: 'Servicios' },
     { href: '#contacto', label: 'Contacto' },
-    { href: '#formulario-cotizacion', label: 'Cotizar Ahora' },
+    { href: '#formulario-cotizacion', label: 'Cotización' },
   ];
 
   return (
     <div className="min-h-screen bg-white">
       {/* Executive Header */}
-      <header
-        className={`fixed top-0 left-0 right-0 z-50 transition-colors duration-300 ${
-          isHeroPassed ? 'bg-black border-b border-bob-blue-500/20 shadow-lg' : 'bg-transparent border-transparent'
-        }`}
-      >
-        {isHeroPassed && (
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_40%,rgba(46,108,230,0.05),transparent_50%)]" />
-        )}
+      <header className="relative w-full transition-colors duration-300 bg-transparent">
         <div className="relative mx-auto w-full max-w-4xl px-4 py-2">
-          <div className="flex items-center justify-between lg:justify-center">
+          <div className="flex items-center justify-between lg:justify-end">
             <button
               type="button"
               className="inline-flex items-center justify-center rounded-lg border border-white/20 bg-black/60 px-3 py-2 text-sm font-semibold text-white shadow-lg shadow-black/20 backdrop-blur transition hover:bg-black/80 focus:outline-none focus-visible:ring-2 focus-visible:ring-bob-green-400 lg:hidden"
@@ -87,12 +56,12 @@ export default function Home() {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4 6h16M4 12h16M4 18h16" />
               </svg>
             </button>
-            <nav className="hidden lg:flex items-center justify-center space-x-8">
+            <nav className="hidden lg:flex items-center justify-end space-x-10">
               {navigationLinks.map((link) => (
                 <a
                   key={link.href}
                   href={link.href}
-                  className="bg-bob-blue-500 text-white font-semibold px-6 py-2.5 rounded-lg hover:bg-bob-green-500 transition-colors shadow-lg hover:shadow-xl"
+                  className="text-white font-semibold tracking-wide uppercase text-sm hover:text-bob-green-400 transition-colors"
                 >
                   {link.label}
                 </a>
@@ -120,11 +89,7 @@ export default function Home() {
       </header>
 
       {/* Executive Hero Section with Video Background */}
-      <section
-        id="hero"
-        ref={heroRef}
-        className="relative min-h-screen flex items-center justify-center overflow-hidden pt-24"
-      >
+      <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden">
         {/* Video Background */}
         <div className="absolute inset-0 w-full h-full overflow-hidden">
           <video

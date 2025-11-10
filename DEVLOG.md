@@ -11,4 +11,7 @@
 - Branding consistente: El hero ahora utiliza el mismo `logobob.png`, conservando escalas `h-64 md:h-80 lg:h-96`.
 - Decisión: Hacer el header transparente sobre el hero y restaurar fondo negro al salir de la sección para destacar el video inicial.
 - Experiencia móvil: Se incorporó menú hamburguesa exclusivo para móviles reutilizando la navegación principal.
+- Ajuste UX desktop: Se retiraron los botones azules del header y se dejaron los enlaces en texto blanco alineados a la derecha.
+- Ajuste de comportamiento: El header deja de ser fijo para permanecer solo en la sección inicial y no acompañar el scroll.
+- Ajuste de copy: El enlace principal ahora muestra la leyenda “Cotización” para reforzar la intención de contacto.
 

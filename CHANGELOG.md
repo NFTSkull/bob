@@ -11,4 +11,7 @@
 - Logo del hero actualizado para utilizar `logobob.png`, manteniendo dimensiones originales.
 - Header ahora es transparente sobre el hero y recupera fondo negro al salir de la sección principal.
 - Menú hamburguesa exclusivo para móviles que despliega la navegación principal.
+- Navegación desktop del header ahora muestra enlaces en texto blanco alineados a la derecha sin botones azules.
+- Header vuelve a ser parte de la sección inicial (no fijo) para que desaparezca al continuar el scroll.
+- Renombrado el enlace principal de navegación a “Cotización” para mantener consistencia de lenguaje.
 
