@@ -57,59 +57,6 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-white">
-      {/* Executive Header */}
-      <header className="relative w-full transition-colors duration-300 bg-transparent">
-        <div className="relative mx-auto w-full max-w-4xl px-4 py-2">
-          <div className="flex items-center justify-between lg:justify-end">
-            <button
-              type="button"
-              className="inline-flex items-center justify-center rounded-lg border border-white/20 bg-black/60 px-3 py-2 text-sm font-semibold text-white shadow-lg shadow-black/20 backdrop-blur transition hover:bg-black/80 focus:outline-none focus-visible:ring-2 focus-visible:ring-bob-green-400 lg:hidden"
-              aria-expanded={isMenuOpen}
-              aria-controls="mobile-navigation"
-              onClick={() => setIsMenuOpen((prev) => !prev)}
-            >
-              <svg
-                className="h-6 w-6"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-                aria-hidden="true"
-              >
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4 6h16M4 12h16M4 18h16" />
-              </svg>
-            </button>
-            <nav className="hidden lg:flex items-center justify-end space-x-10">
-              {navigationLinks.map((link) => (
-                <a
-                  key={link.href}
-                  href={link.href}
-                  className="text-white font-semibold tracking-wide uppercase text-sm hover:text-bob-green-400 transition-colors"
-                >
-                  {link.label}
-                </a>
-              ))}
-            </nav>
-          </div>
-          {isMenuOpen && (
-            <div
-              id="mobile-navigation"
-              className="mt-3 flex flex-col space-y-3 rounded-xl border border-white/10 bg-black/80 p-4 text-center shadow-2xl shadow-black/40 backdrop-blur lg:hidden"
-            >
-              {navigationLinks.map((link) => (
-                <a
-                  key={link.href}
-                  href={link.href}
-                  className="block rounded-lg bg-bob-blue-500 px-4 py-2 text-sm font-semibold text-white shadow hover:bg-bob-green-500 transition"
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  {link.label}
-                </a>
-              ))}
-            </div>
-          )}
-        </div>
-      </header>
-
       {/* Executive Hero Section with Video Background */}
       <section
         id="hero"
@@ -148,8 +95,61 @@ export default function Home() {
           </div>
         </div>
 
+        {/* Header Overlay */}
+        <div className="absolute inset-x-0 top-0 z-30">
+          <div className="relative mx-auto w-full max-w-4xl px-4 py-2">
+            <div className="flex items-center justify-between lg:justify-end">
+              <button
+                type="button"
+                className="inline-flex items-center justify-center rounded-lg border border-white/20 bg-black/60 px-3 py-2 text-sm font-semibold text-white shadow-lg shadow-black/20 backdrop-blur transition hover:bg-black/80 focus:outline-none focus-visible:ring-2 focus-visible:ring-bob-green-400 lg:hidden"
+                aria-expanded={isMenuOpen}
+                aria-controls="mobile-navigation"
+                onClick={() => setIsMenuOpen((prev) => !prev)}
+              >
+                <svg
+                  className="h-6 w-6"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  aria-hidden="true"
+                >
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+              </button>
+              <nav className="hidden lg:flex items-center justify-end space-x-10">
+                {navigationLinks.map((link) => (
+                  <a
+                    key={link.href}
+                    href={link.href}
+                    className="text-white font-semibold tracking-wide uppercase text-sm hover:text-bob-green-400 transition-colors"
+                  >
+                    {link.label}
+                  </a>
+                ))}
+              </nav>
+            </div>
+            {isMenuOpen && (
+              <div
+                id="mobile-navigation"
+                className="mt-3 flex flex-col space-y-3 rounded-xl border border-white/10 bg-black/80 p-4 text-center shadow-2xl shadow-black/40 backdrop-blur lg:hidden"
+              >
+                {navigationLinks.map((link) => (
+                  <a
+                    key={link.href}
+                    href={link.href}
+                    className="block rounded-lg bg-bob-blue-500 px-4 py-2 text-sm font-semibold text-white shadow hover:bg-bob-green-500 transition"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    {link.label}
+                  </a>
+                ))}
+              </div>
+            )}
+          </div>
+        </div>
+
         {/* Contenido del Hero */}
-        <div className="relative z-10 container mx-auto px-4 text-center">
+        <div className="relative z-20 container mx-auto px-4 text-center pt-24">
           <div className="max-w-5xl mx-auto">
             <ScrollReveal animation="fadeInUp" delay={200}>
               <div className="mb-8">

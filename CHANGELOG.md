@@ -16,4 +16,5 @@
 - Renombrado el enlace principal de navegación a “Cotización” para mantener consistencia de lenguaje.
 - Se aplicó detección de visibilidad del hero para ocultar el video una vez fuera de la vista, evitando que permanezca visible al seguir el scroll.
 - Reducido el tamaño del logo y de los encabezados principales en el hero para mejorar la composición visual.
+- Header se integró como overlay dentro del hero para asegurar visibilidad de los enlaces sobre el video.
 
