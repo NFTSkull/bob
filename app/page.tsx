@@ -97,7 +97,7 @@ export default function Home() {
 
         {/* Header Overlay */}
         <div className="absolute inset-x-0 top-0 z-30">
-          <div className="relative mx-auto w-full max-w-4xl px-4 py-2">
+          <div className="relative mx-auto w-full max-w-4xl px-4 py-2 lg:mx-0 lg:ml-auto lg:mr-10">
             <div className="flex items-center justify-between lg:justify-end">
               <button
                 type="button"
