@@ -14,4 +14,6 @@
 - Ajuste UX desktop: Se retiraron los botones azules del header y se dejaron los enlaces en texto blanco alineados a la derecha.
 - Ajuste de comportamiento: El header deja de ser fijo para permanecer solo en la sección inicial y no acompañar el scroll.
 - Ajuste de copy: El enlace principal ahora muestra la leyenda “Cotización” para reforzar la intención de contacto.
+- Mejora visual: El video del hero ahora se oculta automáticamente al abandonar la sección para evitar que permanezca visible en scroll.
+- Refinamiento hero: Se redujeron dimensiones del logo y del título principal para lograr un equilibrio visual en pantallas pequeñas y grandes.
 

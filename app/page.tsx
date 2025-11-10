@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 import ContactForm from '@/components/ContactForm';
 import { ScrollReveal, StaggeredReveal } from '@/components/ScrollReveal';
@@ -11,6 +11,8 @@ import { useCategoryNavigation } from '@/hooks/useCategoryNavigation';
 export default function Home() {
   const { isCategoryOpen, toggleCategory, navigateToCategory } = useCategoryNavigation();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isVideoActive, setIsVideoActive] = useState(true);
+  const heroRef = useRef<HTMLElement | null>(null);
 
   useEffect(() => {
     const handleResize = () => {
@@ -23,6 +25,26 @@ export default function Home() {
 
     return () => {
       window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+
+  useEffect(() => {
+    const observerTarget = heroRef.current;
+    if (!observerTarget) {
+      return;
+    }
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setIsVideoActive(entry.isIntersecting);
+      },
+      { threshold: 0.1 }
+    );
+
+    observer.observe(observerTarget);
+
+    return () => {
+      observer.disconnect();
     };
   }, []);
 
@@ -89,9 +111,17 @@ export default function Home() {
       </header>
 
       {/* Executive Hero Section with Video Background */}
-      <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden">
+      <section
+        id="hero"
+        ref={heroRef}
+        className="relative min-h-screen flex items-center justify-center overflow-hidden"
+      >
         {/* Video Background */}
-        <div className="absolute inset-0 w-full h-full overflow-hidden">
+        <div
+          className={`absolute inset-0 w-full h-full overflow-hidden transition-opacity duration-500 ${
+            isVideoActive ? 'opacity-100' : 'opacity-0 pointer-events-none'
+          }`}
+        >
           <video
             autoPlay
             muted
@@ -124,10 +154,10 @@ export default function Home() {
             <ScrollReveal animation="fadeInUp" delay={200}>
               <div className="mb-8">
                 <div className="flex justify-center mb-6">
-                  <img 
-                    src="/logobob.png" 
-                    alt="BOB Coperation Logo" 
-                    className="h-64 md:h-80 lg:h-96 w-auto object-contain"
+                  <img
+                    src="/logobob.png"
+                    alt="BOB Coperation Logo"
+                    className="h-40 md:h-56 lg:h-72 w-auto object-contain"
                   />
                 </div>
                 <div className="w-24 h-1 bg-bob-green-500 mx-auto rounded-full mb-6" />
@@ -135,9 +165,9 @@ export default function Home() {
             </ScrollReveal>
 
             <ScrollReveal animation="fadeInUp" delay={400}>
-              <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold text-white mb-8 leading-tight">
-                <span className="block text-shadow-lg">LIDER EN SOLUCIONES</span>
-                <span className="block text-bob-green-400 text-shadow-lg">
+              <h1 className="text-2xl md:text-4xl lg:text-5xl font-bold text-white mb-6 leading-tight">
+                <span className="block text-shadow-lg tracking-wide">LIDER EN SOLUCIONES</span>
+                <span className="block text-bob-green-400 text-shadow-lg tracking-wide">
                   Y MATERIALES INDUSTRIALES
                 </span>
               </h1>

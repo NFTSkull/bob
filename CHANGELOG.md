@@ -14,4 +14,6 @@
 - Navegación desktop del header ahora muestra enlaces en texto blanco alineados a la derecha sin botones azules.
 - Header vuelve a ser parte de la sección inicial (no fijo) para que desaparezca al continuar el scroll.
 - Renombrado el enlace principal de navegación a “Cotización” para mantener consistencia de lenguaje.
+- Se aplicó detección de visibilidad del hero para ocultar el video una vez fuera de la vista, evitando que permanezca visible al seguir el scroll.
+- Reducido el tamaño del logo y de los encabezados principales en el hero para mejorar la composición visual.
 
