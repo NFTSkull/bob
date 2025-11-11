@@ -18,4 +18,5 @@
 - Refinamiento hero: Se redujeron dimensiones del logo y del título principal para lograr un equilibrio visual en pantallas pequeñas y grandes.
 - Interacción header/hero: El header ahora se renderiza como overlay dentro del hero para mantener los enlaces visibles sobre el video sin añadir fondos opacos.
 - Ajuste de layout: En escritorio el contenedor del header se desplaza hacia la derecha para una alineación más profesional de la navegación.
+- Decisión de despliegue: Se habilitó `output: 'export'` con imágenes sin optimizar y `trailingSlash` para entregar un paquete estático listo para CPanel sin Node.js.
 
